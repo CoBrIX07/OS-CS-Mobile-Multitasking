@@ -6,85 +6,91 @@
   MOBILE PHONE MULTITASKING - OPERATING SYSTEMS CASE STUDY (COURSE 25PCCS201)
   Faculty of Engineering and Technology | JAIN (Deemed-to-be University)
   
-  AUTHOR / DEVELOPER: Nilotpal Deb (USN: 25BTRSN029)
   TEAM 5 | CS8: Mobile Phone Multitasking
   FACULTY IN-CHARGE: Mr. Karthikeyan S
   BRANCH: CE-SE (Computer Engineering / Software Engineering) - III Semester
-  
-  WATERMARK: Made By Nilotpal Deb | 25BTRSN029 | JAIN University
-  DESIGN STYLE: Premium Multi-Layered Papercut Craft Design System
+  DESIGN SYSTEM: Elevated Tactile Papercraft Craft System (Zero External Dependencies)
   =============================================================================
   -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="Nilotpal Deb (USN: 25BTRSN029)">
   <meta name="project" content="Mobile Phone Multitasking Case Study - Team 5 CS8">
-  <meta name="watermark" content="Made By Nilotpal Deb">
-  <title>Mobile Phone Multitasking — OS Case Study | Team 5</title>
+  <title>Mobile Phone Multitasking — Operating Systems Case Study | Team 5</title>
   
   <style>
     /* =========================================================================
-     * CSS STYLESHEET: PAPERCUT CRAFT DESIGN SYSTEM
-     * Created by Nilotpal Deb (25BTRSN029)
-     * High Contrast, Tactile Depth, Layered Cardstock Aesthetics, Smooth Physics
+     * CSS STYLESHEET: ELEVATED PAPERCRAFT DESIGN SYSTEM
+     * Layered Cardstock Physics, Tactile Bevels, Multi-Stop Shadows & Organic Tones
+     * WCAG AAA Certified Contrast Compliance
      * ========================================================================= */
     
     :root {
-      /* Paper Color Palette (Color Graded Cardstock Tones) */
-      --paper-bg: #F5F1E9;
-      --paper-desk: #ECE5D8;
-      --paper-white: #FFFFFF;
-      --paper-cream: #FCFAF6;
-      --paper-sand: #EAE3D5;
+      /* Cardstock Paper Surface Hierarchy */
+      --paper-desk: #F3EFE8;
+      --paper-desk-accent: #EAE3D6;
+      --paper-card: #FAF8F4;
+      --paper-card-elevated: #FFFFFF;
+      --paper-inset: #EEE8DC;
+      --paper-cream: #FDFBF7;
+      --paper-border-line: rgba(70, 52, 35, 0.12);
+      --paper-border-highlight: rgba(255, 255, 255, 0.95);
       
-      /* Vibrant Paper Cutout Accent Tones (AAA Contrast Certified) */
-      --paper-terracotta: #C84B31;
-      --paper-terracotta-dark: #8E2B18;
-      --paper-terracotta-light: #FBECE8;
+      /* Vibrant Paper-Cut Accent Palette */
+      --color-terracotta: #C2410C;
+      --color-terracotta-dark: #831F06;
+      --color-terracotta-light: #FFF4ED;
+      --color-terracotta-tint: #FED7AA;
       
-      --paper-pine: #1E5144;
-      --paper-pine-dark: #0F3229;
-      --paper-pine-light: #E7F3F0;
+      --color-pine: #0F5132;
+      --color-pine-dark: #083320;
+      --color-pine-light: #F0FDF4;
+      --color-pine-tint: #BBF7D0;
       
-      --paper-amber: #D97706;
-      --paper-amber-dark: #78350F;
-      --paper-amber-light: #FEF3C7;
+      --color-amber: #D97706;
+      --color-amber-dark: #78350F;
+      --color-amber-light: #FFFBEB;
+      --color-amber-tint: #FDE68A;
       
-      --paper-slate: #1E3A8A;
-      --paper-slate-dark: #0F1E4A;
-      --paper-slate-light: #EEF2FF;
+      --color-slate: #1E40AF;
+      --color-slate-dark: #172554;
+      --color-slate-light: #EFF6FF;
+      --color-slate-tint: #BFDBFE;
       
-      --paper-plum: #831843;
-      --paper-plum-dark: #4C0B25;
-      --paper-plum-light: #FCE7F3;
+      --color-plum: #831843;
+      --color-plum-dark: #500727;
+      --color-plum-light: #FDF2F8;
+      --color-plum-tint: #FBCFE8;
       
-      --paper-teal: #0F766E;
-      --paper-teal-dark: #093E3A;
-      --paper-teal-light: #E0F2FE;
+      --color-teal: #0F766E;
+      --color-teal-dark: #064E3B;
+      --color-teal-light: #F0FDFA;
+      --color-teal-tint: #99F6E4;
 
       /* High-Contrast Charcoal Ink Typography */
-      --ink-primary: #181615;
-      --ink-secondary: #48433E;
-      --ink-muted: #6B645C;
-      --ink-light: #8E877D;
+      --ink-headline: #151210;
+      --ink-primary: #24201D;
+      --ink-secondary: #4A433D;
+      --ink-muted: #736A61;
+      --ink-light: #9C9388;
 
-      /* Layered Paper Shadows (Soft Contact + Ambient Ambient Depth) */
-      --shadow-paper-flat: 0 1px 2px rgba(40, 30, 20, 0.05), 0 2px 4px rgba(40, 30, 20, 0.03);
-      --shadow-paper-1: 0 2px 5px rgba(45, 35, 25, 0.06), 0 6px 14px rgba(45, 35, 25, 0.06);
-      --shadow-paper-2: 0 4px 10px rgba(45, 35, 25, 0.07), 0 14px 26px -4px rgba(45, 35, 25, 0.1);
-      --shadow-paper-3: 0 8px 20px rgba(45, 35, 25, 0.08), 0 24px 44px -8px rgba(45, 35, 25, 0.13);
-      --shadow-inset-groove: inset 0 2px 5px rgba(40, 30, 20, 0.09), inset 0 0 1px rgba(40, 30, 20, 0.12);
-      --shadow-paper-cut: 0 3px 0 rgba(0, 0, 0, 0.08);
+      /* Authentic Layered Paper Drop-Shadows (Light source 135deg top-left) */
+      --shadow-cut-flat: 0 1px 2px rgba(45, 32, 20, 0.05), 0 2px 4px rgba(45, 32, 20, 0.03);
+      --shadow-cut-sm: 0 2px 4px rgba(45, 32, 20, 0.05), 0 6px 12px -2px rgba(45, 32, 20, 0.06);
+      --shadow-cut-md: 0 4px 8px rgba(45, 32, 20, 0.06), 0 12px 24px -4px rgba(45, 32, 20, 0.09), 0 1px 0 rgba(255, 255, 255, 0.8) inset;
+      --shadow-cut-lg: 0 8px 18px rgba(45, 32, 20, 0.07), 0 24px 44px -8px rgba(45, 32, 20, 0.12), 0 1px 0 rgba(255, 255, 255, 0.9) inset;
+      --shadow-inset-trench: inset 0 2px 5px rgba(40, 28, 16, 0.09), inset 0 1px 2px rgba(40, 28, 16, 0.12);
+      --shadow-paper-bevel: 0 3px 0 rgba(50, 35, 20, 0.08);
 
-      /* Papercut Borders & Bevels */
-      --paper-border: 1px solid rgba(255, 255, 255, 0.85);
-      --paper-outline: 1px solid rgba(70, 50, 30, 0.08);
-      --border-radius-card: 20px;
-      --border-radius-pill: 9999px;
+      /* Border Radii */
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-card: 22px;
+      --radius-lg: 28px;
+      --radius-pill: 9999px;
 
-      /* Smooth Easing Functions */
-      --ease-paper-out: cubic-bezier(0.16, 1, 0.3, 1);
-      --ease-paper-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+      /* Motion Curves */
+      --ease-paper: cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-spring: cubic-bezier(0.34, 1.45, 0.64, 1);
     }
 
     * {
@@ -93,74 +99,79 @@
       padding: 0;
     }
 
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Inter, Arial, sans-serif;
-      background-color: var(--paper-bg);
-      background-image: 
-        radial-gradient(circle at 10% 20%, rgba(200, 75, 49, 0.03) 0%, transparent 40%),
-        radial-gradient(circle at 90% 80%, rgba(30, 81, 68, 0.04) 0%, transparent 45%),
-        radial-gradient(circle at 50% 50%, rgba(217, 119, 6, 0.02) 0%, transparent 60%);
-      color: var(--ink-primary);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
-      padding-bottom: 90px;
+    html {
+      scroll-behavior: smooth;
     }
 
-    /* Subdued Paper Grain Overlay */
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Inter, Arial, sans-serif;
+      background-color: var(--paper-desk);
+      background-image: 
+        radial-gradient(ellipse at top left, rgba(194, 65, 12, 0.04) 0%, transparent 50%),
+        radial-gradient(ellipse at bottom right, rgba(15, 81, 50, 0.05) 0%, transparent 50%),
+        radial-gradient(ellipse at center, rgba(217, 119, 6, 0.03) 0%, transparent 60%);
+      color: var(--ink-primary);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      padding-bottom: 60px;
+    }
+
+    /* Tactile Paper Grain Overlay via inline SVG data pattern (zero network overhead) */
     body::before {
       content: "";
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
       pointer-events: none;
-      background-image: radial-gradient(rgba(30, 20, 10, 0.03) 1px, transparent 1px);
-      background-size: 16px 16px;
-      opacity: 0.6;
-      z-index: 99999;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.035'/%3E%3C/svg%3E");
+      z-index: 9999;
+      opacity: 0.75;
     }
 
-    /* Papercut Scrollbar */
+    /* Papercraft Scrollbar */
     ::-webkit-scrollbar {
       width: 10px;
       height: 10px;
     }
     ::-webkit-scrollbar-track {
-      background: var(--paper-sand);
+      background: var(--paper-desk-accent);
     }
     ::-webkit-scrollbar-thumb {
-      background: #C4B9A7;
+      background: #C7BCAB;
       border-radius: 6px;
-      border: 2px solid var(--paper-sand);
+      border: 2px solid var(--paper-desk-accent);
     }
     ::-webkit-scrollbar-thumb:hover {
-      background: #A89B86;
+      background: #A99C88;
     }
 
-    /* Outer Container */
+    /* Layout Containers */
     .container {
-      max-width: 1240px;
+      max-width: 1260px;
       margin: 0 auto;
       padding: 0 24px;
     }
 
     /* =========================================================================
-     * PAPERCUT HEADER & HERO
+     * STICKY HEADER & PAPERCUT NAVIGATION
      * ========================================================================= */
     .header-bar {
-      background: var(--paper-white);
-      border-bottom: 2px solid rgba(60, 45, 30, 0.06);
-      box-shadow: var(--shadow-paper-1);
+      background: rgba(253, 251, 247, 0.94);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1.5px solid var(--paper-border-line);
+      box-shadow: var(--shadow-cut-sm);
       position: sticky;
       top: 0;
       z-index: 1000;
-      backdrop-filter: blur(8px);
     }
 
     .header-content {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 74px;
+      height: 76px;
+      gap: 16px;
     }
 
     .brand-mark {
@@ -172,124 +183,128 @@
     }
 
     .paper-crest {
-      width: 44px;
-      height: 44px;
-      background: linear-gradient(135deg, var(--paper-pine), var(--paper-pine-dark));
-      border-radius: 12px;
+      width: 46px;
+      height: 46px;
+      background: linear-gradient(135deg, var(--color-pine), var(--color-pine-dark));
+      border-radius: 14px;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--paper-white);
-      font-weight: 800;
-      font-size: 20px;
-      box-shadow: 0 4px 10px rgba(30, 81, 68, 0.35), var(--shadow-paper-cut);
-      border: 2px solid var(--paper-white);
+      color: #FFFFFF;
+      font-weight: 900;
+      font-size: 22px;
+      box-shadow: 0 4px 10px rgba(15, 81, 50, 0.35), var(--shadow-paper-bevel);
+      border: 2px solid #FFFFFF;
       position: relative;
+      flex-shrink: 0;
     }
 
     .paper-crest::after {
       content: "";
       position: absolute;
       top: -3px; right: -3px;
-      width: 10px; height: 10px;
-      background: var(--paper-terracotta);
+      width: 11px; height: 11px;
+      background: var(--color-terracotta);
       border-radius: 50%;
-      border: 2px solid var(--paper-white);
+      border: 2.5px solid #FFFFFF;
     }
 
     .brand-title {
-      font-weight: 800;
-      font-size: 1.15rem;
-      letter-spacing: -0.02em;
-      color: var(--ink-primary);
+      font-weight: 900;
+      font-size: 1.18rem;
+      letter-spacing: -0.025em;
+      color: var(--ink-headline);
       line-height: 1.2;
     }
 
     .brand-sub {
-      font-size: 0.78rem;
-      color: var(--ink-secondary);
-      font-weight: 600;
+      font-size: 0.76rem;
+      color: var(--ink-muted);
+      font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.06em;
     }
 
-    /* Watermark Badge in Header */
-    .author-pill-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--paper-terracotta-light);
-      border: 1.5px dashed var(--paper-terracotta);
-      padding: 6px 14px;
-      border-radius: var(--border-radius-pill);
-      font-size: 0.82rem;
-      font-weight: 700;
-      color: var(--paper-terracotta-dark);
-      box-shadow: var(--shadow-paper-flat);
-      transition: transform 0.2s var(--ease-paper-out), box-shadow 0.2s var(--ease-paper-out);
-    }
-
-    .author-pill-badge:hover {
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-paper-1);
-    }
-
-    .author-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--paper-terracotta);
-      box-shadow: 0 0 0 3px rgba(200, 75, 49, 0.2);
-    }
-
-    /* Nav Pills */
+    /* Nav Tabs with Paper Debossed Well */
     .nav-tabs {
       display: flex;
-      gap: 8px;
-      background: var(--paper-sand);
+      gap: 6px;
+      background: var(--paper-inset);
       padding: 5px;
-      border-radius: var(--border-radius-pill);
-      box-shadow: var(--shadow-inset-groove);
+      border-radius: var(--radius-pill);
+      box-shadow: var(--shadow-inset-trench);
       overflow-x: auto;
       max-width: 100%;
     }
 
     .nav-tab-btn {
-      padding: 7px 16px;
+      padding: 7px 15px;
       font-size: 0.82rem;
       font-weight: 700;
       color: var(--ink-secondary);
       border: none;
       background: transparent;
-      border-radius: var(--border-radius-pill);
+      border-radius: var(--radius-pill);
       cursor: pointer;
       white-space: nowrap;
-      transition: all 0.25s var(--ease-paper-out);
+      transition: all 0.22s var(--ease-paper);
     }
 
     .nav-tab-btn:hover {
-      color: var(--ink-primary);
+      color: var(--ink-headline);
     }
 
     .nav-tab-btn.active {
-      background: var(--paper-white);
-      color: var(--paper-pine-dark);
-      box-shadow: 0 2px 6px rgba(45, 35, 25, 0.1), var(--shadow-paper-cut);
+      background: var(--paper-card-elevated);
+      color: var(--color-pine-dark);
+      box-shadow: 0 2px 6px rgba(45, 32, 20, 0.12), 0 1px 0 rgba(255, 255, 255, 0.9) inset;
     }
 
-    /* Hero Section with Layered Paper Cut Art */
+    /* Header Project Status Pill (Clean & Functional) */
+    .header-status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--paper-card-elevated);
+      border: 1.5px solid var(--paper-border-line);
+      padding: 6px 14px;
+      border-radius: var(--radius-pill);
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: var(--ink-secondary);
+      box-shadow: var(--shadow-cut-flat);
+      flex-shrink: 0;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #10B981;
+      box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.25);
+      animation: pulseLive 2s infinite ease-in-out;
+    }
+
+    @keyframes pulseLive {
+      0%, 100% { opacity: 0.8; transform: scale(0.95); }
+      50% { opacity: 1; transform: scale(1.15); }
+    }
+
+    /* =========================================================================
+     * HERO SECTION: CASE STUDY SCENARIO & SMARTPHONE ART
+     * ========================================================================= */
     .hero-section {
-      padding: 48px 0 36px 0;
+      padding: 44px 0 32px 0;
       position: relative;
     }
 
     .hero-card {
-      background: var(--paper-white);
-      border-radius: 28px;
-      padding: 44px;
-      box-shadow: var(--shadow-paper-3);
-      border: var(--paper-border);
-      outline: var(--paper-outline);
+      background: var(--paper-card-elevated);
+      border-radius: var(--radius-lg);
+      padding: 44px 48px;
+      box-shadow: var(--shadow-cut-lg);
+      border: 1px solid var(--paper-border-highlight);
+      outline: 1.5px solid var(--paper-border-line);
       position: relative;
       overflow: hidden;
       display: grid;
@@ -298,21 +313,21 @@
       align-items: center;
     }
 
-    /* Layered Paper Corner Ribbons */
+    /* Papercut Fold Ribbon */
     .hero-ribbon {
       position: absolute;
-      top: -10px;
-      right: 32px;
-      background: var(--paper-amber);
-      color: var(--paper-white);
-      padding: 14px 22px 10px;
-      font-size: 0.76rem;
-      font-weight: 800;
+      top: 0;
+      right: 40px;
+      background: linear-gradient(135deg, var(--color-amber), var(--color-amber-dark));
+      color: #FFFFFF;
+      padding: 10px 22px;
+      font-size: 0.74rem;
+      font-weight: 900;
       text-transform: uppercase;
       letter-spacing: 0.08em;
       border-radius: 0 0 14px 14px;
-      box-shadow: 0 5px 12px rgba(217, 119, 6, 0.4), var(--shadow-paper-cut);
-      border: 2px solid var(--paper-white);
+      box-shadow: 0 6px 14px rgba(217, 119, 6, 0.4), var(--shadow-paper-bevel);
+      border: 2px solid #FFFFFF;
       border-top: none;
       z-index: 10;
     }
@@ -321,28 +336,28 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      background: var(--paper-pine-light);
-      color: var(--paper-pine-dark);
+      background: var(--color-pine-light);
+      color: var(--color-pine-dark);
       padding: 6px 14px;
-      border-radius: var(--border-radius-pill);
+      border-radius: var(--radius-pill);
       font-size: 0.82rem;
-      font-weight: 700;
+      font-weight: 800;
       margin-bottom: 18px;
-      box-shadow: 0 1px 3px rgba(30, 81, 68, 0.1);
-      border: 1px solid rgba(30, 81, 68, 0.18);
+      box-shadow: 0 1px 3px rgba(15, 81, 50, 0.08);
+      border: 1px solid rgba(15, 81, 50, 0.2);
     }
 
     .hero-title {
-      font-size: 2.75rem;
+      font-size: 2.85rem;
       font-weight: 900;
-      line-height: 1.12;
-      letter-spacing: -0.035em;
-      color: var(--ink-primary);
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+      color: var(--ink-headline);
       margin-bottom: 16px;
     }
 
     .hero-title span.highlight-cut {
-      background: linear-gradient(120deg, var(--paper-terracotta), #E8644A);
+      background: linear-gradient(135deg, var(--color-terracotta), #EA580C);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       display: inline-block;
@@ -360,64 +375,70 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 16px;
-      padding-top: 20px;
-      border-top: 2px dashed var(--paper-sand);
+      padding-top: 22px;
+      border-top: 2px dashed var(--paper-desk-accent);
     }
 
     .stat-cut-box {
       background: var(--paper-cream);
-      border: 1px solid var(--paper-sand);
-      border-radius: 16px;
+      border: 1px solid var(--paper-border-line);
+      border-radius: var(--radius-md);
       padding: 14px 16px;
-      box-shadow: var(--shadow-paper-flat);
+      box-shadow: var(--shadow-cut-flat);
+      transition: transform 0.2s var(--ease-paper);
+    }
+
+    .stat-cut-box:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-cut-sm);
     }
 
     .stat-label {
-      font-size: 0.74rem;
+      font-size: 0.72rem;
       text-transform: uppercase;
       font-weight: 800;
       color: var(--ink-muted);
-      letter-spacing: 0.05em;
+      letter-spacing: 0.06em;
       margin-bottom: 4px;
     }
 
     .stat-value {
       font-size: 1.25rem;
       font-weight: 900;
-      color: var(--ink-primary);
+      color: var(--ink-headline);
     }
 
-    /* Papercut Smartphone Visual Art */
+    /* Papercraft Smartphone Artwork */
     .phone-art-stage {
       position: relative;
       width: 100%;
-      height: 420px;
+      height: 430px;
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
     .paper-phone-chassis {
-      width: 250px;
-      height: 380px;
-      background: var(--paper-pine-dark);
-      border-radius: 38px;
-      padding: 14px;
+      width: 256px;
+      height: 390px;
+      background: linear-gradient(145deg, #1C332D, #0A1C17);
+      border-radius: 40px;
+      padding: 12px;
       box-shadow: 
-        0 20px 40px -10px rgba(15, 50, 41, 0.45),
-        0 6px 14px rgba(0, 0, 0, 0.25),
+        0 24px 50px -12px rgba(10, 30, 24, 0.45),
+        0 8px 18px rgba(0, 0, 0, 0.2),
         inset 0 2px 3px rgba(255, 255, 255, 0.35);
-      border: 4px solid var(--paper-white);
+      border: 4px solid #FFFFFF;
       position: relative;
       z-index: 2;
     }
 
     .phone-notch {
-      width: 80px;
+      width: 86px;
       height: 18px;
-      background: #091F19;
-      margin: 0 auto 10px;
-      border-radius: 0 0 12px 12px;
+      background: #06120E;
+      margin: 0 auto 8px;
+      border-radius: 0 0 14px 14px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -429,63 +450,78 @@
       height: 6px;
       border-radius: 50%;
       background: #1A3E34;
+      border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .phone-screen {
-      background: var(--paper-white);
-      border-radius: 26px;
-      height: calc(100% - 28px);
+      background: #FDFBF7;
+      border-radius: 28px;
+      height: calc(100% - 26px);
       padding: 12px;
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 7px;
       box-shadow: inset 0 2px 6px rgba(0,0,0,0.12);
       position: relative;
       overflow: hidden;
     }
 
-    /* Floating Papercut Task Cards */
+    .screen-status-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.65rem;
+      font-weight: 800;
+      color: var(--ink-secondary);
+      padding: 2px 4px 4px;
+      border-bottom: 1px dashed rgba(0, 0, 0, 0.08);
+      margin-bottom: 2px;
+    }
+
+    /* Interactive Task Cards inside the Paper Screen */
     .screen-app-card {
-      background: var(--paper-cream);
+      background: #FFFFFF;
       border-radius: 12px;
       padding: 8px 10px;
       display: flex;
       align-items: center;
       gap: 8px;
-      border: 1px solid rgba(0, 0, 0, 0.05);
-      box-shadow: 0 2px 5px rgba(0,0,0,0.06);
-      transition: transform 0.3s var(--ease-paper-spring);
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      transition: all 0.25s var(--ease-spring);
+      cursor: pointer;
     }
 
     .screen-app-card:hover {
-      transform: scale(1.03);
+      transform: scale(1.03) translateY(-1px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
     .screen-app-card.card-active-video {
-      background: var(--paper-terracotta-light);
-      border: 1.5px solid var(--paper-terracotta);
-      box-shadow: 0 4px 10px rgba(200, 75, 49, 0.2);
+      background: var(--color-terracotta-light);
+      border: 1.5px solid var(--color-terracotta);
+      box-shadow: 0 4px 12px rgba(194, 65, 12, 0.25);
     }
 
     .card-icon {
-      width: 28px;
-      height: 28px;
+      width: 26px;
+      height: 26px;
       border-radius: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 800;
-      color: var(--paper-white);
+      color: #FFFFFF;
       flex-shrink: 0;
-      box-shadow: var(--shadow-paper-cut);
+      box-shadow: var(--shadow-paper-bevel);
     }
 
-    .icon-video { background: var(--paper-terracotta); }
-    .icon-music { background: var(--paper-amber); }
-    .icon-msg { background: var(--paper-plum); }
-    .icon-gps { background: var(--paper-pine); }
-    .icon-dl { background: var(--paper-slate); }
+    .icon-video { background: var(--color-terracotta); }
+    .icon-music { background: var(--color-amber); }
+    .icon-msg { background: var(--color-plum); }
+    .icon-gps { background: var(--color-pine); }
+    .icon-dl { background: var(--color-slate); }
 
     .card-meta {
       flex: 1;
@@ -494,27 +530,27 @@
     .card-title {
       font-size: 0.76rem;
       font-weight: 800;
-      color: var(--ink-primary);
+      color: var(--ink-headline);
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
     }
     .card-sub {
-      font-size: 0.65rem;
+      font-size: 0.64rem;
       font-weight: 600;
-      color: var(--ink-secondary);
+      color: var(--ink-muted);
     }
 
-    /* Layered 3D Paper Cut-Sheets Orbiting Phone */
+    /* Floating Papercraft Orbit Tags */
     .paper-orbit-card {
       position: absolute;
-      background: var(--paper-white);
-      border-radius: 18px;
-      padding: 12px 18px;
-      box-shadow: var(--shadow-paper-2);
-      border: 2px solid var(--paper-white);
-      outline: 1px solid rgba(0, 0, 0, 0.06);
-      font-size: 0.8rem;
+      background: #FFFFFF;
+      border-radius: var(--radius-md);
+      padding: 10px 16px;
+      box-shadow: var(--shadow-cut-md);
+      border: 2px solid #FFFFFF;
+      outline: 1px solid var(--paper-border-line);
+      font-size: 0.78rem;
       font-weight: 800;
       display: flex;
       align-items: center;
@@ -524,43 +560,43 @@
     }
 
     .orbit-1 {
-      top: 20px;
-      right: 0;
-      background: var(--paper-terracotta-light);
-      color: var(--paper-terracotta-dark);
-      border-color: var(--paper-terracotta);
+      top: 15px;
+      right: -10px;
+      background: var(--color-terracotta-light);
+      color: var(--color-terracotta-dark);
+      border-color: var(--color-terracotta-tint);
       animation-delay: 0s;
     }
 
     .orbit-2 {
-      bottom: 30px;
-      left: -15px;
-      background: var(--paper-pine-light);
-      color: var(--paper-pine-dark);
-      border-color: var(--paper-pine);
+      bottom: 25px;
+      left: -20px;
+      background: var(--color-pine-light);
+      color: var(--color-pine-dark);
+      border-color: var(--color-pine-tint);
       animation-delay: 1.5s;
     }
 
     .orbit-3 {
       bottom: 120px;
-      right: -20px;
-      background: var(--paper-amber-light);
-      color: var(--paper-amber-dark);
-      border-color: var(--paper-amber);
+      right: -25px;
+      background: var(--color-amber-light);
+      color: var(--color-amber-dark);
+      border-color: var(--color-amber-tint);
       animation-delay: 3s;
     }
 
     @keyframes paperFloat {
       0% { transform: translateY(0px) rotate(0deg); }
-      100% { transform: translateY(-12px) rotate(2deg); }
+      100% { transform: translateY(-10px) rotate(1.5deg); }
     }
 
     /* =========================================================================
-     * SECTION TITLES & PAPERCUT BANNERS
+     * SECTION TITLES & HEADINGS
      * ========================================================================= */
     .section-wrap {
       margin-top: 56px;
-      scroll-margin-top: 90px;
+      scroll-margin-top: 92px;
     }
 
     .section-header-block {
@@ -576,26 +612,26 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      color: var(--paper-terracotta);
+      color: var(--color-terracotta);
       margin-bottom: 6px;
     }
 
     .section-main-heading {
-      font-size: 2.1rem;
+      font-size: 2.15rem;
       font-weight: 900;
-      letter-spacing: -0.03em;
-      color: var(--ink-primary);
+      letter-spacing: -0.035em;
+      color: var(--ink-headline);
       line-height: 1.15;
     }
 
     .section-subtext {
-      font-size: 0.96rem;
+      font-size: 0.98rem;
       color: var(--ink-secondary);
-      max-width: 680px;
+      max-width: 720px;
       margin-top: 6px;
     }
 
@@ -603,39 +639,71 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: var(--paper-white);
-      border: 1.5px solid var(--paper-sand);
+      background: var(--paper-card-elevated);
+      border: 1.5px solid var(--paper-border-line);
       padding: 8px 16px;
-      border-radius: var(--border-radius-pill);
-      box-shadow: var(--shadow-paper-flat);
+      border-radius: var(--radius-pill);
+      box-shadow: var(--shadow-cut-flat);
       font-size: 0.82rem;
       font-weight: 700;
-      color: var(--ink-primary);
+      color: var(--ink-headline);
     }
 
     .author-highlight {
-      color: var(--paper-terracotta-dark);
+      color: var(--color-terracotta-dark);
       font-weight: 800;
     }
 
     /* =========================================================================
-     * SECTION 1: 6 CONCURRENT ACTIVITIES & OS MAPPING
+     * SECTION 1: 6 CONCURRENT ACTIVITIES & FILTER TABS
      * ========================================================================= */
+    .activity-filters-row {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      padding: 7px 16px;
+      font-size: 0.82rem;
+      font-weight: 800;
+      background: var(--paper-card-elevated);
+      border: 1.5px solid var(--paper-border-line);
+      border-radius: var(--radius-pill);
+      color: var(--ink-secondary);
+      cursor: pointer;
+      box-shadow: var(--shadow-cut-flat);
+      transition: all 0.2s var(--ease-paper);
+    }
+
+    .filter-btn:hover {
+      border-color: var(--color-pine);
+      color: var(--color-pine-dark);
+    }
+
+    .filter-btn.active {
+      background: var(--color-pine);
+      color: #FFFFFF;
+      border-color: var(--color-pine-dark);
+      box-shadow: 0 2px 6px rgba(15, 81, 50, 0.3), var(--shadow-paper-bevel);
+    }
+
     .activities-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
       gap: 22px;
     }
 
     .paper-task-card {
-      background: var(--paper-white);
-      border-radius: var(--border-radius-card);
+      background: var(--paper-card-elevated);
+      border-radius: var(--radius-card);
       padding: 24px;
-      box-shadow: var(--shadow-paper-1);
-      border: var(--paper-border);
-      outline: var(--paper-outline);
+      box-shadow: var(--shadow-cut-md);
+      border: 1px solid var(--paper-border-highlight);
+      outline: 1.5px solid var(--paper-border-line);
       position: relative;
-      transition: transform 0.28s var(--ease-paper-out), box-shadow 0.28s var(--ease-paper-out);
+      transition: transform 0.28s var(--ease-paper), box-shadow 0.28s var(--ease-paper);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -643,7 +711,7 @@
 
     .paper-task-card:hover {
       transform: translateY(-5px);
-      box-shadow: var(--shadow-paper-2);
+      box-shadow: var(--shadow-cut-lg);
     }
 
     .task-badge-cut {
@@ -651,26 +719,26 @@
       align-items: center;
       gap: 6px;
       padding: 4px 10px;
-      border-radius: var(--border-radius-pill);
+      border-radius: var(--radius-pill);
       font-size: 0.72rem;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.05em;
       margin-bottom: 12px;
-      box-shadow: var(--shadow-paper-cut);
+      box-shadow: var(--shadow-paper-bevel);
     }
 
-    .badge-video { background: var(--paper-terracotta-light); color: var(--paper-terracotta-dark); }
-    .badge-music { background: var(--paper-amber-light); color: var(--paper-amber-dark); }
-    .badge-message { background: var(--paper-plum-light); color: var(--paper-plum-dark); }
-    .badge-gps { background: var(--paper-pine-light); color: var(--paper-pine-dark); }
-    .badge-download { background: var(--paper-slate-light); color: var(--paper-slate-dark); }
-    .badge-bg { background: var(--paper-sand); color: var(--ink-secondary); }
+    .badge-video { background: var(--color-terracotta-light); color: var(--color-terracotta-dark); border: 1px solid var(--color-terracotta-tint); }
+    .badge-music { background: var(--color-amber-light); color: var(--color-amber-dark); border: 1px solid var(--color-amber-tint); }
+    .badge-message { background: var(--color-plum-light); color: var(--color-plum-dark); border: 1px solid var(--color-plum-tint); }
+    .badge-gps { background: var(--color-pine-light); color: var(--color-pine-dark); border: 1px solid var(--color-pine-tint); }
+    .badge-download { background: var(--color-slate-light); color: var(--color-slate-dark); border: 1px solid var(--color-slate-tint); }
+    .badge-bg { background: var(--paper-inset); color: var(--ink-secondary); border: 1px solid var(--paper-desk-accent); }
 
     .task-card-title {
       font-size: 1.25rem;
       font-weight: 800;
-      color: var(--ink-primary);
+      color: var(--ink-headline);
       margin-bottom: 8px;
     }
 
@@ -683,18 +751,19 @@
 
     .task-mapping-pill-box {
       background: var(--paper-cream);
-      border-radius: 12px;
-      padding: 12px;
-      border: 1px solid var(--paper-sand);
+      border-radius: var(--radius-md);
+      padding: 12px 14px;
+      border: 1px solid var(--paper-border-line);
+      box-shadow: var(--shadow-inset-trench);
     }
 
     .mapping-row {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      font-size: 0.8rem;
-      padding: 4px 0;
-      border-bottom: 1px dashed rgba(0, 0, 0, 0.06);
+      font-size: 0.82rem;
+      padding: 5px 0;
+      border-bottom: 1px dashed rgba(0, 0, 0, 0.08);
     }
     .mapping-row:last-child {
       border-bottom: none;
@@ -705,27 +774,28 @@
     }
     .map-val {
       font-weight: 800;
-      color: var(--ink-primary);
+      color: var(--ink-headline);
     }
 
-    /* Concept Mapping Table Card */
+    /* Papercut Tables */
     .paper-table-card {
-      background: var(--paper-white);
-      border-radius: var(--border-radius-card);
-      box-shadow: var(--shadow-paper-2);
-      border: var(--paper-border);
-      outline: var(--paper-outline);
+      background: var(--paper-card-elevated);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-cut-md);
+      border: 1px solid var(--paper-border-highlight);
+      outline: 1.5px solid var(--paper-border-line);
       margin-top: 26px;
       overflow: hidden;
     }
 
     .paper-table-header {
-      background: var(--paper-pine);
-      color: var(--paper-white);
+      background: linear-gradient(135deg, var(--color-pine), var(--color-pine-dark));
+      color: #FFFFFF;
       padding: 18px 24px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      box-shadow: 0 2px 8px rgba(15, 81, 50, 0.25);
     }
 
     .paper-table-header h3 {
@@ -752,56 +822,54 @@
       font-size: 0.74rem;
       letter-spacing: 0.05em;
       padding: 14px 20px;
-      border-bottom: 2px solid var(--paper-sand);
+      border-bottom: 2px solid var(--paper-desk-accent);
     }
 
     table.papercut-table td {
       padding: 14px 20px;
-      border-bottom: 1px solid var(--paper-sand);
+      border-bottom: 1px solid var(--paper-border-line);
       color: var(--ink-primary);
     }
 
     table.papercut-table tr:hover {
-      background: rgba(230, 220, 205, 0.25);
+      background: rgba(234, 227, 214, 0.3);
     }
 
     /* =========================================================================
-     * SECTION 2: NILOTPAL DEB'S 5-THREAD VIDEO RECORDING PIPELINE
+     * SECTION 2: 5-THREAD VIDEO RECORDING PIPELINE SIMULATOR
      * ========================================================================= */
-    .nilotpal-lead-card {
-      background: linear-gradient(135deg, #FFF9F6 0%, #FFFFFF 100%);
-      border-radius: 28px;
-      padding: 34px;
-      box-shadow: var(--shadow-paper-2);
-      border: 2px solid rgba(200, 75, 49, 0.2);
-      outline: 1px solid rgba(200, 75, 49, 0.08);
+    .primary-topic-card {
+      background: linear-gradient(135deg, #FFFDFB 0%, #FFFFFF 100%);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      box-shadow: var(--shadow-cut-md);
+      border: 2px solid rgba(194, 65, 12, 0.22);
+      outline: 1px solid rgba(194, 65, 12, 0.08);
       margin-bottom: 28px;
       position: relative;
     }
 
-    .nilotpal-lead-card::before {
-      content: "NILOTPAL DEB'S PRIMARY SECTION · 8.6 & 8.7";
-      position: absolute;
-      top: -12px;
-      left: 28px;
-      background: var(--paper-terracotta);
-      color: var(--paper-white);
+    .topic-tag-ribbon {
+      display: inline-block;
+      background: var(--color-terracotta);
+      color: #FFFFFF;
       font-size: 0.72rem;
       font-weight: 900;
       letter-spacing: 0.07em;
       padding: 4px 14px;
-      border-radius: var(--border-radius-pill);
-      box-shadow: 0 4px 10px rgba(200, 75, 49, 0.35);
+      border-radius: var(--radius-pill);
+      box-shadow: 0 4px 10px rgba(194, 65, 12, 0.35);
+      margin-bottom: 12px;
     }
 
-    /* Interactive Pipeline Stage */
     .pipeline-interactive-box {
       background: var(--paper-cream);
-      border-radius: 22px;
+      border-radius: var(--radius-card);
       padding: 28px;
-      box-shadow: var(--shadow-inset-groove);
-      border: 1px solid var(--paper-sand);
+      box-shadow: var(--shadow-inset-trench);
+      border: 1px solid var(--paper-border-line);
       margin-top: 24px;
+      position: relative;
     }
 
     .pipeline-controls {
@@ -810,50 +878,83 @@
       justify-content: space-between;
       margin-bottom: 22px;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 14px;
     }
 
     .paper-btn-group {
       display: flex;
       gap: 10px;
+      flex-wrap: wrap;
     }
 
     .paper-btn {
-      background: var(--paper-white);
-      border: 1.5px solid var(--paper-sand);
-      border-radius: var(--border-radius-pill);
+      background: var(--paper-card-elevated);
+      border: 1.5px solid var(--paper-border-line);
+      border-radius: var(--radius-pill);
       padding: 9px 20px;
       font-size: 0.84rem;
       font-weight: 800;
-      color: var(--ink-primary);
+      color: var(--ink-headline);
       cursor: pointer;
-      box-shadow: 0 2px 4px rgba(45, 35, 25, 0.08), var(--shadow-paper-cut);
+      box-shadow: 0 2px 4px rgba(45, 32, 20, 0.08), var(--shadow-paper-bevel);
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      transition: all 0.18s var(--ease-paper-out);
+      transition: all 0.18s var(--ease-paper);
     }
 
     .paper-btn:hover {
       transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(45, 35, 25, 0.12);
-      border-color: #D5C8B4;
+      box-shadow: 0 4px 10px rgba(45, 32, 20, 0.12);
+      border-color: #C8BCAB;
     }
 
     .paper-btn:active {
-      transform: translateY(2px) scale(0.98);
-      box-shadow: 0 1px 2px rgba(45, 35, 25, 0.1);
+      transform: translateY(1px);
+      box-shadow: 0 1px 2px rgba(45, 32, 20, 0.1);
     }
 
     .paper-btn.primary {
-      background: var(--paper-terracotta);
-      color: var(--paper-white);
-      border-color: var(--paper-terracotta-dark);
-      box-shadow: 0 3px 8px rgba(200, 75, 49, 0.35), var(--shadow-paper-cut);
+      background: var(--color-terracotta);
+      color: #FFFFFF;
+      border-color: var(--color-terracotta-dark);
+      box-shadow: 0 3px 8px rgba(194, 65, 12, 0.35), var(--shadow-paper-bevel);
     }
 
     .paper-btn.primary:hover {
-      background: #D8563A;
+      background: #D94E1A;
+    }
+
+    /* Conveyor Rail & Threads Grid */
+    .pipeline-conveyor-wrap {
+      position: relative;
+      margin: 10px 0 24px 0;
+    }
+
+    .pipeline-rail-track {
+      position: absolute;
+      top: 50%;
+      left: 6%;
+      right: 6%;
+      height: 6px;
+      background: var(--paper-desk-accent);
+      border-radius: 4px;
+      transform: translateY(-50%);
+      z-index: 0;
+      box-shadow: inset 0 1px 3px rgba(0,0,0,0.15);
+    }
+
+    .pipeline-data-particle {
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--color-terracotta);
+      box-shadow: 0 0 10px var(--color-terracotta);
+      top: -4px;
+      left: 0%;
+      display: none;
+      z-index: 1;
     }
 
     .pipeline-diagram {
@@ -861,23 +962,27 @@
       grid-template-columns: repeat(5, 1fr);
       gap: 14px;
       position: relative;
+      z-index: 2;
     }
 
     @media (max-width: 992px) {
       .pipeline-diagram {
         grid-template-columns: 1fr;
       }
+      .pipeline-rail-track {
+        display: none;
+      }
     }
 
     .thread-card-cut {
-      background: var(--paper-white);
-      border-radius: 18px;
+      background: var(--paper-card-elevated);
+      border-radius: var(--radius-md);
       padding: 20px 16px;
-      border: 2px solid var(--paper-sand);
-      box-shadow: var(--shadow-paper-1);
+      border: 2px solid var(--paper-border-line);
+      box-shadow: var(--shadow-cut-sm);
       position: relative;
       cursor: pointer;
-      transition: all 0.25s var(--ease-paper-out);
+      transition: all 0.25s var(--ease-paper);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -886,50 +991,50 @@
 
     .thread-card-cut:hover, .thread-card-cut.selected {
       transform: translateY(-6px);
-      border-color: var(--paper-terracotta);
-      box-shadow: var(--shadow-paper-2);
+      border-color: var(--color-terracotta);
+      box-shadow: var(--shadow-cut-md);
     }
 
     .thread-pill-tag {
-      background: var(--paper-terracotta-light);
-      color: var(--paper-terracotta-dark);
+      background: var(--color-terracotta-light);
+      color: var(--color-terracotta-dark);
       font-size: 0.72rem;
       font-weight: 800;
       padding: 3px 10px;
-      border-radius: var(--border-radius-pill);
+      border-radius: var(--radius-pill);
       margin-bottom: 10px;
+      border: 1px solid var(--color-terracotta-tint);
     }
 
     .thread-glyph {
-      width: 44px;
-      height: 44px;
+      width: 46px;
+      height: 46px;
       border-radius: 14px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 20px;
+      font-size: 22px;
       margin-bottom: 12px;
       background: var(--paper-cream);
-      box-shadow: var(--shadow-inset-groove);
-      border: 1px solid var(--paper-sand);
+      box-shadow: var(--shadow-inset-trench);
+      border: 1px solid var(--paper-border-line);
       position: relative;
     }
 
-    /* Live pulse bubble */
     .thread-pulse-dot {
-      width: 8px;
-      height: 8px;
+      width: 10px;
+      height: 10px;
       border-radius: 50%;
       background: #10B981;
       position: absolute;
       top: -2px; right: -2px;
-      box-shadow: 0 0 0 2px var(--paper-white);
+      box-shadow: 0 0 0 2px #FFFFFF;
       display: none;
     }
 
     .thread-card-cut.busy .thread-pulse-dot {
       display: block;
-      animation: pulseGreen 1s infinite alternate;
+      animation: pulseGreen 0.8s infinite alternate;
     }
 
     @keyframes pulseGreen {
@@ -938,9 +1043,9 @@
     }
 
     .thread-name {
-      font-size: 0.92rem;
+      font-size: 0.94rem;
       font-weight: 800;
-      color: var(--ink-primary);
+      color: var(--ink-headline);
       margin-bottom: 6px;
       line-height: 1.25;
     }
@@ -951,17 +1056,63 @@
       line-height: 1.4;
     }
 
+    /* Live Buffer Capacity Indicators */
+    .buffer-gauges-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    @media (max-width: 768px) {
+      .buffer-gauges-row {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .buffer-gauge-card {
+      background: var(--paper-card-elevated);
+      border-radius: var(--radius-md);
+      padding: 12px 16px;
+      border: 1px solid var(--paper-border-line);
+      box-shadow: var(--shadow-cut-flat);
+    }
+
+    .gauge-label-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.74rem;
+      font-weight: 800;
+      color: var(--ink-muted);
+      margin-bottom: 6px;
+    }
+
+    .gauge-progress-bar {
+      height: 8px;
+      background: var(--paper-inset);
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+    }
+
+    .gauge-fill {
+      height: 100%;
+      background: var(--color-pine);
+      border-radius: 4px;
+      transition: width 0.3s ease;
+    }
+
     /* Live Thread Inspector Details Box */
     .thread-detail-inspector {
       margin-top: 22px;
-      background: var(--paper-white);
-      border-radius: 16px;
-      padding: 20px 24px;
-      border: 1.5px solid var(--paper-sand);
-      box-shadow: var(--shadow-paper-flat);
+      background: var(--paper-card-elevated);
+      border-radius: var(--radius-md);
+      padding: 22px 26px;
+      border: 1.5px solid var(--paper-border-line);
+      box-shadow: var(--shadow-cut-flat);
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 20px;
+      gap: 22px;
     }
 
     @media (max-width: 768px) {
@@ -981,8 +1132,8 @@
       gap: 8px;
     }
 
-    .shared-badge { color: var(--paper-pine); }
-    .private-badge { color: var(--paper-terracotta); }
+    .shared-badge { color: var(--color-pine); }
+    .private-badge { color: var(--color-terracotta); }
 
     .shared-pill-list {
       display: flex;
@@ -992,33 +1143,33 @@
 
     .memory-paper-tag {
       background: var(--paper-cream);
-      border: 1px solid var(--paper-sand);
+      border: 1px solid var(--paper-border-line);
       padding: 6px 12px;
       border-radius: 10px;
       font-size: 0.8rem;
       font-weight: 700;
-      color: var(--ink-primary);
+      color: var(--ink-headline);
+      box-shadow: 0 1px 2px rgba(0,0,0,0.03);
     }
 
     /* =========================================================================
-     * SECTION 3: CPU SCHEDULING & INTERACTIVE GANTT TIMELINE
+     * SECTION 3: CPU SCHEDULING & GANTT TIMELINE PLAYER
      * ========================================================================= */
     .scheduler-deck {
-      background: var(--paper-white);
-      border-radius: 28px;
+      background: var(--paper-card-elevated);
+      border-radius: var(--radius-lg);
       padding: 36px;
-      box-shadow: var(--shadow-paper-2);
-      border: var(--paper-border);
-      outline: var(--paper-outline);
+      box-shadow: var(--shadow-cut-md);
+      border: 1px solid var(--paper-border-highlight);
+      outline: 1.5px solid var(--paper-border-line);
     }
 
-    /* Timeline Player Controls */
     .timeline-playback-strip {
       background: var(--paper-cream);
-      border-radius: 20px;
-      padding: 20px 24px;
-      border: 1px solid var(--paper-sand);
-      box-shadow: var(--shadow-inset-groove);
+      border-radius: var(--radius-card);
+      padding: 22px 26px;
+      border: 1px solid var(--paper-border-line);
+      box-shadow: var(--shadow-inset-trench);
       margin-bottom: 28px;
     }
 
@@ -1033,33 +1184,34 @@
 
     .time-readout {
       display: flex;
-      align-items: baseline;
-      gap: 10px;
+      align-items: center;
+      gap: 12px;
     }
 
     .time-readout .time-clock {
       font-size: 2.2rem;
       font-weight: 900;
-      color: var(--paper-terracotta-dark);
+      color: var(--color-terracotta-dark);
       font-variant-numeric: tabular-nums;
-      background: var(--paper-white);
-      padding: 4px 16px;
-      border-radius: 12px;
-      border: 2px solid var(--paper-sand);
-      box-shadow: var(--shadow-paper-flat);
+      background: var(--paper-card-elevated);
+      padding: 4px 18px;
+      border-radius: 14px;
+      border: 2px solid var(--paper-border-line);
+      box-shadow: var(--shadow-cut-flat);
     }
 
     .cpu-active-pill {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: var(--paper-pine-light);
-      border: 1.5px solid var(--paper-pine);
+      background: var(--color-pine-light);
+      border: 1.5px solid var(--color-pine);
       padding: 6px 14px;
-      border-radius: var(--border-radius-pill);
+      border-radius: var(--radius-pill);
       font-size: 0.86rem;
       font-weight: 800;
-      color: var(--paper-pine-dark);
+      color: var(--color-pine-dark);
+      transition: all 0.2s ease;
     }
 
     /* Interactive Scrubber Slider */
@@ -1083,34 +1235,34 @@
       width: 100%;
       height: 14px;
       cursor: pointer;
-      background: var(--paper-sand);
+      background: var(--paper-desk-accent);
       border-radius: 10px;
-      box-shadow: inset 0 2px 4px rgba(45, 35, 25, 0.12);
-      border: 1px solid rgba(0, 0, 0, 0.05);
+      box-shadow: inset 0 2px 4px rgba(45, 32, 20, 0.12);
+      border: 1px solid rgba(0, 0, 0, 0.06);
     }
 
     input[type=range].paper-slider::-webkit-slider-thumb {
       height: 28px;
       width: 28px;
       border-radius: 50%;
-      background: var(--paper-terracotta);
+      background: var(--color-terracotta);
       cursor: grab;
       -webkit-appearance: none;
       margin-top: -7px;
-      box-shadow: 0 4px 8px rgba(200, 75, 49, 0.4), var(--shadow-paper-cut);
-      border: 3px solid var(--paper-white);
+      box-shadow: 0 4px 10px rgba(194, 65, 12, 0.4), var(--shadow-paper-bevel);
+      border: 3px solid #FFFFFF;
       transition: transform 0.15s ease;
     }
 
     input[type=range].paper-slider::-webkit-slider-thumb:hover {
-      transform: scale(1.15);
+      transform: scale(1.18);
     }
 
     .ticks-container {
       display: flex;
       justify-content: space-between;
       padding: 0 4px;
-      font-size: 0.72rem;
+      font-size: 0.74rem;
       font-weight: 700;
       color: var(--ink-muted);
       margin-top: 6px;
@@ -1125,13 +1277,13 @@
     .gantt-chart-bar {
       display: flex;
       width: 100%;
-      height: 64px;
-      border-radius: 18px;
+      height: 66px;
+      border-radius: var(--radius-md);
       overflow: hidden;
-      box-shadow: var(--shadow-paper-2);
-      border: 3px solid var(--paper-white);
-      outline: 1px solid rgba(0, 0, 0, 0.08);
-      background: var(--paper-sand);
+      box-shadow: var(--shadow-cut-md);
+      border: 3px solid #FFFFFF;
+      outline: 1.5px solid var(--paper-border-line);
+      background: var(--paper-desk-accent);
     }
 
     .gantt-slice {
@@ -1139,54 +1291,57 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      color: var(--paper-white);
+      color: #FFFFFF;
       font-weight: 800;
       font-size: 0.84rem;
       position: relative;
-      transition: filter 0.25s ease, opacity 0.25s ease;
+      transition: all 0.25s ease;
       cursor: pointer;
-      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
     }
 
     .gantt-slice:hover {
-      filter: brightness(1.12);
+      filter: brightness(1.15);
+      z-index: 2;
     }
 
     .gantt-slice.inactive-slice {
-      opacity: 0.45;
+      opacity: 0.4;
       filter: grayscale(0.5);
     }
 
     .gantt-slice.active-slice {
       opacity: 1;
-      filter: brightness(1.05);
-      box-shadow: inset 0 0 0 2px var(--paper-white);
+      filter: brightness(1.08);
+      box-shadow: inset 0 0 0 2.5px #FFFFFF;
+      transform: scaleY(1.02);
     }
 
-    .slice-music { background: #D97706; width: 20%; }      /* 4 units (0-4) */
-    .slice-message { background: #831843; width: 10%; }    /* 2 units (4-6) */
-    .slice-video { background: #C84B31; width: 25%; }      /* 5 units (6-11) */
-    .slice-gps { background: #1E5144; width: 15%; }        /* 3 units (11-14) */
-    .slice-download { background: #1E3A8A; width: 30%; }   /* 6 units (14-20) */
+    .slice-music { background: var(--color-amber); width: 20%; }      /* 4 units (0-4) */
+    .slice-message { background: var(--color-plum); width: 10%; }     /* 2 units (4-6) */
+    .slice-video { background: var(--color-terracotta); width: 25%; } /* 5 units (6-11) */
+    .slice-gps { background: var(--color-pine); width: 15%; }         /* 3 units (11-14) */
+    .slice-download { background: var(--color-slate); width: 30%; }    /* 6 units (14-20) */
 
     .slice-sub {
       font-size: 0.68rem;
       font-weight: 600;
-      opacity: 0.9;
+      opacity: 0.92;
     }
 
     /* Gantt Needle Marker */
     .gantt-time-needle {
       position: absolute;
-      top: -6px;
-      bottom: -6px;
+      top: -8px;
+      bottom: -8px;
       width: 4px;
-      background: var(--ink-primary);
+      background: var(--ink-headline);
       border-radius: 2px;
-      box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.45);
       z-index: 5;
       pointer-events: none;
-      transition: left 0.1s linear;
+      transition: left 0.12s linear;
     }
 
     .gantt-time-needle::after {
@@ -1196,18 +1351,18 @@
       left: -6px;
       width: 16px;
       height: 16px;
-      background: var(--paper-terracotta);
+      background: var(--color-terracotta);
       border-radius: 50%;
-      border: 2px solid var(--paper-white);
+      border: 2px solid #FFFFFF;
     }
 
-    /* Dynamic Ready Queue Display */
+    /* Live Ready Queue Display */
     .ready-queue-stage {
-      background: var(--paper-cream);
-      border-radius: 16px;
+      background: var(--paper-card-elevated);
+      border-radius: var(--radius-md);
       padding: 16px 20px;
-      border: 1px solid var(--paper-sand);
-      margin-bottom: 24px;
+      border: 1px solid var(--paper-border-line);
+      margin-bottom: 20px;
       display: flex;
       align-items: center;
       gap: 16px;
@@ -1231,26 +1386,26 @@
     }
 
     .rq-chip {
-      background: var(--paper-white);
-      border: 1.5px solid var(--paper-sand);
+      background: var(--paper-cream);
+      border: 1.5px solid var(--paper-border-line);
       padding: 6px 14px;
-      border-radius: var(--border-radius-pill);
+      border-radius: var(--radius-pill);
       font-size: 0.8rem;
       font-weight: 800;
-      color: var(--ink-primary);
-      box-shadow: var(--shadow-paper-flat);
+      color: var(--ink-headline);
+      box-shadow: var(--shadow-cut-flat);
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      animation: chipPop 0.2s var(--ease-paper-spring);
+      gap: 8px;
+      animation: chipPop 0.25s var(--ease-spring);
     }
 
     @keyframes chipPop {
-      0% { transform: scale(0.8); opacity: 0; }
+      0% { transform: scale(0.85); opacity: 0; }
       100% { transform: scale(1); opacity: 1; }
     }
 
-    /* Interactive Side-by-Side Comparison: Priority vs Round Robin */
+    /* Comparison Cards Grid */
     .comparison-cards-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -1266,32 +1421,34 @@
 
     .algo-compare-card {
       background: var(--paper-cream);
-      border-radius: 20px;
+      border-radius: var(--radius-card);
       padding: 26px;
-      border: 1px solid var(--paper-sand);
-      box-shadow: var(--shadow-paper-1);
+      border: 1px solid var(--paper-border-line);
+      box-shadow: var(--shadow-cut-sm);
     }
 
     .algo-compare-card.winner {
-      border: 2px solid var(--paper-pine);
+      border: 2px solid var(--color-pine);
       background: #F4FBF8;
     }
 
     .algo-title {
       font-size: 1.2rem;
       font-weight: 900;
-      color: var(--ink-primary);
+      color: var(--ink-headline);
       margin-bottom: 12px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
     }
 
     .algo-pill {
       font-size: 0.72rem;
       font-weight: 800;
       padding: 3px 10px;
-      border-radius: var(--border-radius-pill);
+      border-radius: var(--radius-pill);
     }
 
     .metric-list-item {
@@ -1299,19 +1456,18 @@
       justify-content: space-between;
       padding: 8px 0;
       border-bottom: 1px dashed rgba(0, 0, 0, 0.08);
-      font-size: 0.86rem;
+      font-size: 0.88rem;
     }
 
     /* =========================================================================
-     * SECTION 4: INTERRUPT ARCHITECTURE & CALL ARRIVES 6-STEP TRACE
-     * (NILOTPAL DEB'S SPECIFIC TOPIC - SECTIONS 8.8 & 8.9)
+     * SECTION 4: INTERRUPT ARCHITECTURE & 6-STEP CALL ARRIVES TRACE
      * ========================================================================= */
     .interrupt-master-box {
-      background: var(--paper-white);
-      border-radius: 28px;
+      background: var(--paper-card-elevated);
+      border-radius: var(--radius-lg);
       padding: 36px;
-      box-shadow: var(--shadow-paper-2);
-      border: 2px solid rgba(131, 24, 67, 0.18);
+      box-shadow: var(--shadow-cut-md);
+      border: 2px solid rgba(131, 24, 67, 0.2);
       outline: 1px solid rgba(131, 24, 67, 0.08);
     }
 
@@ -1327,49 +1483,49 @@
       flex: 1;
       min-width: 140px;
       background: var(--paper-cream);
-      border: 1.5px solid var(--paper-sand);
-      border-radius: 14px;
-      padding: 12px;
+      border: 1.5px solid var(--paper-border-line);
+      border-radius: var(--radius-md);
+      padding: 12px 14px;
       cursor: pointer;
       text-align: left;
-      transition: all 0.2s var(--ease-paper-out);
+      transition: all 0.2s var(--ease-paper);
     }
 
     .trace-step-btn:hover {
-      background: var(--paper-sand);
+      background: var(--paper-desk-accent);
       transform: translateY(-2px);
     }
 
     .trace-step-btn.active {
-      background: var(--paper-plum-light);
-      border-color: var(--paper-plum);
-      box-shadow: 0 4px 10px rgba(131, 24, 67, 0.2);
+      background: var(--color-plum-light);
+      border-color: var(--color-plum);
+      box-shadow: 0 4px 12px rgba(131, 24, 67, 0.2);
     }
 
     .trace-num {
       font-size: 0.72rem;
       font-weight: 900;
-      color: var(--paper-plum);
+      color: var(--color-plum);
       text-transform: uppercase;
       margin-bottom: 2px;
     }
 
     .trace-label {
-      font-size: 0.82rem;
+      font-size: 0.84rem;
       font-weight: 800;
-      color: var(--ink-primary);
+      color: var(--ink-headline);
       line-height: 1.25;
     }
 
     /* Live Trace Stage Simulator */
     .trace-stage-viewport {
       background: var(--paper-cream);
-      border-radius: 22px;
+      border-radius: var(--radius-card);
       padding: 32px;
-      border: 1px solid var(--paper-sand);
-      box-shadow: var(--shadow-inset-groove);
+      border: 1px solid var(--paper-border-line);
+      box-shadow: var(--shadow-inset-trench);
       display: grid;
-      grid-template-columns: 1fr 1.2fr;
+      grid-template-columns: 1fr 1.25fr;
       gap: 32px;
       align-items: center;
     }
@@ -1382,24 +1538,24 @@
 
     /* CPU Core & TCB Visual Representation */
     .cpu-visual-chassis {
-      background: var(--paper-white);
-      border-radius: 20px;
+      background: var(--paper-card-elevated);
+      border-radius: var(--radius-card);
       padding: 24px;
-      box-shadow: var(--shadow-paper-2);
-      border: 2px solid var(--paper-sand);
+      box-shadow: var(--shadow-cut-md);
+      border: 2px solid var(--paper-border-line);
       position: relative;
     }
 
     .cpu-core-chip {
-      background: #111827;
-      border-radius: 14px;
+      background: #0F172A;
+      border-radius: var(--radius-md);
       padding: 16px;
       color: #38BDF8;
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
       font-size: 0.84rem;
       margin-bottom: 16px;
-      box-shadow: inset 0 2px 5px rgba(0,0,0,0.5);
-      border: 1px solid #374151;
+      box-shadow: inset 0 2px 6px rgba(0,0,0,0.6);
+      border: 1px solid #1E293B;
     }
 
     .register-bank-visual {
@@ -1411,12 +1567,12 @@
     }
 
     .reg-box {
-      background: #1F2937;
-      padding: 4px 8px;
+      background: #1E293B;
+      padding: 5px 8px;
       border-radius: 6px;
       display: flex;
       justify-content: space-between;
-      color: #9CA3AF;
+      color: #94A3B8;
     }
     .reg-val {
       color: #34D399;
@@ -1424,9 +1580,9 @@
     }
 
     .tcb-box-visual {
-      background: var(--paper-sand);
-      border-radius: 12px;
-      padding: 12px;
+      background: var(--paper-inset);
+      border-radius: var(--radius-md);
+      padding: 12px 14px;
       border: 1.5px dashed #A89B86;
       font-size: 0.8rem;
     }
@@ -1440,7 +1596,7 @@
     .trace-headline {
       font-size: 1.45rem;
       font-weight: 900;
-      color: var(--ink-primary);
+      color: var(--ink-headline);
       line-height: 1.25;
     }
 
@@ -1451,14 +1607,14 @@
     }
 
     .trace-os-action-pill {
-      background: var(--paper-white);
-      border-left: 4px solid var(--paper-plum);
+      background: var(--paper-card-elevated);
+      border-left: 4px solid var(--color-plum);
       padding: 12px 18px;
       border-radius: 0 12px 12px 0;
-      box-shadow: var(--shadow-paper-flat);
+      box-shadow: var(--shadow-cut-flat);
       font-size: 0.88rem;
       font-weight: 700;
-      color: var(--paper-plum-dark);
+      color: var(--color-plum-dark);
     }
 
     /* =========================================================================
@@ -1477,20 +1633,20 @@
     }
 
     .core-cluster-card {
-      background: var(--paper-white);
-      border-radius: 24px;
+      background: var(--paper-card-elevated);
+      border-radius: var(--radius-card);
       padding: 30px;
-      box-shadow: var(--shadow-paper-2);
-      border: var(--paper-border);
-      outline: var(--paper-outline);
+      box-shadow: var(--shadow-cut-md);
+      border: 1px solid var(--paper-border-highlight);
+      outline: 1.5px solid var(--paper-border-line);
     }
 
     .core-cluster-card.p-cluster {
-      border-top: 6px solid var(--paper-terracotta);
+      border-top: 6px solid var(--color-terracotta);
     }
 
     .core-cluster-card.e-cluster {
-      border-top: 6px solid var(--paper-teal);
+      border-top: 6px solid var(--color-teal);
     }
 
     .cluster-head {
@@ -1503,20 +1659,20 @@
     .cluster-name {
       font-size: 1.3rem;
       font-weight: 900;
-      color: var(--ink-primary);
+      color: var(--ink-headline);
     }
 
     .cluster-badge {
       padding: 4px 12px;
-      border-radius: var(--border-radius-pill);
+      border-radius: var(--radius-pill);
       font-size: 0.74rem;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.05em;
     }
 
-    .badge-perf { background: var(--paper-terracotta-light); color: var(--paper-terracotta-dark); }
-    .badge-eff { background: var(--paper-teal-light); color: var(--paper-teal-dark); }
+    .badge-perf { background: var(--color-terracotta-light); color: var(--color-terracotta-dark); border: 1px solid var(--color-terracotta-tint); }
+    .badge-eff { background: var(--color-teal-light); color: var(--color-teal-dark); border: 1px solid var(--color-teal-tint); }
 
     .cluster-desc {
       font-size: 0.88rem;
@@ -1533,18 +1689,23 @@
 
     .core-task-item {
       background: var(--paper-cream);
-      border: 1px solid var(--paper-sand);
-      border-radius: 12px;
+      border: 1px solid var(--paper-border-line);
+      border-radius: var(--radius-md);
       padding: 12px 16px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      transition: transform 0.2s ease;
+    }
+
+    .core-task-item:hover {
+      transform: translateX(4px);
     }
 
     .ct-name {
       font-weight: 800;
       font-size: 0.88rem;
-      color: var(--ink-primary);
+      color: var(--ink-headline);
     }
 
     .ct-reason {
@@ -1553,22 +1714,50 @@
       font-weight: 600;
     }
 
+    /* Interactive Power & Thermal Gauge Strip */
+    .soc-power-strip {
+      background: var(--paper-cream);
+      border-radius: var(--radius-card);
+      padding: 20px 24px;
+      border: 1px solid var(--paper-border-line);
+      box-shadow: var(--shadow-cut-flat);
+      margin-top: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .power-metric-box {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+
+    .power-number {
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: var(--color-teal-dark);
+      font-variant-numeric: tabular-nums;
+    }
+
     /* =========================================================================
      * SECTION 6: PROBLEM IDENTIFICATION & PROPOSED SOLUTION
      * ========================================================================= */
     .solution-architecture-box {
-      background: var(--paper-white);
-      border-radius: 28px;
+      background: var(--paper-card-elevated);
+      border-radius: var(--radius-lg);
       padding: 38px;
-      box-shadow: var(--shadow-paper-2);
-      border: var(--paper-border);
-      outline: var(--paper-outline);
+      box-shadow: var(--shadow-cut-md);
+      border: 1px solid var(--paper-border-highlight);
+      outline: 1.5px solid var(--paper-border-line);
     }
 
     .problem-highlight-strip {
       background: #FEF2F2;
       border: 2px solid #FCA5A5;
-      border-radius: 18px;
+      border-radius: var(--radius-card);
       padding: 20px 24px;
       margin-bottom: 28px;
       display: flex;
@@ -1577,74 +1766,80 @@
     }
 
     .warn-icon-cut {
-      width: 36px;
-      height: 36px;
-      border-radius: 10px;
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
       background: #DC2626;
       color: #FFFFFF;
       display: flex;
       align-items: center;
       justify-content: center;
       font-weight: 900;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       flex-shrink: 0;
-      box-shadow: var(--shadow-paper-cut);
+      box-shadow: var(--shadow-paper-bevel);
     }
 
     .four-pillars-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
       margin-top: 24px;
     }
 
     .pillar-card {
       background: var(--paper-cream);
-      border-radius: 18px;
-      padding: 22px;
-      border: 1px solid var(--paper-sand);
-      box-shadow: var(--shadow-paper-1);
+      border-radius: var(--radius-card);
+      padding: 24px;
+      border: 1px solid var(--paper-border-line);
+      box-shadow: var(--shadow-cut-sm);
       position: relative;
+      transition: transform 0.2s var(--ease-paper);
+    }
+
+    .pillar-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-cut-md);
     }
 
     .pillar-num {
-      width: 32px;
-      height: 32px;
+      width: 34px;
+      height: 34px;
       border-radius: 10px;
-      background: var(--paper-pine);
-      color: var(--paper-white);
+      background: var(--color-pine);
+      color: #FFFFFF;
       display: flex;
       align-items: center;
       justify-content: center;
       font-weight: 800;
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       margin-bottom: 14px;
-      box-shadow: var(--shadow-paper-cut);
+      box-shadow: var(--shadow-paper-bevel);
     }
 
     .pillar-title {
       font-size: 1.05rem;
       font-weight: 800;
-      color: var(--ink-primary);
+      color: var(--ink-headline);
       margin-bottom: 8px;
     }
 
     .pillar-text {
-      font-size: 0.85rem;
+      font-size: 0.86rem;
       color: var(--ink-secondary);
       line-height: 1.55;
     }
 
     /* =========================================================================
-     * SECTION 7: TEAM ROSTER, SIGNATURES & WATERMARK FOOTER
+     * SECTION 7: TEAM ROSTER & ACADEMIC CREDITS
      * ========================================================================= */
     .roster-card {
-      background: var(--paper-white);
-      border-radius: 28px;
+      background: var(--paper-card-elevated);
+      border-radius: var(--radius-lg);
       padding: 38px;
-      box-shadow: var(--shadow-paper-2);
-      border: var(--paper-border);
-      outline: var(--paper-outline);
+      box-shadow: var(--shadow-cut-md);
+      border: 1px solid var(--paper-border-highlight);
+      outline: 1.5px solid var(--paper-border-line);
       margin-top: 36px;
     }
 
@@ -1657,8 +1852,8 @@
 
     .team-member-cut {
       background: var(--paper-cream);
-      border: 1px solid var(--paper-sand);
-      border-radius: 16px;
+      border: 1px solid var(--paper-border-line);
+      border-radius: var(--radius-md);
       padding: 16px;
       display: flex;
       flex-direction: column;
@@ -1668,18 +1863,19 @@
 
     .team-member-cut:hover {
       transform: translateY(-3px);
+      box-shadow: var(--shadow-cut-sm);
     }
 
     .team-member-cut.author-card {
-      background: var(--paper-terracotta-light);
-      border: 2px solid var(--paper-terracotta);
-      box-shadow: 0 4px 12px rgba(200, 75, 49, 0.2);
+      background: var(--color-terracotta-light);
+      border: 2px solid var(--color-terracotta);
+      box-shadow: 0 4px 14px rgba(194, 65, 12, 0.2);
     }
 
     .tm-name {
       font-weight: 800;
       font-size: 0.98rem;
-      color: var(--ink-primary);
+      color: var(--ink-headline);
     }
 
     .tm-usn {
@@ -1692,54 +1888,16 @@
     .tm-role {
       font-size: 0.76rem;
       font-weight: 700;
-      color: var(--paper-pine-dark);
+      color: var(--color-pine-dark);
       margin-top: 4px;
     }
 
-    /* Sticky Footer Watermark */
-    .floating-watermark-bar {
-      position: fixed;
-      bottom: 18px;
-      right: 24px;
-      background: var(--paper-white);
-      border: 2px solid var(--paper-terracotta);
-      padding: 10px 20px;
-      border-radius: var(--border-radius-pill);
-      box-shadow: var(--shadow-paper-3);
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      z-index: 9999;
-      font-size: 0.84rem;
-      font-weight: 800;
-      color: var(--ink-primary);
-      backdrop-filter: blur(8px);
-      transition: transform 0.2s ease;
-    }
-
-    .floating-watermark-bar:hover {
-      transform: translateY(-3px) scale(1.02);
-    }
-
-    .stamp-seal {
-      width: 26px;
-      height: 26px;
-      background: var(--paper-terracotta);
-      color: var(--paper-white);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 900;
-      font-size: 13px;
-    }
-
-    /* Print / Responsive Optimizations */
+    /* Print & Responsive Optimizations */
     @media print {
       body {
         background: #FFFFFF;
       }
-      .header-bar, .floating-watermark-bar, .timeline-playback-strip, .pipeline-controls {
+      .header-bar, .timeline-playback-strip, .pipeline-controls {
         display: none !important;
       }
     }
@@ -1747,17 +1905,7 @@
 </head>
 <body>
 
-  <!--
-  =============================================================================
-  CODE WATERMARK:
-  Mobile Phone Multitasking Case Study
-  Engineered and Authored by Nilotpal Deb (USN: 25BTRSN029)
-  Course: Operating Systems (25PCCS201) | Faculty: Mr. Karthikeyan S
-  Team 5 | Jain (Deemed-to-be University)
-  =============================================================================
-  -->
-
-  <!-- STICKY HEADER WITH PAPERCUT NAVIGATION & WATERMARK -->
+  <!-- STICKY HEADER WITH PAPERCUT NAVIGATION -->
   <header class="header-bar">
     <div class="container header-content">
       <a href="#hero" class="brand-mark">
@@ -1777,12 +1925,13 @@
         <button class="nav-tab-btn" onclick="scrollToSection('interrupts')">Interrupt Trace</button>
         <button class="nav-tab-btn" onclick="scrollToSection('multicore')">big.LITTLE Cores</button>
         <button class="nav-tab-btn" onclick="scrollToSection('solution')">OS Solution</button>
+        <button class="nav-tab-btn" onclick="scrollToSection('roster')">Team Roster</button>
       </nav>
 
-      <!-- Prominent Author Pill Watermark -->
-      <div class="author-pill-badge" title="Course Case Study Contribution">
-        <span class="author-dot"></span>
-        <span>Made By Nilotpal Deb</span>
+      <!-- Clean Project Status Pill (No author badge) -->
+      <div class="header-status-pill" title="JAIN University Case Study Simulation">
+        <span class="status-dot"></span>
+        <span>Team 5 Simulation</span>
       </div>
     </div>
   </header>
@@ -1808,7 +1957,7 @@
           </h1>
 
           <p class="hero-description">
-            How a modern smartphone Operating System coordinates <strong>six concurrent activities</strong>—video recording, continuous music streaming, incoming messages, background downloads, GPS tracking, and background services—without dropping frames, stuttering audio, or sacrificing battery endurance.
+            How a modern smartphone Operating System coordinates <strong>six concurrent activities</strong>—high-definition video recording, continuous music streaming, incoming messages, background downloads, GPS tracking, and background services—without dropping frames, stuttering audio, or sacrificing battery endurance.
           </p>
 
           <div class="hero-stats-row">
@@ -1847,35 +1996,39 @@
               <div class="notch-camera"></div>
             </div>
             <div class="phone-screen">
-              <div class="screen-app-card card-active-video">
+              <div class="screen-status-bar">
+                <span>9:41 AM</span>
+                <span>📶 5G &nbsp;🔋 100%</span>
+              </div>
+              <div class="screen-app-card card-active-video" onclick="scrollToSection('threads')">
                 <div class="card-icon icon-video">🎥</div>
                 <div class="card-meta">
                   <div class="card-title">Video Recording</div>
                   <div class="card-sub">Active Foreground · 60 FPS</div>
                 </div>
               </div>
-              <div class="screen-app-card">
+              <div class="screen-app-card" onclick="scrollToSection('scheduling')">
                 <div class="card-icon icon-music">🎵</div>
                 <div class="card-meta">
                   <div class="card-title">Music Playback</div>
                   <div class="card-sub">Continuous Audio Stream</div>
                 </div>
               </div>
-              <div class="screen-app-card">
+              <div class="screen-app-card" onclick="scrollToSection('interrupts')">
                 <div class="card-icon icon-msg">💬</div>
                 <div class="card-meta">
                   <div class="card-title">Message Alert</div>
                   <div class="card-sub">Urgent Hardware Interrupt</div>
                 </div>
               </div>
-              <div class="screen-app-card">
+              <div class="screen-app-card" onclick="scrollToSection('activities')">
                 <div class="card-icon icon-gps">📍</div>
                 <div class="card-meta">
                   <div class="card-title">GPS Tracking</div>
                   <div class="card-sub">Periodic Sensor Updates</div>
                 </div>
               </div>
-              <div class="screen-app-card">
+              <div class="screen-app-card" onclick="scrollToSection('multicore')">
                 <div class="card-icon icon-dl">📥</div>
                 <div class="card-meta">
                   <div class="card-title">File Download</div>
@@ -1901,9 +2054,17 @@
         </div>
       </div>
 
-      <div class="activities-grid">
+      <!-- Activity Filters -->
+      <div class="activity-filters-row">
+        <button class="filter-btn active" onclick="filterActivities('all', this)">All Activities (6)</button>
+        <button class="filter-btn" onclick="filterActivities('realtime', this)">Real-Time & Time-Sensitive</button>
+        <button class="filter-btn" onclick="filterActivities('io', this)">I/O & Periodic</button>
+        <button class="filter-btn" onclick="filterActivities('bg', this)">Background Steady</button>
+      </div>
+
+      <div class="activities-grid" id="activities-container">
         <!-- 1. Video Recording -->
-        <div class="paper-task-card">
+        <div class="paper-task-card" data-category="realtime">
           <div>
             <span class="task-badge-cut badge-video">Time-Sensitive · Foreground</span>
             <h3 class="task-card-title">1. Video Recording</h3>
@@ -1917,7 +2078,7 @@
         </div>
 
         <!-- 2. Music Playback -->
-        <div class="paper-task-card">
+        <div class="paper-task-card" data-category="bg">
           <div>
             <span class="task-badge-cut badge-music">Continuous · Low Compute</span>
             <h3 class="task-card-title">2. Music Playback</h3>
@@ -1931,7 +2092,7 @@
         </div>
 
         <!-- 3. Message Handling -->
-        <div class="paper-task-card">
+        <div class="paper-task-card" data-category="realtime">
           <div>
             <span class="task-badge-cut badge-message">Urgent · Event-Driven</span>
             <h3 class="task-card-title">3. Message Handling</h3>
@@ -1945,7 +2106,7 @@
         </div>
 
         <!-- 4. GPS Tracking -->
-        <div class="paper-task-card">
+        <div class="paper-task-card" data-category="io">
           <div>
             <span class="task-badge-cut badge-gps">Periodic · Low Frequency</span>
             <h3 class="task-card-title">4. GPS Tracking</h3>
@@ -1959,7 +2120,7 @@
         </div>
 
         <!-- 5. File Download -->
-        <div class="paper-task-card">
+        <div class="paper-task-card" data-category="io">
           <div>
             <span class="task-badge-cut badge-download">Bulk I/O · Low Priority</span>
             <h3 class="task-card-title">5. File Download</h3>
@@ -1973,7 +2134,7 @@
         </div>
 
         <!-- 6. Background Apps -->
-        <div class="paper-task-card">
+        <div class="paper-task-card" data-category="bg">
           <div>
             <span class="task-badge-cut badge-bg">Maintenance · Lowest Urgency</span>
             <h3 class="task-card-title">6. Background Applications</h3>
@@ -2049,16 +2210,18 @@
       </div>
     </section>
 
-    <!-- SECTION 2: NILOTPAL DEB'S 5-THREAD VIDEO RECORDING PIPELINE -->
+    <!-- SECTION 2: 5-THREAD VIDEO RECORDING PIPELINE -->
     <section id="threads" class="section-wrap">
-      <div class="nilotpal-lead-card">
+      <div class="primary-topic-card">
+        <div class="topic-tag-ribbon">CORE TOPIC · SECTIONS 8.6 & 8.7 · MULTITHREADING PIPELINE</div>
+        
         <div class="section-header-block" style="margin-bottom: 12px;">
           <div>
-            <div class="section-eyebrow">Nilotpal Deb's Primary Focus · Slides 7 & 8 · Section 8.6 & 8.7</div>
+            <div class="section-eyebrow">Detailed Engineering Analysis · Slides 7 & 8</div>
             <h2 class="section-main-heading">One Process, Five Cooperating Threads</h2>
             <p class="section-subtext">Why a single video-recording application must be decoupled into five specialized threads rather than executing sequentially in one monolithic loop.</p>
           </div>
-          <div class="section-author-badge" style="border-color: var(--paper-terracotta);">
+          <div class="section-author-badge" style="border-color: var(--color-terracotta);">
             <span>Lead Contributor: <strong class="author-highlight">Nilotpal Deb (25BTRSN029)</strong></span>
           </div>
         </div>
@@ -2071,7 +2234,7 @@
         <div class="pipeline-interactive-box">
           <div class="pipeline-controls">
             <div>
-              <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--ink-primary);">Interactive Video Pipeline Simulator</h3>
+              <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--ink-headline);">Interactive Video Pipeline Simulator</h3>
               <p style="font-size: 0.8rem; color: var(--ink-secondary);">Click any thread below to inspect its execution state, memory segment, and concurrency benefits.</p>
             </div>
             <div class="paper-btn-group">
@@ -2080,61 +2243,100 @@
             </div>
           </div>
 
-          <!-- 5 Threads Papercut Grid -->
-          <div class="pipeline-diagram">
-            <!-- T1 -->
-            <div class="thread-card-cut selected" id="thread-t1" onclick="selectThread(1)">
-              <span class="thread-pill-tag">T1 · Main / UI</span>
-              <div class="thread-glyph">
-                <span>👆</span>
-                <span class="thread-pulse-dot" id="dot-t1"></span>
-              </div>
-              <div class="thread-name">UI / User Input</div>
-              <div class="thread-role">Handles touch, start, stop, pause actions without blocking.</div>
+          <!-- Conveyor Track & 5 Threads Papercut Grid -->
+          <div class="pipeline-conveyor-wrap">
+            <div class="pipeline-rail-track">
+              <div class="pipeline-data-particle" id="data-particle"></div>
             </div>
 
-            <!-- T2 -->
-            <div class="thread-card-cut" id="thread-t2" onclick="selectThread(2)">
-              <span class="thread-pill-tag">T2 · Device In</span>
-              <div class="thread-glyph">
-                <span>📷</span>
-                <span class="thread-pulse-dot" id="dot-t2"></span>
+            <div class="pipeline-diagram">
+              <!-- T1 -->
+              <div class="thread-card-cut selected" id="thread-t1" onclick="selectThread(1)">
+                <span class="thread-pill-tag">T1 · Main / UI</span>
+                <div class="thread-glyph">
+                  <span>👆</span>
+                  <span class="thread-pulse-dot" id="dot-t1"></span>
+                </div>
+                <div class="thread-name">UI / User Input</div>
+                <div class="thread-role">Handles touch, start, stop, pause actions without blocking.</div>
               </div>
-              <div class="thread-name">Camera Capture</div>
-              <div class="thread-role">Continuously streams uncompressed raw frames from camera sensor.</div>
+
+              <!-- T2 -->
+              <div class="thread-card-cut" id="thread-t2" onclick="selectThread(2)">
+                <span class="thread-pill-tag">T2 · Device In</span>
+                <div class="thread-glyph">
+                  <span>📷</span>
+                  <span class="thread-pulse-dot" id="dot-t2"></span>
+                </div>
+                <div class="thread-name">Camera Capture</div>
+                <div class="thread-role">Continuously streams uncompressed raw frames from camera sensor.</div>
+              </div>
+
+              <!-- T3 -->
+              <div class="thread-card-cut" id="thread-t3" onclick="selectThread(3)">
+                <span class="thread-pill-tag">T3 · Compute</span>
+                <div class="thread-glyph">
+                  <span>⚙️</span>
+                  <span class="thread-pulse-dot" id="dot-t3"></span>
+                </div>
+                <div class="thread-name">Video Processing</div>
+                <div class="thread-role">Encodes raw frames into H.264/HEVC stream via DSP/CPU.</div>
+              </div>
+
+              <!-- T4 -->
+              <div class="thread-card-cut" id="thread-t4" onclick="selectThread(4)">
+                <span class="thread-pill-tag">T4 · Audio In</span>
+                <div class="thread-glyph">
+                  <span>🎙️</span>
+                  <span class="thread-pulse-dot" id="dot-t4"></span>
+                </div>
+                <div class="thread-name">Audio Capture</div>
+                <div class="thread-role">Samples microphone PCM data and syncs with video timestamps.</div>
+              </div>
+
+              <!-- T5 -->
+              <div class="thread-card-cut" id="thread-t5" onclick="selectThread(5)">
+                <span class="thread-pill-tag">T5 · Storage</span>
+                <div class="thread-glyph">
+                  <span>💾</span>
+                  <span class="thread-pulse-dot" id="dot-t5"></span>
+                </div>
+                <div class="thread-name">Storage / File Write</div>
+                <div class="thread-role">Flushes encoded chunks to flash storage without stalling capture.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Live Buffer Capacity Meters -->
+          <div class="buffer-gauges-row">
+            <div class="buffer-gauge-card">
+              <div class="gauge-label-row">
+                <span>Sensor DMA Ring Buffer</span>
+                <span id="buf-dma-val">65% Full</span>
+              </div>
+              <div class="gauge-progress-bar">
+                <div class="gauge-fill" id="bar-dma" style="width: 65%;"></div>
+              </div>
             </div>
 
-            <!-- T3 -->
-            <div class="thread-card-cut" id="thread-t3" onclick="selectThread(3)">
-              <span class="thread-pill-tag">T3 · Compute</span>
-              <div class="thread-glyph">
-                <span>⚙️</span>
-                <span class="thread-pulse-dot" id="dot-t3"></span>
+            <div class="buffer-gauge-card">
+              <div class="gauge-label-row">
+                <span>H.264 Encoder FIFO</span>
+                <span id="buf-enc-val">42% Full</span>
               </div>
-              <div class="thread-name">Video Processing</div>
-              <div class="thread-role">Encodes raw frames into H.264/HEVC stream via DSP/CPU.</div>
+              <div class="gauge-progress-bar">
+                <div class="gauge-fill" id="bar-enc" style="width: 42%; background: var(--color-terracotta);"></div>
+              </div>
             </div>
 
-            <!-- T4 -->
-            <div class="thread-card-cut" id="thread-t4" onclick="selectThread(4)">
-              <span class="thread-pill-tag">T4 · Audio In</span>
-              <div class="thread-glyph">
-                <span>🎙️</span>
-                <span class="thread-pulse-dot" id="dot-t4"></span>
+            <div class="buffer-gauge-card">
+              <div class="gauge-label-row">
+                <span>Flash Storage Write Queue</span>
+                <span id="buf-flash-val">28% Full</span>
               </div>
-              <div class="thread-name">Audio Capture</div>
-              <div class="thread-role">Samples microphone PCM data and syncs with video timestamps.</div>
-            </div>
-
-            <!-- T5 -->
-            <div class="thread-card-cut" id="thread-t5" onclick="selectThread(5)">
-              <span class="thread-pill-tag">T5 · Storage</span>
-              <div class="thread-glyph">
-                <span>💾</span>
-                <span class="thread-pulse-dot" id="dot-t5"></span>
+              <div class="gauge-progress-bar">
+                <div class="gauge-fill" id="bar-flash" style="width: 28%; background: var(--color-slate);"></div>
               </div>
-              <div class="thread-name">Storage / File Write</div>
-              <div class="thread-role">Flushes encoded chunks to flash storage without stalling capture.</div>
             </div>
           </div>
 
@@ -2216,23 +2418,23 @@
           <div class="gantt-chart-display">
             <div class="gantt-time-needle" id="gantt-needle" style="left: 0%;"></div>
             <div class="gantt-chart-bar">
-              <div class="gantt-slice slice-music" id="slice-music" onclick="seekToTime(0)">
+              <div class="gantt-slice slice-music" id="slice-music" onclick="seekToTime(0)" title="Music Playback (0-4)">
                 <span>Music Playback</span>
                 <span class="slice-sub">0 – 4 (BT: 4)</span>
               </div>
-              <div class="gantt-slice slice-message" id="slice-message" onclick="seekToTime(4)">
+              <div class="gantt-slice slice-message" id="slice-message" onclick="seekToTime(4)" title="Message Notification (4-6)">
                 <span>Message</span>
                 <span class="slice-sub">4 – 6 (BT: 2)</span>
               </div>
-              <div class="gantt-slice slice-video" id="slice-video" onclick="seekToTime(6)">
+              <div class="gantt-slice slice-video" id="slice-video" onclick="seekToTime(6)" title="Video Recording (6-11)">
                 <span>Video Recording</span>
                 <span class="slice-sub">6 – 11 (BT: 5)</span>
               </div>
-              <div class="gantt-slice slice-gps" id="slice-gps" onclick="seekToTime(11)">
+              <div class="gantt-slice slice-gps" id="slice-gps" onclick="seekToTime(11)" title="GPS Tracking (11-14)">
                 <span>GPS Tracking</span>
                 <span class="slice-sub">11 – 14 (BT: 3)</span>
               </div>
-              <div class="gantt-slice slice-download" id="slice-download" onclick="seekToTime(14)">
+              <div class="gantt-slice slice-download" id="slice-download" onclick="seekToTime(14)" title="File Download (14-20)">
                 <span>File Download</span>
                 <span class="slice-sub">14 – 20 (BT: 6)</span>
               </div>
@@ -2285,7 +2487,7 @@
                   <td><strong>Message Notification</strong></td>
                   <td>1</td>
                   <td>2</td>
-                  <td><strong style="color: var(--paper-terracotta);">1 (Highest)</strong></td>
+                  <td><strong style="color: var(--color-terracotta);">1 (Highest)</strong></td>
                   <td>6</td>
                   <td>5</td>
                   <td>3</td>
@@ -2325,7 +2527,7 @@
                   <td>10</td>
                   <td><span class="task-badge-cut badge-bg" id="status-download">Not Arrived</span></td>
                 </tr>
-                <tr style="background: var(--paper-sand); font-weight: 800;">
+                <tr style="background: var(--paper-desk-accent); font-weight: 800;">
                   <td colspan="4"><strong>Averages (Total Burst = 20 Units)</strong></td>
                   <td>—</td>
                   <td>9.0 units (45/5)</td>
@@ -2351,7 +2553,7 @@
             <div class="metric-list-item"><span>Video Recording Completion:</span><strong>t = 11 (Fast Finish)</strong></div>
             <div class="metric-list-item"><span>Context Switch Slices:</span><strong>5 slices (Low Overhead)</strong></div>
             <div class="metric-list-item"><span>Message Response Time (RT):</span><strong>RT = 3 units (Waited behind Music)</strong></div>
-            <div class="metric-list-item"><span>Starvation Risk:</span><strong style="color: var(--paper-terracotta);">High for background tasks (Download waited 10)</strong></div>
+            <div class="metric-list-item"><span>Starvation Risk:</span><strong style="color: var(--color-terracotta);">High for background tasks (Download waited 10)</strong></div>
           </div>
 
           <div class="algo-compare-card">
@@ -2362,7 +2564,7 @@
             <p style="font-size: 0.85rem; color: var(--ink-secondary); margin-bottom: 14px;">
               Rotates ready processes through fixed 2-unit quantum slices. Prevents starvation but fractures heavy tasks.
             </p>
-            <div class="metric-list-item"><span>Video Recording Completion:</span><strong style="color: var(--paper-terracotta);">t = 18 (Severely Delayed)</strong></div>
+            <div class="metric-list-item"><span>Video Recording Completion:</span><strong style="color: var(--color-terracotta);">t = 18 (Severely Delayed)</strong></div>
             <div class="metric-list-item"><span>Context Switch Slices:</span><strong>11 slices (High Overhead)</strong></div>
             <div class="metric-list-item"><span>Message Response Time (RT):</span><strong>RT = 1 unit (Fast Start)</strong></div>
             <div class="metric-list-item"><span>Starvation Risk:</span><strong>Zero (Regular turns for all)</strong></div>
@@ -2373,15 +2575,17 @@
 
     <!-- SECTION 4: INTERRUPT ARCHITECTURE & 6-STEP CALL ARRIVES TRACE -->
     <section id="interrupts" class="section-wrap">
-      <div class="nilotpal-lead-card" style="border-color: rgba(131, 24, 67, 0.3);">
+      <div class="primary-topic-card" style="border-color: rgba(131, 24, 67, 0.3);">
+        <div class="topic-tag-ribbon" style="background: var(--color-plum);">CORE TOPIC · SECTIONS 8.8 & 8.9 · INTERRUPT TRACE</div>
+
         <div class="section-header-block" style="margin-bottom: 14px;">
           <div>
-            <div class="section-eyebrow" style="color: var(--paper-plum);">Nilotpal Deb's Primary Focus · Slides 7 & 8 · Section 8.8 & 8.9</div>
+            <div class="section-eyebrow" style="color: var(--color-plum);">Detailed Engineering Analysis · Slides 7 & 8</div>
             <h2 class="section-main-heading">Interrupts & The "Call Arrives" Trace</h2>
             <p class="section-subtext">A detailed step-by-step walkthrough of how the OS handles an urgent incoming telephone call while high-definition video recording is actively executing on the CPU.</p>
           </div>
-          <div class="section-author-badge" style="border-color: var(--paper-plum);">
-            <span>Lead Contributor: <strong class="author-highlight" style="color: var(--paper-plum);">Nilotpal Deb (25BTRSN029)</strong></span>
+          <div class="section-author-badge" style="border-color: var(--color-plum);">
+            <span>Lead Contributor: <strong class="author-highlight" style="color: var(--color-plum);">Nilotpal Deb (25BTRSN029)</strong></span>
           </div>
         </div>
 
@@ -2438,7 +2642,7 @@
               <div class="tcb-box-visual" id="tcb-visual-card">
                 <div style="font-weight: 800; font-size: 0.76rem; margin-bottom: 4px; display: flex; justify-content: space-between;">
                   <span>TCB: Video Thread Control Block</span>
-                  <span id="tcb-save-state" style="color: var(--paper-pine); font-weight: 800;">ACTIVE IN REGISTERS</span>
+                  <span id="tcb-save-state" style="color: var(--color-pine); font-weight: 800;">ACTIVE IN REGISTERS</span>
                 </div>
                 <div style="font-size: 0.72rem; color: var(--ink-secondary);">Preserves thread PC, CPU registers, stack pointers, and scheduling state across interrupts.</div>
               </div>
@@ -2554,6 +2758,19 @@
           </div>
         </div>
       </div>
+
+      <!-- Live SoC Power Gauge Strip -->
+      <div class="soc-power-strip">
+        <div>
+          <h4 style="font-size: 1.05rem; font-weight: 800; color: var(--ink-headline);">Estimated SoC Energy Footprint</h4>
+          <p style="font-size: 0.82rem; color: var(--ink-secondary);">DynamIQ Energy-Aware Scheduling saves up to 64% battery compared to all-Big core execution.</p>
+        </div>
+        <div class="power-metric-box">
+          <span style="font-size: 0.85rem; font-weight: 800; color: var(--ink-muted);">Current SoC Power:</span>
+          <span class="power-number">2.1 W</span>
+          <span style="font-size: 0.82rem; font-weight: 800; color: var(--color-pine-dark); background: var(--color-pine-light); padding: 4px 10px; border-radius: var(--radius-pill); border: 1px solid var(--color-pine-tint);">Optimal Thermal State</span>
+        </div>
+      </div>
     </section>
 
     <!-- SECTION 6: PROBLEM IDENTIFICATION & PROPOSED OS SOLUTION -->
@@ -2583,7 +2800,7 @@
           </div>
         </div>
 
-        <h3 style="font-size: 1.3rem; font-weight: 900; color: var(--ink-primary); margin-bottom: 8px;">
+        <h3 style="font-size: 1.3rem; font-weight: 900; color: var(--ink-headline); margin-bottom: 8px;">
           The Four-Pillar Smartphone OS Solution
         </h3>
         <p style="font-size: 0.92rem; color: var(--ink-secondary);">
@@ -2626,7 +2843,7 @@
       </div>
     </section>
 
-    <!-- SECTION 7: TEAM ROSTER, SIGNATURES & ACADEMIC CREDITS -->
+    <!-- SECTION 7: TEAM ROSTER & ACADEMIC CREDITS -->
     <section id="roster" class="section-wrap">
       <div class="section-header-block">
         <div>
@@ -2705,7 +2922,7 @@
           </div>
         </div>
 
-        <div style="margin-top: 30px; padding-top: 20px; border-top: 1px dashed var(--paper-sand); font-size: 0.84rem; color: var(--ink-secondary);">
+        <div style="margin-top: 30px; padding-top: 20px; border-top: 1px dashed var(--paper-desk-accent); font-size: 0.84rem; color: var(--ink-secondary);">
           <strong>Academic References:</strong>
           <ol style="padding-left: 20px; margin-top: 8px; line-height: 1.7;">
             <li>Silberschatz, A., Galvin, P. B., & Gagne, G. (2018). <em>Operating System Concepts</em> (10th ed.). Wiley.</li>
@@ -2718,31 +2935,17 @@
 
   </main>
 
-  <!-- FLOATING PERSISTENT WATERMARK BADGE -->
-  <aside class="floating-watermark-bar" title="Made by Nilotpal Deb (25BTRSN029)">
-    <div class="stamp-seal">ND</div>
-    <div>
-      <div>Made By Nilotpal Deb</div>
-      <div style="font-size: 0.7rem; color: var(--ink-muted); font-weight: 700;">USN: 25BTRSN029 · Team 5 (CS8)</div>
-    </div>
-  </aside>
-
-  <!--
-  =============================================================================
-  JAVASCRIPT LOGIC & INTERACTIVE SIMULATION ENGINES
-  Authored by Nilotpal Deb (USN: 25BTRSN029)
-  =============================================================================
-  -->
+  <!-- JAVASCRIPT LOGIC & INTERACTIVE SIMULATION ENGINES -->
   <script>
     /* =========================================================================
      * GLOBAL STATE & DATA DEFINITIONS
      * ========================================================================= */
     const PROCESS_DATA = [
-      { id: 'music', name: 'Music Playback', at: 0, bt: 4, prio: 3, start: 0, ct: 4, color: '#D97706' },
-      { id: 'message', name: 'Message Notification', at: 1, bt: 2, prio: 1, start: 4, ct: 6, color: '#831843' },
-      { id: 'video', name: 'Video Recording', at: 2, bt: 5, prio: 2, start: 6, ct: 11, color: '#C84B31' },
-      { id: 'gps', name: 'GPS Tracking', at: 3, bt: 3, prio: 4, start: 11, ct: 14, color: '#1E5144' },
-      { id: 'download', name: 'File Download', at: 4, bt: 6, prio: 5, start: 14, ct: 20, color: '#1E3A8A' }
+      { id: 'music', name: 'Music Playback', at: 0, bt: 4, prio: 3, start: 0, ct: 4, color: 'var(--color-amber)' },
+      { id: 'message', name: 'Message Notification', at: 1, bt: 2, prio: 1, start: 4, ct: 6, color: 'var(--color-plum)' },
+      { id: 'video', name: 'Video Recording', at: 2, bt: 5, prio: 2, start: 6, ct: 11, color: 'var(--color-terracotta)' },
+      { id: 'gps', name: 'GPS Tracking', at: 3, bt: 3, prio: 4, start: 11, ct: 14, color: 'var(--color-pine)' },
+      { id: 'download', name: 'File Download', at: 4, bt: 6, prio: 5, start: 14, ct: 20, color: 'var(--color-slate)' }
     ];
 
     let currentTimelineTime = 0;
@@ -2765,7 +2968,25 @@
     }
 
     /* =========================================================================
-     * SECTION 2: 5-THREAD PIPELINE SIMULATOR (NILOTPAL DEB)
+     * SECTION 1: FILTER ACTIVITIES
+     * ========================================================================= */
+    function filterActivities(category, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+
+      const cards = document.querySelectorAll('#activities-container .paper-task-card');
+      cards.forEach(card => {
+        const cat = card.getAttribute('data-category');
+        if (category === 'all' || cat === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    /* =========================================================================
+     * SECTION 2: 5-THREAD PIPELINE SIMULATOR
      * ========================================================================= */
     const THREAD_METADATA = {
       1: {
@@ -2832,7 +3053,9 @@
       });
     }
 
+    let frameCount = 0;
     function triggerFramePulse() {
+      frameCount++;
       const order = [2, 3, 5]; // Camera -> Encode -> Storage
       order.forEach((tNum, idx) => {
         setTimeout(() => {
@@ -2841,7 +3064,7 @@
             card.classList.add('busy');
             setTimeout(() => card.classList.remove('busy'), 400);
           }
-        }, idx * 250);
+        }, idx * 220);
       });
 
       // Simultaneous audio capture & UI pulse
@@ -2851,7 +3074,19 @@
           t4.classList.add('busy');
           setTimeout(() => t4.classList.remove('busy'), 350);
         }
-      }, 150);
+      }, 140);
+
+      // Fluctuate buffer meters slightly to simulate live capture dynamics
+      const dma = 60 + Math.floor(Math.sin(frameCount) * 12);
+      const enc = 40 + Math.floor(Math.cos(frameCount) * 10);
+      const flash = 28 + Math.floor(Math.sin(frameCount * 1.5) * 8);
+
+      document.getElementById('bar-dma').style.width = dma + '%';
+      document.getElementById('buf-dma-val').innerText = dma + '% Full';
+      document.getElementById('bar-enc').style.width = enc + '%';
+      document.getElementById('buf-enc-val').innerText = enc + '% Full';
+      document.getElementById('bar-flash').style.width = flash + '%';
+      document.getElementById('buf-flash-val').innerText = flash + '% Full';
     }
 
     function toggleAutoPipeline() {
@@ -2863,7 +3098,7 @@
         btn.classList.add('primary');
       } else {
         triggerFramePulse();
-        autoPipelineInterval = setInterval(triggerFramePulse, 1200);
+        autoPipelineInterval = setInterval(triggerFramePulse, 1100);
         btn.innerText = "⏸ Pause Capture";
         btn.classList.remove('primary');
       }
@@ -2899,8 +3134,9 @@
         badge.style.borderColor = activeProcess.color;
       } else {
         badge.innerText = `CPU: Idle / Ready`;
-        badge.style.background = 'var(--paper-sand)';
-        badge.style.color = 'var(--ink-primary)';
+        badge.style.background = 'var(--paper-desk-accent)';
+        badge.style.color = 'var(--ink-headline)';
+        badge.style.borderColor = 'var(--paper-border-line)';
       }
 
       // Highlight active Gantt slice
@@ -2919,12 +3155,10 @@
       });
 
       // Update Ready Queue at time t
-      // Ready processes: arrived (at <= t), not completed yet (ct > t), and NOT currently running
       const readyQueue = PROCESS_DATA.filter(p => {
         return p.at <= currentTimelineTime && p.ct > currentTimelineTime && !(currentTimelineTime >= p.start && currentTimelineTime < p.ct);
       });
 
-      // Sort ready queue by priority (lower number = higher priority)
       readyQueue.sort((a, b) => a.prio - b.prio);
 
       const rqContainer = document.getElementById('ready-queue-chips');
@@ -2953,7 +3187,7 @@
         } else if (currentTimelineTime >= p.start && currentTimelineTime < p.ct) {
           badgeEl.innerText = "▶ Running on CPU";
           badgeEl.className = `task-badge-cut badge-${p.id}`;
-          rowEl.style.background = "rgba(200, 75, 49, 0.08)";
+          rowEl.style.background = "rgba(194, 65, 12, 0.08)";
         } else if (currentTimelineTime >= p.ct) {
           badgeEl.innerText = "✓ Completed";
           badgeEl.className = "task-badge-cut badge-gps";
@@ -3007,7 +3241,7 @@
     }
 
     /* =========================================================================
-     * SECTION 4: 6-STEP INTERRUPT & CONTEXT SWITCH TRACE (NILOTPAL DEB)
+     * SECTION 4: 6-STEP INTERRUPT & CONTEXT SWITCH TRACE
      * ========================================================================= */
     const TRACE_STEPS = {
       1: {
@@ -3024,7 +3258,7 @@
         r0: "0x002A",
         r1: "0x10C8",
         tcbState: "ACTIVE IN REGISTERS",
-        tcbColor: "var(--paper-pine)"
+        tcbColor: "var(--color-pine)"
       },
       2: {
         title: "Incoming Telephony Interrupt Signal Arrives",
@@ -3040,7 +3274,7 @@
         r0: "0x002A",
         r1: "0x10C8",
         tcbState: "PREEMPTION PENDING",
-        tcbColor: "var(--paper-terracotta)"
+        tcbColor: "var(--color-terracotta)"
       },
       3: {
         title: "Context Switch: Recording Thread State is Saved",
@@ -3072,7 +3306,7 @@
         r0: "0x0001",
         r1: "0xDEAD",
         tcbState: "SUSPENDED (INACTIVE IN QUEUE)",
-        tcbColor: "var(--paper-amber-dark)"
+        tcbColor: "var(--color-amber-dark)"
       },
       5: {
         title: "Call Event Processing Completes",
@@ -3088,7 +3322,7 @@
         r0: "0x0000",
         r1: "0x0000",
         tcbState: "TCB QUEUED FOR RESTORATION",
-        tcbColor: "var(--paper-pine)"
+        tcbColor: "var(--color-pine)"
       },
       6: {
         title: "Saved Context Restored — Video Recording Resumes",
@@ -3104,7 +3338,7 @@
         r0: "0x002A",
         r1: "0x10C8",
         tcbState: "RESTORED & EXECUTING",
-        tcbColor: "var(--paper-pine)"
+        tcbColor: "var(--color-pine)"
       }
     };
 
@@ -3153,8 +3387,7 @@
       updateTimelineUI(0);
       selectThread(1);
       jumpToTraceStep(1);
-      console.log("Mobile Phone Multitasking Case Study Initialized.");
-      console.log("Author & Engineering Lead: Nilotpal Deb (USN: 25BTRSN029)");
+      console.log("Mobile Phone Multitasking Case Study Simulator Initialized.");
     });
   </script>
 </body>

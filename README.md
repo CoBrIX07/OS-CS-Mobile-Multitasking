@@ -95,11 +95,11 @@ Simply double-click `index.html` or open it in any modern browser (Chrome, Edge,
 
 ---
 
-## 📜 Watermark & Academic Integrity
+## 📜 Academic Integrity & Project Details
 
 ```
 /* =========================================================================
- * Made By Nilotpal Deb | USN: 25BTRSN029 | Team 5 - CS8
+ * Mobile Phone Multitasking Case Study | Team 5 - CS8
  * Faculty: Mr. Karthikeyan S | JAIN (Deemed-to-be University)
  * Course Code: 25PCCS201 - Operating Systems
  * ========================================================================= */
