@@ -9,7 +9,7 @@
   TEAM 5 | CS8: Mobile Phone Multitasking
   FACULTY IN-CHARGE: Mr. Karthikeyan S
   BRANCH: CE-SE (Computer Engineering / Software Engineering) - III Semester
-  DESIGN SYSTEM: Elevated Tactile Papercraft Craft System (Zero External Dependencies)
+  DESIGN SYSTEM: Mastercraft Tactile Papercraft System (Zero External Dependencies)
   =============================================================================
   -->
   <meta charset="UTF-8">
@@ -26,14 +26,15 @@
     
     :root {
       /* Cardstock Paper Surface Hierarchy */
-      --paper-desk: #F3EFE8;
-      --paper-desk-accent: #EAE3D6;
+      --paper-desk: #F4EFEB;
+      --paper-desk-accent: #E8E0D2;
       --paper-card: #FAF8F4;
       --paper-card-elevated: #FFFFFF;
-      --paper-inset: #EEE8DC;
-      --paper-cream: #FDFBF7;
+      --paper-inset: #EDE6D9;
+      --paper-cream: #FCFAF6;
       --paper-border-line: rgba(70, 52, 35, 0.12);
       --paper-border-highlight: rgba(255, 255, 255, 0.95);
+      --paper-stitch: rgba(70, 52, 35, 0.18);
       
       /* Vibrant Paper-Cut Accent Palette */
       --color-terracotta: #C2410C;
@@ -46,13 +47,13 @@
       --color-pine-light: #F0FDF4;
       --color-pine-tint: #BBF7D0;
       
-      --color-amber: #D97706;
+      --color-amber: #B45309;
       --color-amber-dark: #78350F;
       --color-amber-light: #FFFBEB;
       --color-amber-tint: #FDE68A;
       
-      --color-slate: #1E40AF;
-      --color-slate-dark: #172554;
+      --color-slate: #1D4ED8;
+      --color-slate-dark: #1E3A8A;
       --color-slate-light: #EFF6FF;
       --color-slate-tint: #BFDBFE;
       
@@ -70,30 +71,29 @@
       --ink-headline: #151210;
       --ink-primary: #24201D;
       --ink-secondary: #4A433D;
-      --ink-muted: #736A61;
-      --ink-light: #9C9388;
+      --ink-muted: #6E655B;
+      --ink-light: #948A7D;
 
       /* Authentic Layered Paper Drop-Shadows (Light source 135deg top-left) */
-      --shadow-cut-flat: 0 1px 2px rgba(45, 32, 20, 0.05), 0 2px 4px rgba(45, 32, 20, 0.03);
-      --shadow-cut-sm: 0 2px 4px rgba(45, 32, 20, 0.05), 0 6px 12px -2px rgba(45, 32, 20, 0.06);
-      --shadow-cut-md: 0 4px 8px rgba(45, 32, 20, 0.06), 0 12px 24px -4px rgba(45, 32, 20, 0.09), 0 1px 0 rgba(255, 255, 255, 0.8) inset;
-      --shadow-cut-lg: 0 8px 18px rgba(45, 32, 20, 0.07), 0 24px 44px -8px rgba(45, 32, 20, 0.12), 0 1px 0 rgba(255, 255, 255, 0.9) inset;
-      --shadow-inset-trench: inset 0 2px 5px rgba(40, 28, 16, 0.09), inset 0 1px 2px rgba(40, 28, 16, 0.12);
-      --shadow-paper-bevel: 0 3px 0 rgba(50, 35, 20, 0.08);
+      --shadow-cut-flat: 0 1px 2px rgba(45, 30, 15, 0.06), 0 1px 0 rgba(255, 255, 255, 0.8) inset;
+      --shadow-cut-sm: 0 2px 5px rgba(45, 30, 15, 0.07), 0 6px 14px -2px rgba(45, 30, 15, 0.08), 0 1px 0 rgba(255, 255, 255, 0.9) inset;
+      --shadow-cut-md: 0 4px 8px rgba(45, 30, 15, 0.07), 0 14px 28px -4px rgba(45, 30, 15, 0.11), 0 1.5px 0 rgba(255, 255, 255, 0.95) inset;
+      --shadow-cut-lg: 0 10px 24px rgba(45, 30, 15, 0.08), 0 28px 56px -8px rgba(45, 30, 15, 0.14), 0 2px 0 rgba(255, 255, 255, 0.95) inset;
+      
+      /* Inset Carved Trench Shadows for Trays, Slots & Data Tracks */
+      --shadow-inset-trench: inset 0 2px 5px rgba(45, 30, 15, 0.15), inset 0 1px 2px rgba(45, 30, 15, 0.2), 0 1px 0 rgba(255, 255, 255, 0.9);
+      --shadow-paper-bevel: inset 0 1.5px 0 rgba(255, 255, 255, 0.95), inset 0 -1.5px 0 rgba(45, 30, 15, 0.08);
 
-      /* Border Radii */
+      /* Ergonomic Paper Geometry */
       --radius-sm: 8px;
-      --radius-md: 14px;
-      --radius-card: 22px;
-      --radius-lg: 28px;
+      --radius-card: 14px;
+      --radius-lg: 22px;
       --radius-pill: 9999px;
-
-      /* Motion Curves */
+      
       --ease-paper: cubic-bezier(0.16, 1, 0.3, 1);
-      --ease-spring: cubic-bezier(0.34, 1.45, 0.64, 1);
     }
 
-    * {
+    *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
@@ -104,17 +104,17 @@
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Inter, Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", "Helvetica Neue", Arial, sans-serif;
       background-color: var(--paper-desk);
       background-image: 
-        radial-gradient(ellipse at top left, rgba(194, 65, 12, 0.04) 0%, transparent 50%),
-        radial-gradient(ellipse at bottom right, rgba(15, 81, 50, 0.05) 0%, transparent 50%),
-        radial-gradient(ellipse at center, rgba(217, 119, 6, 0.03) 0%, transparent 60%);
+        radial-gradient(ellipse at 15% 10%, rgba(194, 65, 12, 0.05) 0%, transparent 45%),
+        radial-gradient(ellipse at 85% 90%, rgba(15, 81, 50, 0.05) 0%, transparent 45%),
+        radial-gradient(circle at 50% 50%, rgba(180, 83, 9, 0.03) 0%, transparent 60%);
       color: var(--ink-primary);
       line-height: 1.65;
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
-      padding-bottom: 60px;
+      padding-bottom: 70px;
     }
 
     /* Tactile Paper Grain Overlay via inline SVG data pattern (zero network overhead) */
@@ -125,7 +125,7 @@
       pointer-events: none;
       background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.035'/%3E%3C/svg%3E");
       z-index: 9999;
-      opacity: 0.75;
+      opacity: 0.65;
     }
 
     /* Papercraft Scrollbar */
@@ -137,109 +137,113 @@
       background: var(--paper-desk-accent);
     }
     ::-webkit-scrollbar-thumb {
-      background: #C7BCAB;
-      border-radius: 6px;
+      background: #C5BBAA;
+      border-radius: var(--radius-pill);
       border: 2px solid var(--paper-desk-accent);
     }
     ::-webkit-scrollbar-thumb:hover {
-      background: #A99C88;
+      background: #A99E8B;
     }
 
-    /* Layout Containers */
+    /* Layout Utility Containers */
     .container {
-      max-width: 1260px;
+      max-width: 1360px;
       margin: 0 auto;
       padding: 0 24px;
     }
 
     /* =========================================================================
-     * STICKY HEADER & PAPERCUT NAVIGATION
+     * STICKY HEADER & PAPERCRAFT NAVIGATION
      * ========================================================================= */
     .header-bar {
-      background: rgba(253, 251, 247, 0.94);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
+      background: rgba(252, 250, 246, 0.94);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
       border-bottom: 1.5px solid var(--paper-border-line);
       box-shadow: var(--shadow-cut-sm);
       position: sticky;
       top: 0;
       z-index: 1000;
+      transition: all 0.25s var(--ease-paper);
     }
 
     .header-content {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 76px;
+      height: 74px;
       gap: 16px;
     }
 
     .brand-mark {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 12px;
       text-decoration: none;
       color: inherit;
+      flex-shrink: 0;
     }
 
     .paper-crest {
-      width: 46px;
-      height: 46px;
-      background: linear-gradient(135deg, var(--color-pine), var(--color-pine-dark));
-      border-radius: 14px;
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, var(--color-pine-dark) 0%, var(--color-pine) 100%);
+      color: #FFFFFF;
+      font-weight: 900;
+      font-size: 1.3rem;
+      border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #FFFFFF;
-      font-weight: 900;
-      font-size: 22px;
-      box-shadow: 0 4px 10px rgba(15, 81, 50, 0.35), var(--shadow-paper-bevel);
-      border: 2px solid #FFFFFF;
+      box-shadow: 0 4px 10px rgba(15, 81, 50, 0.28), 0 1.5px 0 rgba(255, 255, 255, 0.4) inset;
+      border: 2px solid rgba(255, 255, 255, 0.85);
       position: relative;
-      flex-shrink: 0;
     }
 
     .paper-crest::after {
       content: "";
       position: absolute;
-      top: -3px; right: -3px;
-      width: 11px; height: 11px;
-      background: var(--color-terracotta);
-      border-radius: 50%;
-      border: 2.5px solid #FFFFFF;
+      inset: 2px;
+      border: 1px dashed rgba(255, 255, 255, 0.45);
+      border-radius: 8px;
+      pointer-events: none;
     }
 
     .brand-title {
-      font-weight: 900;
-      font-size: 1.18rem;
-      letter-spacing: -0.025em;
+      font-size: 1.05rem;
+      font-weight: 800;
       color: var(--ink-headline);
+      letter-spacing: -0.02em;
       line-height: 1.2;
     }
 
     .brand-sub {
-      font-size: 0.76rem;
-      color: var(--ink-muted);
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--ink-secondary);
+      letter-spacing: 0.02em;
     }
 
-    /* Nav Tabs with Paper Debossed Well */
     .nav-tabs {
       display: flex;
-      gap: 6px;
+      align-items: center;
+      gap: 4px;
       background: var(--paper-inset);
-      padding: 5px;
+      padding: 4px 6px;
       border-radius: var(--radius-pill);
       box-shadow: var(--shadow-inset-trench);
       overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
       max-width: 100%;
+    }
+    .nav-tabs::-webkit-scrollbar {
+      display: none;
     }
 
     .nav-tab-btn {
-      padding: 7px 15px;
-      font-size: 0.82rem;
+      padding: 6px 13px;
+      font-size: 0.8rem;
       font-weight: 700;
       color: var(--ink-secondary);
       border: none;
@@ -247,20 +251,24 @@
       border-radius: var(--radius-pill);
       cursor: pointer;
       white-space: nowrap;
-      transition: all 0.22s var(--ease-paper);
+      transition: all 0.2s var(--ease-paper);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
     }
 
     .nav-tab-btn:hover {
       color: var(--ink-headline);
+      background: rgba(255, 255, 255, 0.5);
     }
 
     .nav-tab-btn.active {
       background: var(--paper-card-elevated);
       color: var(--color-pine-dark);
-      box-shadow: 0 2px 6px rgba(45, 32, 20, 0.12), 0 1px 0 rgba(255, 255, 255, 0.9) inset;
+      box-shadow: 0 2px 6px rgba(45, 30, 15, 0.12), 0 1px 0 rgba(255, 255, 255, 0.9) inset;
     }
 
-    /* Header Project Status Pill (Clean & Functional) */
+    /* Header Project Status Pill */
     .header-status-pill {
       display: inline-flex;
       align-items: center;
@@ -276,40 +284,40 @@
       flex-shrink: 0;
     }
 
-    .status-dot {
-      width: 8px;
-      height: 8px;
+    .status-live-pip {
+      width: 9px;
+      height: 9px;
       border-radius: 50%;
-      background: #10B981;
-      box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.25);
-      animation: pulseLive 2s infinite ease-in-out;
+      background: #16A34A;
+      box-shadow: 0 0 0 2.5px rgba(22, 163, 74, 0.25);
+      animation: pulsePip 2s infinite ease-in-out;
     }
 
-    @keyframes pulseLive {
-      0%, 100% { opacity: 0.8; transform: scale(0.95); }
-      50% { opacity: 1; transform: scale(1.15); }
+    @keyframes pulsePip {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.25); opacity: 0.75; }
     }
 
     /* =========================================================================
-     * HERO SECTION: CASE STUDY SCENARIO & SMARTPHONE ART
+     * HERO SECTION: ELEVATED PAPERCRAFT HERO & MOBILE MULTITASKING DISPLAY
      * ========================================================================= */
     .hero-section {
-      padding: 44px 0 32px 0;
-      position: relative;
+      padding: 36px 0 20px;
     }
 
     .hero-card {
       background: var(--paper-card-elevated);
       border-radius: var(--radius-lg);
-      padding: 44px 48px;
+      padding: 42px 46px;
       box-shadow: var(--shadow-cut-lg);
       border: 1px solid var(--paper-border-highlight);
-      outline: 1.5px solid var(--paper-border-line);
+      outline: 1.5px dashed var(--paper-stitch);
+      outline-offset: -7px;
       position: relative;
       overflow: hidden;
       display: grid;
-      grid-template-columns: 1.25fr 0.95fr;
-      gap: 40px;
+      grid-template-columns: 1.28fr 0.92fr;
+      gap: 36px;
       align-items: center;
     }
 
@@ -317,293 +325,308 @@
     .hero-ribbon {
       position: absolute;
       top: 0;
-      right: 40px;
-      background: linear-gradient(135deg, var(--color-amber), var(--color-amber-dark));
+      right: 36px;
+      background: linear-gradient(135deg, var(--color-terracotta) 0%, var(--color-terracotta-dark) 100%);
       color: #FFFFFF;
-      padding: 10px 22px;
-      font-size: 0.74rem;
-      font-weight: 900;
+      padding: 8px 18px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
-      border-radius: 0 0 14px 14px;
-      box-shadow: 0 6px 14px rgba(217, 119, 6, 0.4), var(--shadow-paper-bevel);
-      border: 2px solid #FFFFFF;
-      border-top: none;
-      z-index: 10;
+      border-radius: 0 0 8px 8px;
+      box-shadow: 0 4px 10px rgba(194, 65, 12, 0.35);
+      z-index: 5;
     }
 
-    .academic-meta-tag {
+    .hero-dept-badge {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      background: var(--color-pine-light);
-      color: var(--color-pine-dark);
+      gap: 8px;
+      flex-wrap: wrap;
+      background: var(--paper-desk);
       padding: 6px 14px;
       border-radius: var(--radius-pill);
-      font-size: 0.82rem;
-      font-weight: 800;
-      margin-bottom: 18px;
-      box-shadow: 0 1px 3px rgba(15, 81, 50, 0.08);
-      border: 1px solid rgba(15, 81, 50, 0.2);
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--ink-secondary);
+      border: 1px solid var(--paper-border-line);
+      margin-bottom: 20px;
+      box-shadow: var(--shadow-cut-flat);
+    }
+
+    .hero-dept-chip {
+      white-space: nowrap;
+    }
+
+    .hero-dept-sep {
+      color: var(--ink-light);
+      font-size: 0.7rem;
     }
 
     .hero-title {
       font-size: 2.85rem;
       font-weight: 900;
-      line-height: 1.1;
-      letter-spacing: -0.04em;
+      line-height: 1.12;
       color: var(--ink-headline);
-      margin-bottom: 16px;
+      letter-spacing: -0.035em;
+      margin-bottom: 18px;
     }
 
-    .hero-title span.highlight-cut {
-      background: linear-gradient(135deg, var(--color-terracotta), #EA580C);
+    .hero-title-accent {
+      background: linear-gradient(135deg, var(--color-terracotta) 0%, #EA580C 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       display: inline-block;
-      position: relative;
     }
 
-    .hero-description {
+    .hero-desc {
       font-size: 1.05rem;
       color: var(--ink-secondary);
       line-height: 1.68;
       margin-bottom: 28px;
+      max-width: 620px;
     }
 
     .hero-stats-row {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      padding-top: 22px;
-      border-top: 2px dashed var(--paper-desk-accent);
+      gap: 14px;
+      margin-top: 10px;
     }
 
-    .stat-cut-box {
-      background: var(--paper-cream);
+    .hero-stat-card {
+      background: var(--paper-card);
       border: 1px solid var(--paper-border-line);
-      border-radius: var(--radius-md);
-      padding: 14px 16px;
+      border-radius: var(--radius-card);
+      padding: 14px 18px;
       box-shadow: var(--shadow-cut-flat);
-      transition: transform 0.2s var(--ease-paper);
+      position: relative;
     }
 
-    .stat-cut-box:hover {
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-cut-sm);
+    .hero-stat-card::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 16px; right: 16px;
+      height: 3px;
+      background: var(--color-pine);
+      border-radius: 0 0 3px 3px;
+      opacity: 0.7;
     }
+    .hero-stat-card:nth-child(2)::before { background: var(--color-terracotta); }
+    .hero-stat-card:nth-child(3)::before { background: var(--color-slate); }
 
-    .stat-label {
+    .hero-stat-label {
       font-size: 0.72rem;
-      text-transform: uppercase;
       font-weight: 800;
       color: var(--ink-muted);
-      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
       margin-bottom: 4px;
     }
 
-    .stat-value {
+    .hero-stat-val {
       font-size: 1.25rem;
       font-weight: 900;
       color: var(--ink-headline);
+      letter-spacing: -0.02em;
     }
 
-    /* Papercraft Smartphone Artwork */
-    .phone-art-stage {
-      position: relative;
-      width: 100%;
-      height: 430px;
+    /* Tactile Papercraft Phone Mockup Frame */
+    .hero-phone-wrap {
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
+      position: relative;
+      padding: 14px 10px;
     }
 
     .paper-phone-chassis {
-      width: 256px;
-      height: 390px;
-      background: linear-gradient(145deg, #1C332D, #0A1C17);
-      border-radius: 40px;
+      width: 290px;
+      background: #25221F;
+      border-radius: 42px;
       padding: 12px;
       box-shadow: 
-        0 24px 50px -12px rgba(10, 30, 24, 0.45),
-        0 8px 18px rgba(0, 0, 0, 0.2),
-        inset 0 2px 3px rgba(255, 255, 255, 0.35);
-      border: 4px solid #FFFFFF;
+        0 22px 50px -10px rgba(45, 30, 15, 0.3),
+        0 4px 12px rgba(45, 30, 15, 0.15),
+        inset 0 2px 0 rgba(255, 255, 255, 0.22),
+        inset 0 -2px 0 rgba(0, 0, 0, 0.4);
       position: relative;
-      z-index: 2;
+      border: 3px solid #3E3833;
     }
 
-    .phone-notch {
-      width: 86px;
-      height: 18px;
-      background: #06120E;
-      margin: 0 auto 8px;
-      border-radius: 0 0 14px 14px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
-    }
-
-    .notch-camera {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: #1A3E34;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .phone-screen {
-      background: #FDFBF7;
-      border-radius: 28px;
-      height: calc(100% - 26px);
-      padding: 12px;
+    .paper-phone-screen {
+      background: #FAF7F2;
+      border-radius: 32px;
+      padding: 14px 12px;
+      overflow: hidden;
       display: flex;
       flex-direction: column;
-      gap: 7px;
-      box-shadow: inset 0 2px 6px rgba(0,0,0,0.12);
+      gap: 10px;
       position: relative;
-      overflow: hidden;
+      box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.12);
     }
 
-    .screen-status-bar {
+    .phone-dynamic-notch {
+      width: 86px;
+      height: 20px;
+      background: #151210;
+      border-radius: 12px;
+      margin: 0 auto 6px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 8px;
+    }
+
+    .notch-camera-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #0B0A09;
+      border: 1px solid #2B2623;
+    }
+
+    .notch-sensor-dot {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: #1C355E;
+    }
+
+    .phone-status-bar {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      font-size: 0.65rem;
+      font-size: 0.68rem;
       font-weight: 800;
       color: var(--ink-secondary);
-      padding: 2px 4px 4px;
-      border-bottom: 1px dashed rgba(0, 0, 0, 0.08);
-      margin-bottom: 2px;
+      padding: 0 4px 2px;
     }
 
-    /* Interactive Task Cards inside the Paper Screen */
-    .screen-app-card {
-      background: #FFFFFF;
+    .phone-app-card {
+      background: var(--paper-card-elevated);
       border-radius: 12px;
-      padding: 8px 10px;
+      padding: 9px 11px;
+      box-shadow: var(--shadow-cut-flat);
+      border: 1px solid rgba(70, 52, 35, 0.08);
       display: flex;
       align-items: center;
-      gap: 8px;
-      border: 1px solid rgba(0, 0, 0, 0.06);
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-      transition: all 0.25s var(--ease-spring);
-      cursor: pointer;
+      gap: 10px;
+      position: relative;
     }
 
-    .screen-app-card:hover {
-      transform: scale(1.03) translateY(-1px);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    .screen-app-card.card-active-video {
+    .phone-app-card.active-fg {
+      border-color: var(--color-terracotta-tint);
       background: var(--color-terracotta-light);
-      border: 1.5px solid var(--color-terracotta);
-      box-shadow: 0 4px 12px rgba(194, 65, 12, 0.25);
+      box-shadow: 0 3px 8px rgba(194, 65, 12, 0.12);
     }
 
-    .card-icon {
-      width: 26px;
-      height: 26px;
+    .phone-app-icon {
+      width: 30px;
+      height: 30px;
       border-radius: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 13px;
-      font-weight: 800;
-      color: #FFFFFF;
+      font-size: 0.95rem;
       flex-shrink: 0;
-      box-shadow: var(--shadow-paper-bevel);
+      color: #FFFFFF;
     }
 
-    .icon-video { background: var(--color-terracotta); }
-    .icon-music { background: var(--color-amber); }
-    .icon-msg { background: var(--color-plum); }
-    .icon-gps { background: var(--color-pine); }
-    .icon-dl { background: var(--color-slate); }
-
-    .card-meta {
+    .phone-app-info {
       flex: 1;
       min-width: 0;
     }
-    .card-title {
-      font-size: 0.76rem;
+
+    .phone-app-title {
+      font-size: 0.78rem;
       font-weight: 800;
       color: var(--ink-headline);
+      line-height: 1.2;
+    }
+
+    .phone-app-sub {
+      font-size: 0.65rem;
+      color: var(--ink-secondary);
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
     }
-    .card-sub {
-      font-size: 0.64rem;
-      font-weight: 600;
-      color: var(--ink-muted);
-    }
 
-    /* Floating Papercraft Orbit Tags */
-    .paper-orbit-card {
+    /* Pinned Papercraft Chips Framing Phone */
+    .hero-float-pin {
       position: absolute;
-      background: #FFFFFF;
-      border-radius: var(--radius-md);
-      padding: 10px 16px;
-      box-shadow: var(--shadow-cut-md);
-      border: 2px solid #FFFFFF;
+      background: var(--paper-card-elevated);
+      border: 1px solid var(--paper-border-highlight);
       outline: 1px solid var(--paper-border-line);
-      font-size: 0.78rem;
+      border-radius: var(--radius-pill);
+      padding: 6px 14px;
+      font-size: 0.74rem;
       font-weight: 800;
-      display: flex;
+      box-shadow: var(--shadow-cut-md);
+      display: inline-flex;
       align-items: center;
-      gap: 10px;
-      z-index: 3;
-      animation: paperFloat 6s ease-in-out infinite alternate;
+      gap: 7px;
+      white-space: nowrap;
+      z-index: 10;
+      animation: floatPin 4s infinite ease-in-out;
     }
 
-    .orbit-1 {
-      top: 15px;
-      right: -10px;
-      background: var(--color-terracotta-light);
+    .pin-top-right {
+      top: 18px;
+      right: -25px;
+      background: #FFF7ED;
       color: var(--color-terracotta-dark);
       border-color: var(--color-terracotta-tint);
       animation-delay: 0s;
     }
 
-    .orbit-2 {
-      bottom: 25px;
-      left: -20px;
-      background: var(--color-pine-light);
-      color: var(--color-pine-dark);
-      border-color: var(--color-pine-tint);
-      animation-delay: 1.5s;
-    }
-
-    .orbit-3 {
-      bottom: 120px;
-      right: -25px;
-      background: var(--color-amber-light);
+    .pin-mid-left {
+      top: 155px;
+      left: -35px;
+      background: #FEFCE8;
       color: var(--color-amber-dark);
       border-color: var(--color-amber-tint);
-      animation-delay: 3s;
+      animation-delay: 1.2s;
     }
 
-    @keyframes paperFloat {
-      0% { transform: translateY(0px) rotate(0deg); }
-      100% { transform: translateY(-10px) rotate(1.5deg); }
+    .pin-bottom-right {
+      bottom: 25px;
+      right: -30px;
+      background: #F0FDF4;
+      color: var(--color-pine-dark);
+      border-color: var(--color-pine-tint);
+      animation-delay: 2.1s;
+    }
+
+    @keyframes floatPin {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
     }
 
     /* =========================================================================
-     * SECTION TITLES & HEADINGS
+     * SECTION WRAPPERS & PAPERCRAFT HEADINGS
      * ========================================================================= */
     .section-wrap {
-      margin-top: 56px;
-      scroll-margin-top: 92px;
+      margin-top: 54px;
+      scroll-margin-top: 90px;
+    }
+
+    .section-deck-mat {
+      background: var(--paper-cream);
+      border-radius: var(--radius-lg);
+      padding: 38px 42px;
+      box-shadow: var(--shadow-cut-md);
+      border: 1px solid var(--paper-border-highlight);
+      outline: 1px solid var(--paper-border-line);
+      position: relative;
     }
 
     .section-header-block {
       display: flex;
-      align-items: flex-end;
+      align-items: flex-start;
       justify-content: space-between;
-      margin-bottom: 26px;
+      margin-bottom: 24px;
       flex-wrap: wrap;
       gap: 16px;
     }
@@ -614,25 +637,26 @@
       gap: 8px;
       font-size: 0.78rem;
       font-weight: 800;
+      color: var(--color-terracotta);
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      color: var(--color-terracotta);
-      margin-bottom: 6px;
+      margin-bottom: 8px;
     }
 
     .section-main-heading {
-      font-size: 2.15rem;
+      font-size: 1.95rem;
       font-weight: 900;
-      letter-spacing: -0.035em;
       color: var(--ink-headline);
-      line-height: 1.15;
+      letter-spacing: -0.025em;
+      line-height: 1.22;
+      margin-bottom: 8px;
     }
 
     .section-subtext {
       font-size: 0.98rem;
       color: var(--ink-secondary);
-      max-width: 720px;
-      margin-top: 6px;
+      max-width: 820px;
+      line-height: 1.6;
     }
 
     .section-author-badge {
@@ -641,57 +665,81 @@
       gap: 8px;
       background: var(--paper-card-elevated);
       border: 1.5px solid var(--paper-border-line);
-      padding: 8px 16px;
+      padding: 7px 16px;
       border-radius: var(--radius-pill);
-      box-shadow: var(--shadow-cut-flat);
-      font-size: 0.82rem;
+      font-size: 0.78rem;
       font-weight: 700;
-      color: var(--ink-headline);
+      color: var(--ink-secondary);
+      box-shadow: var(--shadow-cut-flat);
+      flex-shrink: 0;
     }
 
     .author-highlight {
-      color: var(--color-terracotta-dark);
+      color: var(--ink-headline);
       font-weight: 800;
     }
 
+    /* Washi-Tape Accent Strips on Cards */
+    .paper-tape {
+      position: absolute;
+      top: -9px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90px;
+      height: 18px;
+      background: rgba(220, 210, 195, 0.75);
+      backdrop-filter: blur(2px);
+      box-shadow: 0 1px 3px rgba(45, 30, 15, 0.1);
+      border-left: 2px dashed rgba(70, 52, 35, 0.2);
+      border-right: 2px dashed rgba(70, 52, 35, 0.2);
+      pointer-events: none;
+      z-index: 2;
+    }
+
     /* =========================================================================
-     * SECTION 1: 6 CONCURRENT ACTIVITIES & FILTER TABS
+     * SECTION 1: 6 CONCURRENT ACTIVITIES & OS MAPPING
      * ========================================================================= */
     .activity-filters-row {
       display: flex;
-      gap: 8px;
-      margin-bottom: 20px;
+      gap: 10px;
+      margin-bottom: 24px;
       flex-wrap: wrap;
     }
 
     .filter-btn {
-      padding: 7px 16px;
-      font-size: 0.82rem;
-      font-weight: 800;
       background: var(--paper-card-elevated);
       border: 1.5px solid var(--paper-border-line);
+      padding: 8px 18px;
       border-radius: var(--radius-pill);
+      font-size: 0.84rem;
+      font-weight: 800;
       color: var(--ink-secondary);
       cursor: pointer;
       box-shadow: var(--shadow-cut-flat);
-      transition: all 0.2s var(--ease-paper);
+      transition: all 0.22s var(--ease-paper);
     }
 
     .filter-btn:hover {
-      border-color: var(--color-pine);
-      color: var(--color-pine-dark);
+      background: #FFFFFF;
+      color: var(--ink-headline);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-cut-sm);
+    }
+
+    .filter-btn:active {
+      transform: translateY(1px);
     }
 
     .filter-btn.active {
-      background: var(--color-pine);
+      background: var(--color-pine-dark);
       color: #FFFFFF;
       border-color: var(--color-pine-dark);
-      box-shadow: 0 2px 6px rgba(15, 81, 50, 0.3), var(--shadow-paper-bevel);
+      box-shadow: 0 4px 10px rgba(15, 81, 50, 0.3);
     }
 
     .activities-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 22px;
     }
 
@@ -701,16 +749,16 @@
       padding: 24px;
       box-shadow: var(--shadow-cut-md);
       border: 1px solid var(--paper-border-highlight);
-      outline: 1.5px solid var(--paper-border-line);
+      outline: 1px solid var(--paper-border-line);
       position: relative;
-      transition: transform 0.28s var(--ease-paper), box-shadow 0.28s var(--ease-paper);
+      transition: transform 0.26s var(--ease-paper), box-shadow 0.26s var(--ease-paper);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     }
 
     .paper-task-card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-4px);
       box-shadow: var(--shadow-cut-lg);
     }
 
@@ -731,121 +779,65 @@
     .badge-video { background: var(--color-terracotta-light); color: var(--color-terracotta-dark); border: 1px solid var(--color-terracotta-tint); }
     .badge-music { background: var(--color-amber-light); color: var(--color-amber-dark); border: 1px solid var(--color-amber-tint); }
     .badge-message { background: var(--color-plum-light); color: var(--color-plum-dark); border: 1px solid var(--color-plum-tint); }
-    .badge-gps { background: var(--color-pine-light); color: var(--color-pine-dark); border: 1px solid var(--color-pine-tint); }
+    .badge-gps { background: var(--color-teal-light); color: var(--color-teal-dark); border: 1px solid var(--color-teal-tint); }
     .badge-download { background: var(--color-slate-light); color: var(--color-slate-dark); border: 1px solid var(--color-slate-tint); }
-    .badge-bg { background: var(--paper-inset); color: var(--ink-secondary); border: 1px solid var(--paper-desk-accent); }
+    .badge-bg { background: #F3F4F6; color: #374151; border: 1px solid #E5E7EB; }
 
     .task-card-title {
-      font-size: 1.25rem;
+      font-size: 1.18rem;
       font-weight: 800;
       color: var(--ink-headline);
       margin-bottom: 8px;
     }
 
     .task-card-desc {
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       color: var(--ink-secondary);
-      margin-bottom: 16px;
       line-height: 1.55;
+      margin-bottom: 16px;
     }
 
     .task-mapping-pill-box {
-      background: var(--paper-cream);
-      border-radius: var(--radius-md);
+      background: var(--paper-inset);
+      border-radius: var(--radius-sm);
       padding: 12px 14px;
-      border: 1px solid var(--paper-border-line);
       box-shadow: var(--shadow-inset-trench);
+      font-size: 0.8rem;
     }
 
     .mapping-row {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      font-size: 0.82rem;
-      padding: 5px 0;
-      border-bottom: 1px dashed rgba(0, 0, 0, 0.08);
+      padding: 4px 0;
+      border-bottom: 1px dashed rgba(70, 52, 35, 0.1);
     }
     .mapping-row:last-child {
       border-bottom: none;
+      padding-bottom: 0;
     }
+
     .map-key {
       color: var(--ink-muted);
       font-weight: 700;
     }
+
     .map-val {
-      font-weight: 800;
       color: var(--ink-headline);
-    }
-
-    /* Papercut Tables */
-    .paper-table-card {
-      background: var(--paper-card-elevated);
-      border-radius: var(--radius-card);
-      box-shadow: var(--shadow-cut-md);
-      border: 1px solid var(--paper-border-highlight);
-      outline: 1.5px solid var(--paper-border-line);
-      margin-top: 26px;
-      overflow: hidden;
-    }
-
-    .paper-table-header {
-      background: linear-gradient(135deg, var(--color-pine), var(--color-pine-dark));
-      color: #FFFFFF;
-      padding: 18px 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 2px 8px rgba(15, 81, 50, 0.25);
-    }
-
-    .paper-table-header h3 {
-      font-size: 1.15rem;
       font-weight: 800;
-    }
-
-    .table-container {
-      overflow-x: auto;
-    }
-
-    table.papercut-table {
-      width: 100%;
-      border-collapse: collapse;
-      text-align: left;
-      font-size: 0.9rem;
-    }
-
-    table.papercut-table th {
-      background: var(--paper-cream);
-      color: var(--ink-secondary);
-      font-weight: 800;
-      text-transform: uppercase;
-      font-size: 0.74rem;
-      letter-spacing: 0.05em;
-      padding: 14px 20px;
-      border-bottom: 2px solid var(--paper-desk-accent);
-    }
-
-    table.papercut-table td {
-      padding: 14px 20px;
-      border-bottom: 1px solid var(--paper-border-line);
-      color: var(--ink-primary);
-    }
-
-    table.papercut-table tr:hover {
-      background: rgba(234, 227, 214, 0.3);
+      text-align: right;
     }
 
     /* =========================================================================
-     * SECTION 2: 5-THREAD VIDEO RECORDING PIPELINE SIMULATOR
+     * SECTION 2: 5-THREAD VIDEO RECORDING PIPELINE
      * ========================================================================= */
     .primary-topic-card {
-      background: linear-gradient(135deg, #FFFDFB 0%, #FFFFFF 100%);
+      background: var(--paper-card-elevated);
       border-radius: var(--radius-lg);
-      padding: 36px;
-      box-shadow: var(--shadow-cut-md);
-      border: 2px solid rgba(194, 65, 12, 0.22);
-      outline: 1px solid rgba(194, 65, 12, 0.08);
-      margin-bottom: 28px;
+      padding: 38px 44px;
+      box-shadow: var(--shadow-cut-lg);
+      border: 1px solid var(--paper-border-highlight);
+      outline: 1.5px dashed var(--paper-stitch);
+      outline-offset: -7px;
       position: relative;
     }
 
@@ -853,29 +845,29 @@
       display: inline-block;
       background: var(--color-terracotta);
       color: #FFFFFF;
-      font-size: 0.72rem;
+      font-size: 0.74rem;
       font-weight: 900;
-      letter-spacing: 0.07em;
-      padding: 4px 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 5px 14px;
       border-radius: var(--radius-pill);
-      box-shadow: 0 4px 10px rgba(194, 65, 12, 0.35);
-      margin-bottom: 12px;
+      box-shadow: 0 2px 6px rgba(194, 65, 12, 0.35);
+      margin-bottom: 16px;
     }
 
     .pipeline-interactive-box {
+      margin-top: 24px;
       background: var(--paper-cream);
       border-radius: var(--radius-card);
-      padding: 28px;
-      box-shadow: var(--shadow-inset-trench);
-      border: 1px solid var(--paper-border-line);
-      margin-top: 24px;
-      position: relative;
+      padding: 24px;
+      border: 1.5px solid var(--paper-border-line);
+      box-shadow: var(--shadow-cut-sm);
     }
 
     .pipeline-controls {
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
       margin-bottom: 22px;
       flex-wrap: wrap;
       gap: 14px;
@@ -890,400 +882,329 @@
     .paper-btn {
       background: var(--paper-card-elevated);
       border: 1.5px solid var(--paper-border-line);
+      padding: 9px 18px;
       border-radius: var(--radius-pill);
-      padding: 9px 20px;
       font-size: 0.84rem;
       font-weight: 800;
-      color: var(--ink-headline);
+      color: var(--ink-primary);
       cursor: pointer;
-      box-shadow: 0 2px 4px rgba(45, 32, 20, 0.08), var(--shadow-paper-bevel);
+      box-shadow: var(--shadow-cut-flat);
+      transition: all 0.22s var(--ease-paper);
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      transition: all 0.18s var(--ease-paper);
     }
 
     .paper-btn:hover {
+      background: #FFFFFF;
       transform: translateY(-2px);
-      box-shadow: 0 4px 10px rgba(45, 32, 20, 0.12);
-      border-color: #C8BCAB;
+      box-shadow: var(--shadow-cut-sm);
     }
 
     .paper-btn:active {
       transform: translateY(1px);
-      box-shadow: 0 1px 2px rgba(45, 32, 20, 0.1);
     }
 
     .paper-btn.primary {
-      background: var(--color-terracotta);
+      background: linear-gradient(135deg, var(--color-terracotta) 0%, var(--color-terracotta-dark) 100%);
       color: #FFFFFF;
       border-color: var(--color-terracotta-dark);
-      box-shadow: 0 3px 8px rgba(194, 65, 12, 0.35), var(--shadow-paper-bevel);
+      box-shadow: 0 4px 10px rgba(194, 65, 12, 0.32);
     }
 
-    .paper-btn.primary:hover {
-      background: #D94E1A;
-    }
-
-    /* Conveyor Rail & Threads Grid */
-    .pipeline-conveyor-wrap {
-      position: relative;
-      margin: 10px 0 24px 0;
-    }
-
-    .pipeline-rail-track {
-      position: absolute;
-      top: 50%;
-      left: 6%;
-      right: 6%;
-      height: 6px;
-      background: var(--paper-desk-accent);
-      border-radius: 4px;
-      transform: translateY(-50%);
-      z-index: 0;
-      box-shadow: inset 0 1px 3px rgba(0,0,0,0.15);
-    }
-
-    .pipeline-data-particle {
-      position: absolute;
-      width: 14px;
-      height: 14px;
-      border-radius: 50%;
-      background: var(--color-terracotta);
-      box-shadow: 0 0 10px var(--color-terracotta);
-      top: -4px;
-      left: 0%;
-      display: none;
-      z-index: 1;
-    }
-
-    .pipeline-diagram {
+    .threads-flow-grid {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       gap: 14px;
       position: relative;
-      z-index: 2;
     }
 
-    @media (max-width: 992px) {
-      .pipeline-diagram {
-        grid-template-columns: 1fr;
-      }
-      .pipeline-rail-track {
-        display: none;
-      }
-    }
-
-    .thread-card-cut {
+    .thread-card-chip {
       background: var(--paper-card-elevated);
-      border-radius: var(--radius-md);
-      padding: 20px 16px;
-      border: 2px solid var(--paper-border-line);
+      border-radius: var(--radius-card);
+      padding: 16px 14px;
+      border: 1.5px solid var(--paper-border-line);
       box-shadow: var(--shadow-cut-sm);
-      position: relative;
+      text-align: center;
       cursor: pointer;
       transition: all 0.25s var(--ease-paper);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
+      position: relative;
     }
 
-    .thread-card-cut:hover, .thread-card-cut.selected {
-      transform: translateY(-6px);
-      border-color: var(--color-terracotta);
+    .thread-card-chip:hover {
+      transform: translateY(-3px);
       box-shadow: var(--shadow-cut-md);
+      border-color: var(--color-terracotta);
     }
 
-    .thread-pill-tag {
+    .thread-card-chip.selected {
+      border-color: var(--color-terracotta);
+      outline: 2px solid var(--color-terracotta);
       background: var(--color-terracotta-light);
-      color: var(--color-terracotta-dark);
-      font-size: 0.72rem;
-      font-weight: 800;
-      padding: 3px 10px;
-      border-radius: var(--radius-pill);
-      margin-bottom: 10px;
-      border: 1px solid var(--color-terracotta-tint);
     }
 
-    .thread-glyph {
-      width: 46px;
-      height: 46px;
-      border-radius: 14px;
+    .thread-card-chip.busy {
+      animation: pulseThreadBusy 0.4s ease;
+      background: #FED7AA;
+    }
+
+    @keyframes pulseThreadBusy {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.04); }
+      100% { transform: scale(1); }
+    }
+
+    .thread-badge-label {
+      font-size: 0.68rem;
+      font-weight: 800;
+      color: var(--color-terracotta-dark);
+      background: var(--color-terracotta-tint);
+      padding: 3px 8px;
+      border-radius: var(--radius-pill);
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+
+    .thread-icon-seal {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--paper-desk);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 22px;
-      margin-bottom: 12px;
-      background: var(--paper-cream);
-      box-shadow: var(--shadow-inset-trench);
-      border: 1px solid var(--paper-border-line);
-      position: relative;
+      margin: 0 auto 8px;
+      font-size: 1.1rem;
+      box-shadow: var(--shadow-cut-flat);
     }
 
-    .thread-pulse-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: #10B981;
-      position: absolute;
-      top: -2px; right: -2px;
-      box-shadow: 0 0 0 2px #FFFFFF;
-      display: none;
-    }
-
-    .thread-card-cut.busy .thread-pulse-dot {
-      display: block;
-      animation: pulseGreen 0.8s infinite alternate;
-    }
-
-    @keyframes pulseGreen {
-      0% { transform: scale(0.9); opacity: 0.6; }
-      100% { transform: scale(1.3); opacity: 1; }
-    }
-
-    .thread-name {
-      font-size: 0.94rem;
+    .thread-name-title {
+      font-size: 0.85rem;
       font-weight: 800;
       color: var(--ink-headline);
-      margin-bottom: 6px;
+      margin-bottom: 4px;
       line-height: 1.25;
     }
 
-    .thread-role {
-      font-size: 0.76rem;
+    .thread-role-sub {
+      font-size: 0.72rem;
       color: var(--ink-secondary);
-      line-height: 1.4;
+      line-height: 1.35;
     }
 
-    /* Live Buffer Capacity Indicators */
-    .buffer-gauges-row {
+    /* Buffer Capacity Gauges */
+    .buffer-status-row {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      margin-top: 18px;
+      gap: 16px;
+      margin-top: 20px;
     }
 
-    @media (max-width: 768px) {
-      .buffer-gauges-row {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .buffer-gauge-card {
+    .buffer-box {
       background: var(--paper-card-elevated);
-      border-radius: var(--radius-md);
-      padding: 12px 16px;
       border: 1px solid var(--paper-border-line);
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
       box-shadow: var(--shadow-cut-flat);
     }
 
-    .gauge-label-row {
+    .buffer-header {
       display: flex;
       justify-content: space-between;
-      font-size: 0.74rem;
+      font-size: 0.75rem;
       font-weight: 800;
-      color: var(--ink-muted);
+      color: var(--ink-headline);
       margin-bottom: 6px;
     }
 
-    .gauge-progress-bar {
-      height: 8px;
+    .buffer-trench {
+      height: 9px;
       background: var(--paper-inset);
-      border-radius: 4px;
+      border-radius: var(--radius-pill);
       overflow: hidden;
-      box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+      box-shadow: var(--shadow-inset-trench);
     }
 
-    .gauge-fill {
+    .buffer-fill-bar {
       height: 100%;
-      background: var(--color-pine);
-      border-radius: 4px;
-      transition: width 0.3s ease;
+      border-radius: var(--radius-pill);
+      transition: width 0.4s ease;
     }
 
-    /* Live Thread Inspector Details Box */
-    .thread-detail-inspector {
+    /* Thread Context Details View (Shared vs Private Memory) */
+    .thread-inspector-panel {
       margin-top: 22px;
       background: var(--paper-card-elevated);
-      border-radius: var(--radius-md);
-      padding: 22px 26px;
+      border-radius: var(--radius-card);
+      padding: 20px 24px;
       border: 1.5px solid var(--paper-border-line);
-      box-shadow: var(--shadow-cut-flat);
+      box-shadow: var(--shadow-cut-sm);
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 22px;
+      gap: 24px;
     }
 
-    @media (max-width: 768px) {
-      .thread-detail-inspector {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .inspector-block h4 {
-      font-size: 0.88rem;
+    .inspector-col-title {
+      font-size: 0.85rem;
       font-weight: 800;
+      color: var(--ink-headline);
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      margin-bottom: 8px;
+      margin-bottom: 12px;
       display: flex;
       align-items: center;
       gap: 8px;
     }
 
-    .shared-badge { color: var(--color-pine); }
-    .private-badge { color: var(--color-terracotta); }
-
-    .shared-pill-list {
+    .memory-paper-tag-cloud {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
     }
 
     .memory-paper-tag {
-      background: var(--paper-cream);
-      border: 1px solid var(--paper-border-line);
-      padding: 6px 12px;
-      border-radius: 10px;
-      font-size: 0.8rem;
+      background: var(--paper-inset);
+      border: 1px solid rgba(70, 52, 35, 0.12);
+      padding: 5px 11px;
+      border-radius: var(--radius-pill);
+      font-size: 0.75rem;
       font-weight: 700;
-      color: var(--ink-headline);
-      box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+      color: var(--ink-secondary);
+      box-shadow: var(--shadow-cut-flat);
+    }
+
+    .memory-paper-tag.shared-tag {
+      background: var(--color-pine-light);
+      border-color: var(--color-pine-tint);
+      color: var(--color-pine-dark);
     }
 
     /* =========================================================================
-     * SECTION 3: CPU SCHEDULING & GANTT TIMELINE PLAYER
+     * SECTION 3: CPU SCHEDULING CALCULATIONS & GANTT TIMELINE
      * ========================================================================= */
     .scheduler-deck {
       background: var(--paper-card-elevated);
       border-radius: var(--radius-lg);
-      padding: 36px;
+      padding: 34px 40px;
       box-shadow: var(--shadow-cut-md);
       border: 1px solid var(--paper-border-highlight);
-      outline: 1.5px solid var(--paper-border-line);
+      outline: 1px solid var(--paper-border-line);
+      margin-top: 20px;
     }
 
     .timeline-playback-strip {
       background: var(--paper-cream);
       border-radius: var(--radius-card);
       padding: 22px 26px;
-      border: 1px solid var(--paper-border-line);
-      box-shadow: var(--shadow-inset-trench);
-      margin-bottom: 28px;
+      border: 1.5px solid var(--paper-border-line);
+      box-shadow: var(--shadow-cut-sm);
+      margin-bottom: 26px;
     }
 
     .playback-upper-row {
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      margin-bottom: 18px;
+      align-items: center;
+      margin-bottom: 20px;
       flex-wrap: wrap;
-      gap: 16px;
+      gap: 14px;
     }
 
     .time-readout {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
     }
 
-    .time-readout .time-clock {
-      font-size: 2.2rem;
+    .time-clock {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 1.7rem;
       font-weight: 900;
-      color: var(--color-terracotta-dark);
-      font-variant-numeric: tabular-nums;
       background: var(--paper-card-elevated);
+      border: 1.5px solid var(--paper-border-line);
       padding: 4px 18px;
-      border-radius: 14px;
-      border: 2px solid var(--paper-border-line);
+      border-radius: var(--radius-sm);
       box-shadow: var(--shadow-cut-flat);
+      color: var(--color-terracotta-dark);
     }
 
     .cpu-active-pill {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: var(--color-pine-light);
-      border: 1.5px solid var(--color-pine);
       padding: 6px 14px;
       border-radius: var(--radius-pill);
-      font-size: 0.86rem;
+      font-size: 0.82rem;
       font-weight: 800;
-      color: var(--color-pine-dark);
-      transition: all 0.2s ease;
+      background: var(--paper-inset);
+      color: var(--ink-headline);
+      border: 1px solid var(--paper-border-line);
+      box-shadow: var(--shadow-cut-flat);
+      transition: all 0.25s ease;
     }
 
-    /* Interactive Scrubber Slider */
-    .paper-scrubber-track {
-      width: 100%;
+    /* Tactile Paper Scrubber */
+    .scrubber-track-box {
       position: relative;
-      margin: 14px 0;
+      margin: 18px 0 14px;
     }
 
-    input[type=range].paper-slider {
+    .timeline-scrubber {
       -webkit-appearance: none;
       width: 100%;
-      background: transparent;
-    }
-
-    input[type=range].paper-slider:focus {
+      height: 12px;
+      background: var(--paper-inset);
+      border-radius: var(--radius-pill);
+      box-shadow: var(--shadow-inset-trench);
       outline: none;
-    }
-
-    input[type=range].paper-slider::-webkit-slider-runnable-track {
-      width: 100%;
-      height: 14px;
       cursor: pointer;
-      background: var(--paper-desk-accent);
-      border-radius: 10px;
-      box-shadow: inset 0 2px 4px rgba(45, 32, 20, 0.12);
-      border: 1px solid rgba(0, 0, 0, 0.06);
     }
 
-    input[type=range].paper-slider::-webkit-slider-thumb {
-      height: 28px;
-      width: 28px;
+    .timeline-scrubber::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 26px;
+      height: 26px;
       border-radius: 50%;
       background: var(--color-terracotta);
-      cursor: grab;
-      -webkit-appearance: none;
-      margin-top: -7px;
-      box-shadow: 0 4px 10px rgba(194, 65, 12, 0.4), var(--shadow-paper-bevel);
       border: 3px solid #FFFFFF;
+      box-shadow: 0 2px 6px rgba(45, 30, 15, 0.35);
+      cursor: grab;
       transition: transform 0.15s ease;
     }
 
-    input[type=range].paper-slider::-webkit-slider-thumb:hover {
-      transform: scale(1.18);
+    .timeline-scrubber::-webkit-slider-thumb:hover {
+      transform: scale(1.15);
     }
 
-    .ticks-container {
+    .timeline-scrubber::-webkit-slider-thumb:active {
+      cursor: grabbing;
+      transform: scale(1.22);
+    }
+
+    .scrubber-ticks-labels {
       display: flex;
       justify-content: space-between;
-      padding: 0 4px;
-      font-size: 0.74rem;
-      font-weight: 700;
+      font-size: 0.72rem;
+      font-weight: 800;
       color: var(--ink-muted);
-      margin-top: 6px;
+      padding: 4px 2px 0;
     }
 
-    /* Gantt Chart Visual Track */
-    .gantt-chart-display {
-      margin: 26px 0;
+    /* Gantt Chart Paper Blocks Container */
+    .gantt-chart-wrapper {
       position: relative;
+      margin: 20px 0 24px;
     }
 
-    .gantt-chart-bar {
+    .gantt-bar-trench {
       display: flex;
-      width: 100%;
-      height: 66px;
-      border-radius: var(--radius-md);
+      height: 68px;
+      border-radius: var(--radius-card);
       overflow: hidden;
       box-shadow: var(--shadow-cut-md);
-      border: 3px solid #FFFFFF;
-      outline: 1.5px solid var(--paper-border-line);
-      background: var(--paper-desk-accent);
+      border: 2px solid var(--paper-border-line);
+      background: var(--paper-inset);
+      position: relative;
     }
 
     .gantt-slice {
@@ -1297,609 +1218,753 @@
       position: relative;
       transition: all 0.25s ease;
       cursor: pointer;
-      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
       overflow: hidden;
     }
 
     .gantt-slice:hover {
-      filter: brightness(1.15);
+      filter: brightness(1.12);
       z-index: 2;
     }
 
-    .gantt-slice.inactive-slice {
-      opacity: 0.4;
-      filter: grayscale(0.5);
+    .gantt-slice.upcoming-slice {
+      opacity: 0.82;
+      filter: saturate(0.85);
     }
 
     .gantt-slice.active-slice {
       opacity: 1;
-      filter: brightness(1.08);
-      box-shadow: inset 0 0 0 2.5px #FFFFFF;
-      transform: scaleY(1.02);
+      filter: brightness(1.08) saturate(1.1);
+      box-shadow: inset 0 0 0 3px #FFFFFF, 0 0 12px rgba(255, 255, 255, 0.6);
+      transform: scaleY(1.03);
+      z-index: 3;
+    }
+
+    .gantt-slice.completed-slice {
+      opacity: 0.95;
     }
 
     .slice-music { background: var(--color-amber); width: 20%; }      /* 4 units (0-4) */
     .slice-message { background: var(--color-plum); width: 10%; }     /* 2 units (4-6) */
     .slice-video { background: var(--color-terracotta); width: 25%; } /* 5 units (6-11) */
-    .slice-gps { background: var(--color-pine); width: 15%; }         /* 3 units (11-14) */
+    .slice-gps { background: var(--color-teal); width: 15%; }         /* 3 units (11-14) */
     .slice-download { background: var(--color-slate); width: 30%; }    /* 6 units (14-20) */
 
     .slice-sub {
       font-size: 0.68rem;
-      font-weight: 600;
-      opacity: 0.92;
+      opacity: 0.9;
+      font-weight: 700;
     }
 
-    /* Gantt Needle Marker */
-    .gantt-time-needle {
+    /* Gantt Tracking Needle Line */
+    .gantt-needle-line {
       position: absolute;
-      top: -8px;
-      bottom: -8px;
-      width: 4px;
-      background: var(--ink-headline);
-      border-radius: 2px;
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.45);
-      z-index: 5;
+      top: -6px;
+      bottom: -6px;
+      width: 3px;
+      background: #151210;
       pointer-events: none;
+      z-index: 10;
       transition: left 0.12s linear;
     }
 
-    .gantt-time-needle::after {
-      content: "";
+    .needle-diamond {
       position: absolute;
       top: -8px;
-      left: -6px;
-      width: 16px;
-      height: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 14px;
+      height: 14px;
       background: var(--color-terracotta);
-      border-radius: 50%;
-      border: 2px solid #FFFFFF;
+      border: 2.5px solid #FFFFFF;
+      border-radius: 3px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
     }
 
-    /* Live Ready Queue Display */
-    .ready-queue-stage {
+    /* Ready Queue Chip Box */
+    .ready-queue-box {
       background: var(--paper-card-elevated);
-      border-radius: var(--radius-md);
-      padding: 16px 20px;
+      border-radius: var(--radius-sm);
+      padding: 12px 18px;
       border: 1px solid var(--paper-border-line);
-      margin-bottom: 20px;
+      box-shadow: var(--shadow-cut-flat);
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: 14px;
       flex-wrap: wrap;
     }
 
     .rq-label {
       font-size: 0.78rem;
       font-weight: 800;
+      color: var(--ink-headline);
       text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: var(--ink-muted);
-      flex-shrink: 0;
+      letter-spacing: 0.05em;
     }
 
     .rq-chips-list {
       display: flex;
-      gap: 10px;
+      gap: 8px;
       flex-wrap: wrap;
-      flex: 1;
+      align-items: center;
     }
 
     .rq-chip {
-      background: var(--paper-cream);
+      background: var(--paper-inset);
+      border: 1px solid var(--paper-border-line);
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      font-size: 0.74rem;
+      font-weight: 800;
+      color: var(--ink-headline);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      animation: popInChip 0.25s var(--ease-paper);
+    }
+
+    @keyframes popInChip {
+      from { transform: scale(0.85); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    /* Algorithm Mode Switcher Banner */
+    .algo-mode-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--paper-card);
       border: 1.5px solid var(--paper-border-line);
-      padding: 6px 14px;
+      border-radius: var(--radius-pill);
+      padding: 5px 6px;
+      margin-bottom: 16px;
+      box-shadow: var(--shadow-cut-flat);
+    }
+
+    .algo-mode-pills {
+      display: flex;
+      gap: 6px;
+    }
+
+    .algo-mode-btn {
+      padding: 6px 16px;
       border-radius: var(--radius-pill);
       font-size: 0.8rem;
       font-weight: 800;
-      color: var(--ink-headline);
-      box-shadow: var(--shadow-cut-flat);
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      animation: chipPop 0.25s var(--ease-spring);
+      border: none;
+      cursor: pointer;
+      background: transparent;
+      color: var(--ink-secondary);
+      transition: all 0.2s var(--ease-paper);
     }
 
-    @keyframes chipPop {
-      0% { transform: scale(0.85); opacity: 0; }
-      100% { transform: scale(1); opacity: 1; }
+    .algo-mode-btn.active {
+      background: var(--paper-card-elevated);
+      color: var(--ink-headline);
+      box-shadow: var(--shadow-cut-sm);
+    }
+
+    /* Calculations Table */
+    .calc-table-wrap {
+      overflow-x: auto;
+      margin-top: 24px;
+      border-radius: var(--radius-card);
+      border: 1.5px solid var(--paper-border-line);
+      box-shadow: var(--shadow-cut-sm);
+      background: var(--paper-card-elevated);
+    }
+
+    .metrics-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.85rem;
+    }
+
+    .metrics-table th {
+      background: var(--paper-desk);
+      padding: 12px 16px;
+      font-weight: 800;
+      color: var(--ink-headline);
+      border-bottom: 2px solid var(--paper-border-line);
+      white-space: nowrap;
+    }
+
+    .metrics-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid rgba(70, 52, 35, 0.08);
+      color: var(--ink-primary);
+    }
+
+    .metrics-table tr:hover {
+      background: rgba(244, 239, 235, 0.5);
+    }
+
+    .metrics-table tr.active-row {
+      background: rgba(194, 65, 12, 0.08) !important;
     }
 
     /* Comparison Cards Grid */
     .comparison-cards-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 24px;
-      margin-top: 30px;
-    }
-
-    @media (max-width: 820px) {
-      .comparison-cards-grid {
-        grid-template-columns: 1fr;
-      }
+      gap: 20px;
+      margin-top: 24px;
     }
 
     .algo-compare-card {
-      background: var(--paper-cream);
+      background: var(--paper-card);
       border-radius: var(--radius-card);
-      padding: 26px;
-      border: 1px solid var(--paper-border-line);
+      padding: 22px;
+      border: 1.5px solid var(--paper-border-line);
       box-shadow: var(--shadow-cut-sm);
+      position: relative;
     }
 
     .algo-compare-card.winner {
-      border: 2px solid var(--color-pine);
-      background: #F4FBF8;
+      border-color: var(--color-pine-tint);
+      background: var(--color-pine-light);
     }
 
     .algo-title {
-      font-size: 1.2rem;
-      font-weight: 900;
+      font-size: 1.05rem;
+      font-weight: 800;
       color: var(--ink-headline);
-      margin-bottom: 12px;
+      margin-bottom: 8px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
-      gap: 8px;
     }
 
     .algo-pill {
-      font-size: 0.72rem;
+      font-size: 0.68rem;
       font-weight: 800;
-      padding: 3px 10px;
+      padding: 3px 8px;
       border-radius: var(--radius-pill);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
     }
+
+    .badge-perf { background: var(--color-pine); color: #FFFFFF; }
+    .badge-eff { background: var(--color-slate); color: #FFFFFF; }
 
     .metric-list-item {
       display: flex;
       justify-content: space-between;
-      padding: 8px 0;
-      border-bottom: 1px dashed rgba(0, 0, 0, 0.08);
-      font-size: 0.88rem;
+      padding: 6px 0;
+      border-bottom: 1px dashed rgba(70, 52, 35, 0.1);
+      font-size: 0.82rem;
+    }
+    .metric-list-item:last-child {
+      border-bottom: none;
     }
 
     /* =========================================================================
-     * SECTION 4: INTERRUPT ARCHITECTURE & 6-STEP CALL ARRIVES TRACE
+     * SECTION 4: INTERRUPT ARCHITECTURE & 6-STEP CALL TRACE
      * ========================================================================= */
     .interrupt-master-box {
-      background: var(--paper-card-elevated);
-      border-radius: var(--radius-lg);
-      padding: 36px;
-      box-shadow: var(--shadow-cut-md);
-      border: 2px solid rgba(131, 24, 67, 0.2);
-      outline: 1px solid rgba(131, 24, 67, 0.08);
+      margin-top: 24px;
     }
 
     .trace-stepper-nav {
-      display: flex;
-      gap: 8px;
-      overflow-x: auto;
-      padding-bottom: 12px;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 10px;
       margin-bottom: 24px;
     }
 
     .trace-step-btn {
-      flex: 1;
-      min-width: 140px;
-      background: var(--paper-cream);
+      background: var(--paper-card-elevated);
       border: 1.5px solid var(--paper-border-line);
-      border-radius: var(--radius-md);
-      padding: 12px 14px;
-      cursor: pointer;
+      border-radius: var(--radius-card);
+      padding: 12px 10px;
       text-align: left;
-      transition: all 0.2s var(--ease-paper);
+      cursor: pointer;
+      box-shadow: var(--shadow-cut-flat);
+      transition: all 0.22s var(--ease-paper);
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
     }
 
     .trace-step-btn:hover {
-      background: var(--paper-desk-accent);
       transform: translateY(-2px);
+      box-shadow: var(--shadow-cut-sm);
     }
 
     .trace-step-btn.active {
-      background: var(--color-plum-light);
       border-color: var(--color-plum);
-      box-shadow: 0 4px 12px rgba(131, 24, 67, 0.2);
+      outline: 2px solid var(--color-plum);
+      background: var(--color-plum-light);
     }
 
-    .trace-num {
-      font-size: 0.72rem;
-      font-weight: 900;
-      color: var(--color-plum);
+    .step-num-badge {
+      font-size: 0.68rem;
+      font-weight: 800;
       text-transform: uppercase;
-      margin-bottom: 2px;
+      letter-spacing: 0.05em;
+      color: var(--color-plum-dark);
     }
 
-    .trace-label {
-      font-size: 0.84rem;
+    .step-label-title {
+      font-size: 0.78rem;
       font-weight: 800;
       color: var(--ink-headline);
       line-height: 1.25;
     }
 
-    /* Live Trace Stage Simulator */
     .trace-stage-viewport {
       background: var(--paper-cream);
       border-radius: var(--radius-card);
-      padding: 32px;
-      border: 1px solid var(--paper-border-line);
-      box-shadow: var(--shadow-inset-trench);
+      padding: 28px 32px;
+      border: 1.5px solid var(--paper-border-line);
+      box-shadow: var(--shadow-cut-sm);
       display: grid;
-      grid-template-columns: 1fr 1.25fr;
+      grid-template-columns: 0.95fr 1.35fr;
       gap: 32px;
       align-items: center;
     }
 
-    @media (max-width: 860px) {
-      .trace-stage-viewport {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    /* CPU Core & TCB Visual Representation */
-    .cpu-visual-chassis {
+    /* CPU Core State Terminal / Register Box */
+    .cpu-core-visual-box {
       background: var(--paper-card-elevated);
       border-radius: var(--radius-card);
-      padding: 24px;
+      padding: 22px;
+      border: 1.5px solid var(--paper-border-line);
       box-shadow: var(--shadow-cut-md);
-      border: 2px solid var(--paper-border-line);
       position: relative;
     }
 
-    .cpu-core-chip {
-      background: #0F172A;
-      border-radius: var(--radius-md);
-      padding: 16px;
-      color: #38BDF8;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-      font-size: 0.84rem;
-      margin-bottom: 16px;
-      box-shadow: inset 0 2px 6px rgba(0,0,0,0.6);
-      border: 1px solid #1E293B;
-    }
-
-    .register-bank-visual {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 8px;
-      font-size: 0.74rem;
-      margin-top: 10px;
-    }
-
-    .reg-box {
-      background: #1E293B;
-      padding: 5px 8px;
-      border-radius: 6px;
+    .cpu-core-title {
+      font-size: 0.78rem;
+      font-weight: 800;
+      color: var(--ink-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 12px;
       display: flex;
       justify-content: space-between;
-      color: #94A3B8;
+      align-items: center;
     }
-    .reg-val {
-      color: #34D399;
+
+    .core-terminal-screen {
+      background: #171E2B;
+      color: #93C5FD;
+      font-family: ui-monospace, monospace;
+      font-size: 0.78rem;
+      border-radius: var(--radius-sm);
+      padding: 14px;
+      box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.4);
+      line-height: 1.6;
+      margin-bottom: 14px;
+    }
+
+    .term-line-active {
+      color: #FBBF24;
       font-weight: 700;
     }
 
-    .tcb-box-visual {
-      background: var(--paper-inset);
-      border-radius: var(--radius-md);
-      padding: 12px 14px;
-      border: 1.5px dashed #A89B86;
-      font-size: 0.8rem;
+    .register-bank-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
     }
 
-    .trace-story-text {
+    .reg-cell {
+      background: #0F172A;
+      color: #E2E8F0;
+      padding: 6px 10px;
+      border-radius: 4px;
+      display: flex;
+      justify-content: space-between;
+      font-family: ui-monospace, monospace;
+      font-size: 0.75rem;
+    }
+
+    .reg-name {
+      color: #94A3B8;
+    }
+
+    /* TCB Saved Visual Card */
+    .tcb-visual-card {
+      background: var(--paper-card-elevated);
+      border: 1.5px dashed var(--paper-border-line);
+      border-radius: var(--radius-sm);
+      padding: 10px 14px;
+      margin-top: 12px;
+      font-size: 0.75rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .tcb-state-txt {
+      font-weight: 800;
+      color: var(--ink-secondary);
+    }
+
+    /* Trace Narrative Explanation */
+    .trace-narrative-box {
       display: flex;
       flex-direction: column;
       gap: 14px;
     }
 
-    .trace-headline {
-      font-size: 1.45rem;
-      font-weight: 900;
-      color: var(--ink-headline);
-      line-height: 1.25;
-    }
-
-    .trace-detail-para {
-      font-size: 0.95rem;
-      color: var(--ink-secondary);
-      line-height: 1.65;
-    }
-
-    .trace-os-action-pill {
-      background: var(--paper-card-elevated);
-      border-left: 4px solid var(--color-plum);
-      padding: 12px 18px;
-      border-radius: 0 12px 12px 0;
-      box-shadow: var(--shadow-cut-flat);
-      font-size: 0.88rem;
-      font-weight: 700;
-      color: var(--color-plum-dark);
-    }
-
-    /* =========================================================================
-     * SECTION 5: MULTICORE TASK ALLOCATION (big.LITTLE)
-     * ========================================================================= */
-    .multicore-deck {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 26px;
-    }
-
-    @media (max-width: 820px) {
-      .multicore-deck {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .core-cluster-card {
-      background: var(--paper-card-elevated);
-      border-radius: var(--radius-card);
-      padding: 30px;
-      box-shadow: var(--shadow-cut-md);
-      border: 1px solid var(--paper-border-highlight);
-      outline: 1.5px solid var(--paper-border-line);
-    }
-
-    .core-cluster-card.p-cluster {
-      border-top: 6px solid var(--color-terracotta);
-    }
-
-    .core-cluster-card.e-cluster {
-      border-top: 6px solid var(--color-teal);
-    }
-
-    .cluster-head {
-      display: flex;
-      justify-content: space-between;
+    .trace-step-tag {
+      display: inline-flex;
       align-items: center;
-      margin-bottom: 16px;
-    }
-
-    .cluster-name {
-      font-size: 1.3rem;
-      font-weight: 900;
-      color: var(--ink-headline);
-    }
-
-    .cluster-badge {
+      gap: 6px;
+      background: var(--color-plum-tint);
+      color: var(--color-plum-dark);
       padding: 4px 12px;
       border-radius: var(--radius-pill);
       font-size: 0.74rem;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.05em;
+      align-self: flex-start;
     }
 
-    .badge-perf { background: var(--color-terracotta-light); color: var(--color-terracotta-dark); border: 1px solid var(--color-terracotta-tint); }
-    .badge-eff { background: var(--color-teal-light); color: var(--color-teal-dark); border: 1px solid var(--color-teal-tint); }
+    .trace-step-heading {
+      font-size: 1.55rem;
+      font-weight: 900;
+      color: var(--ink-headline);
+      line-height: 1.25;
+    }
 
-    .cluster-desc {
-      font-size: 0.88rem;
+    .trace-step-para {
+      font-size: 0.95rem;
       color: var(--ink-secondary);
-      margin-bottom: 20px;
-      line-height: 1.5;
+      line-height: 1.65;
     }
 
-    .core-tasks-stack {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .core-task-item {
-      background: var(--paper-cream);
-      border: 1px solid var(--paper-border-line);
-      border-radius: var(--radius-md);
+    .trace-action-callout {
+      background: var(--paper-card-elevated);
+      border-left: 4px solid var(--color-plum);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
       padding: 12px 16px;
+      font-size: 0.85rem;
+      color: var(--ink-headline);
+      box-shadow: var(--shadow-cut-flat);
+    }
+
+    .trace-stepper-ctrls {
+      display: flex;
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    /* =========================================================================
+     * SECTION 5: MULTICORE big.LITTLE ARCHITECTURE
+     * ========================================================================= */
+    .multicore-grid-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 20px;
+    }
+
+    .core-cluster-card {
+      background: var(--paper-card-elevated);
+      border-radius: var(--radius-lg);
+      padding: 30px;
+      border: 1px solid var(--paper-border-highlight);
+      outline: 1.5px solid var(--paper-border-line);
+      box-shadow: var(--shadow-cut-md);
+      position: relative;
+    }
+
+    .cluster-big {
+      border-top: 4px solid var(--color-terracotta);
+    }
+
+    .cluster-little {
+      border-top: 4px solid var(--color-teal);
+    }
+
+    .cluster-title-row {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      transition: transform 0.2s ease;
+      margin-bottom: 12px;
     }
 
-    .core-task-item:hover {
-      transform: translateX(4px);
-    }
-
-    .ct-name {
+    .cluster-name {
+      font-size: 1.25rem;
       font-weight: 800;
-      font-size: 0.88rem;
       color: var(--ink-headline);
     }
 
-    .ct-reason {
-      font-size: 0.76rem;
-      color: var(--ink-muted);
-      font-weight: 600;
+    .cluster-badge {
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
     }
 
-    /* Interactive Power & Thermal Gauge Strip */
-    .soc-power-strip {
-      background: var(--paper-cream);
-      border-radius: var(--radius-card);
-      padding: 20px 24px;
+    .badge-big-core {
+      background: var(--color-terracotta-light);
+      color: var(--color-terracotta-dark);
+      border: 1px solid var(--color-terracotta-tint);
+    }
+
+    .badge-little-core {
+      background: var(--color-teal-light);
+      color: var(--color-teal-dark);
+      border: 1px solid var(--color-teal-tint);
+    }
+
+    .cluster-specs-sub {
+      font-size: 0.8rem;
+      color: var(--ink-muted);
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .core-tasks-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .core-task-pill-card {
+      background: var(--paper-card);
       border: 1px solid var(--paper-border-line);
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       box-shadow: var(--shadow-cut-flat);
-      margin-top: 24px;
+    }
+
+    .core-task-name {
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: var(--ink-headline);
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 16px;
-    }
-
-    .power-metric-box {
-      display: flex;
-      align-items: baseline;
       gap: 8px;
     }
 
-    .power-number {
-      font-size: 1.8rem;
+    .core-task-detail {
+      font-size: 0.75rem;
+      color: var(--ink-secondary);
+      margin-top: 2px;
+    }
+
+    /* Live Energy Footprint Bar */
+    .soc-power-bar {
+      margin-top: 24px;
+      background: var(--paper-card-elevated);
+      border-radius: var(--radius-card);
+      padding: 18px 24px;
+      border: 1.5px solid var(--paper-border-line);
+      box-shadow: var(--shadow-cut-sm);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .soc-power-meter {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .soc-power-val {
+      font-family: ui-monospace, monospace;
+      font-size: 1.6rem;
       font-weight: 900;
-      color: var(--color-teal-dark);
-      font-variant-numeric: tabular-nums;
+      color: var(--color-pine-dark);
     }
 
     /* =========================================================================
      * SECTION 6: PROBLEM IDENTIFICATION & PROPOSED SOLUTION
      * ========================================================================= */
-    .solution-architecture-box {
-      background: var(--paper-card-elevated);
-      border-radius: var(--radius-lg);
-      padding: 38px;
-      box-shadow: var(--shadow-cut-md);
-      border: 1px solid var(--paper-border-highlight);
-      outline: 1.5px solid var(--paper-border-line);
-    }
-
-    .problem-highlight-strip {
-      background: #FEF2F2;
-      border: 2px solid #FCA5A5;
+    .problem-alert-box {
+      background: #FFF1F2;
+      border: 1.5px solid #FECDD3;
       border-radius: var(--radius-card);
-      padding: 20px 24px;
-      margin-bottom: 28px;
+      padding: 22px 26px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-cut-flat);
       display: flex;
-      gap: 18px;
+      gap: 16px;
       align-items: flex-start;
     }
 
-    .warn-icon-cut {
-      width: 38px;
-      height: 38px;
-      border-radius: 12px;
-      background: #DC2626;
+    .alert-icon-seal {
+      width: 36px;
+      height: 36px;
+      background: #E11D48;
       color: #FFFFFF;
+      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       font-weight: 900;
-      font-size: 1.3rem;
+      font-size: 1.1rem;
       flex-shrink: 0;
-      box-shadow: var(--shadow-paper-bevel);
+      box-shadow: 0 3px 8px rgba(225, 29, 72, 0.3);
     }
 
-    .four-pillars-grid {
+    .solutions-four-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      margin-top: 24px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-top: 20px;
     }
 
-    .pillar-card {
-      background: var(--paper-cream);
+    .solution-pillar-card {
+      background: var(--paper-card-elevated);
       border-radius: var(--radius-card);
-      padding: 24px;
-      border: 1px solid var(--paper-border-line);
+      padding: 22px 18px;
+      border: 1px solid var(--paper-border-highlight);
+      outline: 1px solid var(--paper-border-line);
       box-shadow: var(--shadow-cut-sm);
-      position: relative;
-      transition: transform 0.2s var(--ease-paper);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
-    .pillar-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-cut-md);
-    }
-
-    .pillar-num {
-      width: 34px;
-      height: 34px;
-      border-radius: 10px;
-      background: var(--color-pine);
+    .pillar-num-seal {
+      width: 28px;
+      height: 28px;
+      background: var(--color-pine-dark);
       color: #FFFFFF;
+      font-size: 0.8rem;
+      font-weight: 800;
+      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-weight: 800;
-      font-size: 0.9rem;
-      margin-bottom: 14px;
-      box-shadow: var(--shadow-paper-bevel);
+      margin-bottom: 12px;
     }
 
     .pillar-title {
-      font-size: 1.05rem;
+      font-size: 1.02rem;
       font-weight: 800;
       color: var(--ink-headline);
       margin-bottom: 8px;
+      line-height: 1.3;
     }
 
-    .pillar-text {
-      font-size: 0.86rem;
+    .pillar-desc {
+      font-size: 0.82rem;
       color: var(--ink-secondary);
       line-height: 1.55;
     }
 
     /* =========================================================================
-     * SECTION 7: TEAM ROSTER & ACADEMIC CREDITS
+     * SECTION 7: TEAM 5 CONTRIBUTOR ROSTER & REFERENCES
      * ========================================================================= */
-    .roster-card {
-      background: var(--paper-card-elevated);
-      border-radius: var(--radius-lg);
-      padding: 38px;
-      box-shadow: var(--shadow-cut-md);
-      border: 1px solid var(--paper-border-highlight);
-      outline: 1.5px solid var(--paper-border-line);
-      margin-top: 36px;
-    }
-
     .roster-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      grid-template-columns: repeat(4, 1fr);
       gap: 16px;
-      margin-top: 20px;
+      margin-top: 22px;
     }
 
-    .team-member-cut {
-      background: var(--paper-cream);
-      border: 1px solid var(--paper-border-line);
-      border-radius: var(--radius-md);
-      padding: 16px;
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-      transition: transform 0.2s ease;
+    .team-member-card {
+      background: var(--paper-card-elevated);
+      border-radius: var(--radius-card);
+      padding: 18px 16px;
+      border: 1px solid var(--paper-border-highlight);
+      outline: 1px solid var(--paper-border-line);
+      box-shadow: var(--shadow-cut-flat);
+      transition: all 0.22s var(--ease-paper);
     }
 
-    .team-member-cut:hover {
-      transform: translateY(-3px);
+    .team-member-card:hover {
+      transform: translateY(-2px);
       box-shadow: var(--shadow-cut-sm);
     }
 
-    .team-member-cut.author-card {
-      background: var(--color-terracotta-light);
-      border: 2px solid var(--color-terracotta);
-      box-shadow: 0 4px 14px rgba(194, 65, 12, 0.2);
-    }
-
     .tm-name {
+      font-size: 0.95rem;
       font-weight: 800;
-      font-size: 0.98rem;
       color: var(--ink-headline);
+      margin-bottom: 3px;
     }
 
     .tm-usn {
-      font-size: 0.78rem;
+      font-size: 0.72rem;
       font-weight: 700;
       color: var(--ink-muted);
       font-family: ui-monospace, monospace;
+      margin-bottom: 8px;
     }
 
     .tm-role {
-      font-size: 0.76rem;
-      font-weight: 700;
-      color: var(--color-pine-dark);
-      margin-top: 4px;
+      font-size: 0.75rem;
+      color: var(--ink-secondary);
+      line-height: 1.4;
     }
 
-    /* Print & Responsive Optimizations */
-    @media print {
-      body {
-        background: #FFFFFF;
-      }
-      .header-bar, .timeline-playback-strip, .pipeline-controls {
-        display: none !important;
-      }
+    /* Academic Footer */
+    .academic-footer {
+      margin-top: 60px;
+      padding-top: 28px;
+      border-top: 1.5px dashed var(--paper-desk-accent);
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--ink-muted);
+    }
+
+    .footer-pill-row {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+
+    .footer-chip {
+      background: var(--paper-card-elevated);
+      border: 1px solid var(--paper-border-line);
+      padding: 4px 12px;
+      border-radius: var(--radius-pill);
+      font-weight: 700;
+      color: var(--ink-secondary);
+    }
+
+    /* Responsive Breakpoints */
+    @media (max-width: 1200px) {
+      .hero-card { grid-template-columns: 1fr; }
+      .hero-phone-wrap { margin-top: 10px; }
+      .activities-grid { grid-template-columns: repeat(2, 1fr); }
+      .threads-flow-grid { grid-template-columns: repeat(3, 1fr); }
+      .solutions-four-grid { grid-template-columns: repeat(2, 1fr); }
+      .roster-grid { grid-template-columns: repeat(3, 1fr); }
+      .comparison-cards-grid { grid-template-columns: 1fr; }
+      .trace-stage-viewport { grid-template-columns: 1fr; }
+      .multicore-grid-box { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 860px) {
+      .header-content { height: auto; padding: 12px 0; flex-wrap: wrap; }
+      .nav-tabs { order: 3; width: 100%; overflow-x: auto; }
+      .hero-title { font-size: 2.2rem; }
+      .activities-grid { grid-template-columns: 1fr; }
+      .threads-flow-grid { grid-template-columns: 1fr 1fr; }
+      .solutions-four-grid { grid-template-columns: 1fr; }
+      .roster-grid { grid-template-columns: repeat(2, 1fr); }
+      .trace-stepper-nav { grid-template-columns: repeat(3, 1fr); }
+      .thread-inspector-panel { grid-template-columns: 1fr; }
+      .buffer-status-row { grid-template-columns: 1fr; }
+      .hero-stats-row { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 520px) {
+      .threads-flow-grid { grid-template-columns: 1fr; }
+      .roster-grid { grid-template-columns: 1fr; }
+      .trace-stepper-nav { grid-template-columns: 1fr 1fr; }
     }
   </style>
 </head>
@@ -1917,7 +1982,7 @@
       </a>
 
       <!-- Quick Section Tabs -->
-      <nav class="nav-tabs">
+      <nav class="nav-tabs" id="main-nav-tabs">
         <button class="nav-tab-btn active" onclick="scrollToSection('hero')">Overview</button>
         <button class="nav-tab-btn" onclick="scrollToSection('activities')">6 Activities</button>
         <button class="nav-tab-btn" onclick="scrollToSection('threads')">5-Thread Pipeline</button>
@@ -1925,114 +1990,126 @@
         <button class="nav-tab-btn" onclick="scrollToSection('interrupts')">Interrupt Trace</button>
         <button class="nav-tab-btn" onclick="scrollToSection('multicore')">big.LITTLE Cores</button>
         <button class="nav-tab-btn" onclick="scrollToSection('solution')">OS Solution</button>
-        <button class="nav-tab-btn" onclick="scrollToSection('roster')">Team Roster</button>
+        <button class="nav-tab-btn" onclick="scrollToSection('roster')">Team 5</button>
       </nav>
 
-      <!-- Clean Project Status Pill (No author badge) -->
-      <div class="header-status-pill" title="JAIN University Case Study Simulation">
-        <span class="status-dot"></span>
-        <span>Team 5 Simulation</span>
+      <!-- Status Pill -->
+      <div class="header-status-pill">
+        <span class="status-live-pip"></span>
+        <span>Course 25PCCS201</span>
       </div>
     </div>
   </header>
 
   <main class="container">
 
-    <!-- HERO SECTION: SCENARIO & SYSTEM MODEL -->
+    <!-- =========================================================================
+     * HERO SECTION: MOBILE MULTITASKING EXECUTION ARCHITECTURE
+     * ========================================================================= -->
     <section id="hero" class="hero-section">
       <div class="hero-card">
         <div class="hero-ribbon">Team 5 · CS8 Case Study</div>
 
-        <div class="hero-text-side">
-          <div class="academic-meta-tag">
-            <span>🏛️ JAIN (Deemed-to-be University)</span>
-            <span>•</span>
-            <span>Course Code: 25PCCS201</span>
-            <span>•</span>
-            <span>Faculty: Mr. Karthikeyan S</span>
+        <!-- Left Column: Context, Scope & Key Statistics -->
+        <div>
+          <div class="hero-dept-badge">
+            <span class="hero-dept-chip">🏛️ JAIN (Deemed-to-be University)</span>
+            <span class="hero-dept-sep">•</span>
+            <span class="hero-dept-chip">Course: 25PCCS201 (OS)</span>
+            <span class="hero-dept-sep">•</span>
+            <span class="hero-dept-chip">Faculty: Mr. Karthikeyan S</span>
           </div>
 
           <h1 class="hero-title">
-            Mobile Phone <span class="highlight-cut">Multitasking</span>
+            Mobile Phone <span class="hero-title-accent">Multitasking</span>
           </h1>
 
-          <p class="hero-description">
+          <p class="hero-desc">
             How a modern smartphone Operating System coordinates <strong>six concurrent activities</strong>—high-definition video recording, continuous music streaming, incoming messages, background downloads, GPS tracking, and background services—without dropping frames, stuttering audio, or sacrificing battery endurance.
           </p>
 
           <div class="hero-stats-row">
-            <div class="stat-cut-box">
-              <div class="stat-label">Concurrent Tasks</div>
-              <div class="stat-value">6 Workloads</div>
+            <div class="hero-stat-card">
+              <div class="hero-stat-label">Concurrent Tasks</div>
+              <div class="hero-stat-val">6 Workloads</div>
             </div>
-            <div class="stat-cut-box">
-              <div class="stat-label">Model Architecture</div>
-              <div class="stat-value">1 App / 5 Threads</div>
+            <div class="hero-stat-card">
+              <div class="hero-stat-label">Model Architecture</div>
+              <div class="hero-stat-val">1 App / 5 Threads</div>
             </div>
-            <div class="stat-cut-box">
-              <div class="stat-label">CPU Cores</div>
-              <div class="stat-value">big.LITTLE SoC</div>
+            <div class="hero-stat-card">
+              <div class="hero-stat-label">CPU Cores</div>
+              <div class="hero-stat-val">big.LITTLE SoC</div>
             </div>
           </div>
         </div>
 
-        <!-- Papercut Smartphone Visual Artwork -->
-        <div class="phone-art-stage">
-          <div class="paper-orbit-card orbit-1">
-            <span>🎥</span>
-            <span>Video Recording (Foreground)</span>
+        <!-- Right Column: Tactile Papercraft Phone Mockup -->
+        <div class="hero-phone-wrap">
+          <div class="hero-float-pin pin-top-right">
+            <span>📹 Active Foreground: 4K/60FPS</span>
           </div>
-          <div class="paper-orbit-card orbit-2">
-            <span>⚡</span>
-            <span>Hardware Interrupts (Call Alert)</span>
+          <div class="hero-float-pin pin-mid-left">
+            <span>🧠 Priority Scheduler (q=2)</span>
           </div>
-          <div class="paper-orbit-card orbit-3">
-            <span>🧠</span>
-            <span>Priority Scheduler (q=2)</span>
+          <div class="hero-float-pin pin-bottom-right">
+            <span>⚡ Hardware IRQ: Call Alert</span>
           </div>
 
           <div class="paper-phone-chassis">
-            <div class="phone-notch">
-              <div class="notch-camera"></div>
-            </div>
-            <div class="phone-screen">
-              <div class="screen-status-bar">
+            <div class="paper-phone-screen">
+              <div class="phone-dynamic-notch">
+                <div class="notch-camera-dot"></div>
+                <div class="notch-sensor-dot"></div>
+              </div>
+
+              <div class="phone-status-bar">
                 <span>9:41 AM</span>
-                <span>📶 5G &nbsp;🔋 100%</span>
+                <span>📶 5G  🔋 100%</span>
               </div>
-              <div class="screen-app-card card-active-video" onclick="scrollToSection('threads')">
-                <div class="card-icon icon-video">🎥</div>
-                <div class="card-meta">
-                  <div class="card-title">Video Recording</div>
-                  <div class="card-sub">Active Foreground · 60 FPS</div>
+
+              <!-- Foreground App: Video Recording -->
+              <div class="phone-app-card active-fg">
+                <div class="phone-app-icon" style="background: var(--color-terracotta);">📹</div>
+                <div class="phone-app-info">
+                  <div class="phone-app-title">Video Recording</div>
+                  <div class="phone-app-sub">Active Foreground · 60 FPS · 4K</div>
                 </div>
               </div>
-              <div class="screen-app-card" onclick="scrollToSection('scheduling')">
-                <div class="card-icon icon-music">🎵</div>
-                <div class="card-meta">
-                  <div class="card-title">Music Playback</div>
-                  <div class="card-sub">Continuous Audio Stream</div>
+
+              <!-- Background Music -->
+              <div class="phone-app-card">
+                <div class="phone-app-icon" style="background: var(--color-amber);">🎵</div>
+                <div class="phone-app-info">
+                  <div class="phone-app-title">Music Playback</div>
+                  <div class="phone-app-sub">Continuous Audio Stream · DAC</div>
                 </div>
               </div>
-              <div class="screen-app-card" onclick="scrollToSection('interrupts')">
-                <div class="card-icon icon-msg">💬</div>
-                <div class="card-meta">
-                  <div class="card-title">Message Alert</div>
-                  <div class="card-sub">Urgent Hardware Interrupt</div>
+
+              <!-- Message Notification -->
+              <div class="phone-app-card">
+                <div class="phone-app-icon" style="background: var(--color-plum);">💬</div>
+                <div class="phone-app-info">
+                  <div class="phone-app-title">Message Alert</div>
+                  <div class="phone-app-sub">Urgent Hardware Interrupt</div>
                 </div>
               </div>
-              <div class="screen-app-card" onclick="scrollToSection('activities')">
-                <div class="card-icon icon-gps">📍</div>
-                <div class="card-meta">
-                  <div class="card-title">GPS Tracking</div>
-                  <div class="card-sub">Periodic Sensor Updates</div>
+
+              <!-- GPS Tracking -->
+              <div class="phone-app-card">
+                <div class="phone-app-icon" style="background: var(--color-teal);">📍</div>
+                <div class="phone-app-info">
+                  <div class="phone-app-title">GPS Tracking</div>
+                  <div class="phone-app-sub">Periodic Sensor Updates</div>
                 </div>
               </div>
-              <div class="screen-app-card" onclick="scrollToSection('multicore')">
-                <div class="card-icon icon-dl">📥</div>
-                <div class="card-meta">
-                  <div class="card-title">File Download</div>
-                  <div class="card-sub">Background Network I/O</div>
+
+              <!-- Background Download -->
+              <div class="phone-app-card">
+                <div class="phone-app-icon" style="background: var(--color-slate);">📥</div>
+                <div class="phone-app-info">
+                  <div class="phone-app-title">File Download</div>
+                  <div class="phone-app-sub">Bulk Network I/O Wait</div>
                 </div>
               </div>
             </div>
@@ -2041,176 +2118,127 @@
       </div>
     </section>
 
-    <!-- SECTION 1: 6 CONCURRENT ACTIVITIES & OS CONCEPT MAPPING -->
+    <!-- =========================================================================
+     * SECTION 1: 6 CONCURRENT ACTIVITIES & OS CONCEPT MAPPING
+     * ========================================================================= -->
     <section id="activities" class="section-wrap">
-      <div class="section-header-block">
-        <div>
-          <div class="section-eyebrow">Real-World Execution Model · Slide 2 & 3</div>
-          <h2 class="section-main-heading">Six Concurrent Smartphone Activities</h2>
-          <p class="section-subtext">Each real-world phone activity translates into specific operating system constructs, varying significantly in compute intensity, urgency, and I/O wait times.</p>
-        </div>
-        <div class="section-author-badge">
-          <span>Assigned to: <strong class="author-highlight">Aryan Tripathi (P1)</strong> & <strong class="author-highlight">Damodara / Hariom (P2)</strong></span>
-        </div>
-      </div>
-
-      <!-- Activity Filters -->
-      <div class="activity-filters-row">
-        <button class="filter-btn active" onclick="filterActivities('all', this)">All Activities (6)</button>
-        <button class="filter-btn" onclick="filterActivities('realtime', this)">Real-Time & Time-Sensitive</button>
-        <button class="filter-btn" onclick="filterActivities('io', this)">I/O & Periodic</button>
-        <button class="filter-btn" onclick="filterActivities('bg', this)">Background Steady</button>
-      </div>
-
-      <div class="activities-grid" id="activities-container">
-        <!-- 1. Video Recording -->
-        <div class="paper-task-card" data-category="realtime">
+      <div class="section-deck-mat">
+        <div class="section-header-block">
           <div>
-            <span class="task-badge-cut badge-video">Time-Sensitive · Foreground</span>
-            <h3 class="task-card-title">1. Video Recording</h3>
-            <p class="task-card-desc">Streams high-bitrate raw frames from image sensors, encodes frames via hardware DSP/CPU, and syncs audio streams continuously.</p>
+            <div class="section-eyebrow">Real-World Execution Model · Slide 2 & 3</div>
+            <h2 class="section-main-heading">Six Concurrent Smartphone Activities</h2>
+            <p class="section-subtext">Each real-world phone activity translates into specific operating system constructs, varying significantly in compute intensity, urgency, and I/O wait times.</p>
           </div>
-          <div class="task-mapping-pill-box">
-            <div class="mapping-row"><span class="map-key">OS Concept:</span><span class="map-val">Foreground Process</span></div>
-            <div class="mapping-row"><span class="map-key">OS Requirement:</span><span class="map-val">Continuous Fast Processing</span></div>
-            <div class="mapping-row"><span class="map-key">Core Type:</span><span class="map-val">Performance Core (Big)</span></div>
+          <div class="section-author-badge">
+            <span>Assigned to: <strong class="author-highlight">Aryan Tripathi (P1)</strong> & <strong class="author-highlight">Damodara / Hariom (P2)</strong></span>
           </div>
         </div>
 
-        <!-- 2. Music Playback -->
-        <div class="paper-task-card" data-category="bg">
-          <div>
-            <span class="task-badge-cut badge-music">Continuous · Low Compute</span>
-            <h3 class="task-card-title">2. Music Playback</h3>
-            <p class="task-card-desc">Streams compressed audio through DAC to speakers or Bluetooth. Requires deterministic buffer fills to prevent audible glitches.</p>
-          </div>
-          <div class="task-mapping-pill-box">
-            <div class="mapping-row"><span class="map-key">OS Concept:</span><span class="map-val">Background Thread / Audio DAC</span></div>
-            <div class="mapping-row"><span class="map-key">OS Requirement:</span><span class="map-val">Smooth Playback Continuity</span></div>
-            <div class="mapping-row"><span class="map-key">Core Type:</span><span class="map-val">Efficiency Core (LITTLE)</span></div>
-          </div>
+        <!-- Activity Filters -->
+        <div class="activity-filters-row">
+          <button class="filter-btn active" onclick="filterActivities('all', this)">All Activities (6)</button>
+          <button class="filter-btn" onclick="filterActivities('realtime', this)">Real-Time & Time-Sensitive (2)</button>
+          <button class="filter-btn" onclick="filterActivities('io', this)">I/O & Periodic (2)</button>
+          <button class="filter-btn" onclick="filterActivities('bg', this)">Background Steady (2)</button>
         </div>
 
-        <!-- 3. Message Handling -->
-        <div class="paper-task-card" data-category="realtime">
-          <div>
-            <span class="task-badge-cut badge-message">Urgent · Event-Driven</span>
-            <h3 class="task-card-title">3. Message Handling</h3>
-            <p class="task-card-desc">Incoming cellular or Wi-Fi radio packet triggers an interrupt requiring instantaneous user notification, audio chime, and screen pop-up.</p>
+        <div class="activities-grid" id="activities-container">
+          <!-- 1. Video Recording -->
+          <div class="paper-task-card" data-category="realtime">
+            <div class="paper-tape"></div>
+            <div>
+              <span class="task-badge-cut badge-video">Time-Sensitive · Foreground</span>
+              <h3 class="task-card-title">1. Video Recording</h3>
+              <p class="task-card-desc">Streams high-bitrate raw frames from image sensors, encodes frames via hardware DSP/CPU, and syncs audio streams continuously.</p>
+            </div>
+            <div class="task-mapping-pill-box">
+              <div class="mapping-row"><span class="map-key">OS Concept:</span><span class="map-val">Foreground Process</span></div>
+              <div class="mapping-row"><span class="map-key">OS Requirement:</span><span class="map-val">Continuous Fast Processing</span></div>
+              <div class="mapping-row"><span class="map-key">Core Type:</span><span class="map-val">Performance Core (Big)</span></div>
+            </div>
           </div>
-          <div class="task-mapping-pill-box">
-            <div class="mapping-row"><span class="map-key">OS Concept:</span><span class="map-val">Device Event / Interrupt Handler</span></div>
-            <div class="mapping-row"><span class="map-key">OS Requirement:</span><span class="map-val">Prompt Immediate Response</span></div>
-            <div class="mapping-row"><span class="map-key">Core Type:</span><span class="map-val">Performance Core (Burst)</span></div>
-          </div>
-        </div>
 
-        <!-- 4. GPS Tracking -->
-        <div class="paper-task-card" data-category="io">
-          <div>
-            <span class="task-badge-cut badge-gps">Periodic · Low Frequency</span>
-            <h3 class="task-card-title">4. GPS Tracking</h3>
-            <p class="task-card-desc">Receives satellite coordinates periodically from the baseband modem to update mapping or fitness logs without exhausting battery.</p>
+          <!-- 2. Music Playback -->
+          <div class="paper-task-card" data-category="bg">
+            <div class="paper-tape"></div>
+            <div>
+              <span class="task-badge-cut badge-music">Continuous · Low Compute</span>
+              <h3 class="task-card-title">2. Music Playback</h3>
+              <p class="task-card-desc">Streams compressed audio through DAC to speakers or Bluetooth. Requires deterministic buffer fills to prevent audible glitches.</p>
+            </div>
+            <div class="task-mapping-pill-box">
+              <div class="mapping-row"><span class="map-key">OS Concept:</span><span class="map-val">Background Thread / Audio DAC</span></div>
+              <div class="mapping-row"><span class="map-key">OS Requirement:</span><span class="map-val">Smooth Playback Continuity</span></div>
+              <div class="mapping-row"><span class="map-key">Core Type:</span><span class="map-val">Efficiency Core (LITTLE)</span></div>
+            </div>
           </div>
-          <div class="task-mapping-pill-box">
-            <div class="mapping-row"><span class="map-key">OS Concept:</span><span class="map-val">Periodic Background Service</span></div>
-            <div class="mapping-row"><span class="map-key">OS Requirement:</span><span class="map-val">Timely Periodic Updates</span></div>
-            <div class="mapping-row"><span class="map-key">Core Type:</span><span class="map-val">Efficiency Core (LITTLE)</span></div>
-          </div>
-        </div>
 
-        <!-- 5. File Download -->
-        <div class="paper-task-card" data-category="io">
-          <div>
-            <span class="task-badge-cut badge-download">Bulk I/O · Low Priority</span>
-            <h3 class="task-card-title">5. File Download</h3>
-            <p class="task-card-desc">Transfers files over TCP/IP in chunks. Dominated by network latency and disk writing; can tolerate sporadic throttling.</p>
+          <!-- 3. Message Notification -->
+          <div class="paper-task-card" data-category="realtime">
+            <div class="paper-tape"></div>
+            <div>
+              <span class="task-badge-cut badge-message">Urgent · Event-Driven</span>
+              <h3 class="task-card-title">3. Message Handling</h3>
+              <p class="task-card-desc">Incoming cellular or Wi-Fi radio packet triggers an interrupt requiring instantaneous user notification, audio chime, and screen pop-up.</p>
+            </div>
+            <div class="task-mapping-pill-box">
+              <div class="mapping-row"><span class="map-key">OS Concept:</span><span class="map-val">Device Event / Interrupt Handler</span></div>
+              <div class="mapping-row"><span class="map-key">OS Requirement:</span><span class="map-val">Prompt Immediate Response</span></div>
+              <div class="mapping-row"><span class="map-key">Core Type:</span><span class="map-val">Performance Core (Burst)</span></div>
+            </div>
           </div>
-          <div class="task-mapping-pill-box">
-            <div class="mapping-row"><span class="map-key">OS Concept:</span><span class="map-val">I/O-Bound Background Task</span></div>
-            <div class="mapping-row"><span class="map-key">OS Requirement:</span><span class="map-val">Background Steady Progress</span></div>
-            <div class="mapping-row"><span class="map-key">Core Type:</span><span class="map-val">Efficiency Core (LITTLE)</span></div>
-          </div>
-        </div>
 
-        <!-- 6. Background Apps -->
-        <div class="paper-task-card" data-category="bg">
-          <div>
-            <span class="task-badge-cut badge-bg">Maintenance · Lowest Urgency</span>
-            <h3 class="task-card-title">6. Background Applications</h3>
-            <p class="task-card-desc">Sync daemons, cached processes, and analytics jobs that execute opportunistically when processor cores are idle.</p>
+          <!-- 4. GPS Tracking -->
+          <div class="paper-task-card" data-category="io">
+            <div class="paper-tape"></div>
+            <div>
+              <span class="task-badge-cut badge-gps">Periodic · Low Frequency</span>
+              <h3 class="task-card-title">4. GPS Tracking</h3>
+              <p class="task-card-desc">Receives satellite coordinates periodically from the baseband modem to update mapping or fitness logs. Spends most time sleeping.</p>
+            </div>
+            <div class="task-mapping-pill-box">
+              <div class="mapping-row"><span class="map-key">OS Concept:</span><span class="map-val">Periodic Background Service</span></div>
+              <div class="mapping-row"><span class="map-key">OS Requirement:</span><span class="map-val">Low Power Periodic Wakeup</span></div>
+              <div class="mapping-row"><span class="map-key">Core Type:</span><span class="map-val">Efficiency Core (LITTLE)</span></div>
+            </div>
           </div>
-          <div class="task-mapping-pill-box">
-            <div class="mapping-row"><span class="map-key">OS Concept:</span><span class="map-val">Background Processes</span></div>
-            <div class="mapping-row"><span class="map-key">OS Requirement:</span><span class="map-val">Controlled Scavenged CPU Time</span></div>
-            <div class="mapping-row"><span class="map-key">Core Type:</span><span class="map-val">Efficiency Core (LITTLE)</span></div>
-          </div>
-        </div>
-      </div>
 
-      <!-- Real-World to OS Concept Mapping Table -->
-      <div class="paper-table-card">
-        <div class="paper-table-header">
-          <h3>Real-World Activities → Operating System Concept Mapping</h3>
-          <span style="font-size: 0.8rem; font-weight: 700; opacity: 0.9;">Section 5.2 / Slide 3</span>
-        </div>
-        <div class="table-container">
-          <table class="papercut-table">
-            <thead>
-              <tr>
-                <th>Real-World Activity</th>
-                <th>OS Concept</th>
-                <th>OS Mechanism / Role</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Video Recording Application</strong></td>
-                <td><span class="task-badge-cut badge-video">Process</span></td>
-                <td>Active execution unit owning its own virtual memory space, file handles, and threads.</td>
-              </tr>
-              <tr>
-                <td><strong>Video Frame Processing & Encoding</strong></td>
-                <td><span class="task-badge-cut badge-video">Thread</span></td>
-                <td>Lightweight path of execution inside the app sharing memory with capture buffers.</td>
-              </tr>
-              <tr>
-                <td><strong>Microphone Audio Sampling</strong></td>
-                <td><span class="task-badge-cut badge-music">Thread</span></td>
-                <td>Concurrent execution thread synchronizing audio timestamp packets with video frames.</td>
-              </tr>
-              <tr>
-                <td><strong>Camera & Microphone Hardware</strong></td>
-                <td><span class="task-badge-cut badge-gps">Input Devices</span></td>
-                <td>Physical peripherals managed via OS device drivers, DMA, and memory-mapped I/O.</td>
-              </tr>
-              <tr>
-                <td><strong>Network / Wi-Fi Communication</strong></td>
-                <td><span class="task-badge-cut badge-download">I/O Operation</span></td>
-                <td>Asynchronous socket communication handled via kernel network buffer queues.</td>
-              </tr>
-              <tr>
-                <td><strong>Incoming Notification / Alert</strong></td>
-                <td><span class="task-badge-cut badge-message">Device/Network Event</span></td>
-                <td>Hardware interrupt requiring kernel ISR handling and notification daemon dispatch.</td>
-              </tr>
-              <tr>
-                <td><strong>Multiple Tasks Running Together</strong></td>
-                <td><span class="task-badge-cut badge-bg">Multitasking</span></td>
-                <td>Time-sliced CPU scheduling providing the illusion of simultaneous execution.</td>
-              </tr>
-              <tr>
-                <td><strong>Heterogeneous CPU Cores</strong></td>
-                <td><span class="task-badge-cut badge-video">Multicore Processing</span></td>
-                <td>big.LITTLE scheduling placing heavy tasks on Big cores and light tasks on LITTLE cores.</td>
-              </tr>
-            </tbody>
-          </table>
+          <!-- 5. File Download -->
+          <div class="paper-task-card" data-category="io">
+            <div class="paper-tape"></div>
+            <div>
+              <span class="task-badge-cut badge-download">Bulk I/O · Low Priority</span>
+              <h3 class="task-card-title">5. File Download</h3>
+              <p class="task-card-desc">Transfers files over TCP/IP in chunks. Dominated by network latency and disk writing; can tolerate CPU preemptions gracefully.</p>
+            </div>
+            <div class="task-mapping-pill-box">
+              <div class="mapping-row"><span class="map-key">OS Concept:</span><span class="map-val">I/O-Bound Background Thread</span></div>
+              <div class="mapping-row"><span class="map-key">OS Requirement:</span><span class="map-val">Fair Execution / Throughput</span></div>
+              <div class="mapping-row"><span class="map-key">Core Type:</span><span class="map-val">Efficiency Core (LITTLE)</span></div>
+            </div>
+          </div>
+
+          <!-- 6. Background Applications -->
+          <div class="paper-task-card" data-category="bg">
+            <div class="paper-tape"></div>
+            <div>
+              <span class="task-badge-cut badge-bg">Maintenance · Lowest Urgency</span>
+              <h3 class="task-card-title">6. Background Applications</h3>
+              <p class="task-card-desc">Sync daemons, cached processes, and analytics jobs that execute opportunistically when processor cores are otherwise idle.</p>
+            </div>
+            <div class="task-mapping-pill-box">
+              <div class="mapping-row"><span class="map-key">OS Concept:</span><span class="map-val">Idle / Daemon Processes</span></div>
+              <div class="mapping-row"><span class="map-key">OS Requirement:</span><span class="map-val">Opportunistic CPU Usage</span></div>
+              <div class="mapping-row"><span class="map-key">Core Type:</span><span class="map-val">Efficiency Core (LITTLE)</span></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 2: 5-THREAD VIDEO RECORDING PIPELINE -->
+    <!-- =========================================================================
+     * SECTION 2: 5-THREAD VIDEO RECORDING PIPELINE
+     * ========================================================================= -->
     <section id="threads" class="section-wrap">
       <div class="primary-topic-card">
         <div class="topic-tag-ribbon">CORE TOPIC · SECTIONS 8.6 & 8.7 · MULTITHREADING PIPELINE</div>
@@ -2222,7 +2250,7 @@
             <p class="section-subtext">Why a single video-recording application must be decoupled into five specialized threads rather than executing sequentially in one monolithic loop.</p>
           </div>
           <div class="section-author-badge" style="border-color: var(--color-terracotta);">
-            <span>Lead Contributor: <strong class="author-highlight">Nilotpal Deb (25BTRSN029)</strong></span>
+            <span>Assigned to: <strong class="author-highlight">Nilotpal Deb (P3)</strong></span>
           </div>
         </div>
 
@@ -2243,126 +2271,107 @@
             </div>
           </div>
 
-          <!-- Conveyor Track & 5 Threads Papercut Grid -->
-          <div class="pipeline-conveyor-wrap">
-            <div class="pipeline-rail-track">
-              <div class="pipeline-data-particle" id="data-particle"></div>
+          <!-- 5 Thread Cards Grid -->
+          <div class="threads-flow-grid">
+            <!-- T1: UI -->
+            <div class="thread-card-chip selected" id="thread-t1" onclick="selectThread(1)">
+              <span class="thread-badge-label">T1 · Main / UI</span>
+              <div class="thread-icon-seal">👆</div>
+              <div class="thread-name-title">UI / User Input</div>
+              <div class="thread-role-sub">Handles touch, start, stop, pause actions without blocking.</div>
             </div>
 
-            <div class="pipeline-diagram">
-              <!-- T1 -->
-              <div class="thread-card-cut selected" id="thread-t1" onclick="selectThread(1)">
-                <span class="thread-pill-tag">T1 · Main / UI</span>
-                <div class="thread-glyph">
-                  <span>👆</span>
-                  <span class="thread-pulse-dot" id="dot-t1"></span>
-                </div>
-                <div class="thread-name">UI / User Input</div>
-                <div class="thread-role">Handles touch, start, stop, pause actions without blocking.</div>
-              </div>
+            <!-- T2: Camera Capture -->
+            <div class="thread-card-chip" id="thread-t2" onclick="selectThread(2)">
+              <span class="thread-badge-label">T2 · Device In</span>
+              <div class="thread-icon-seal">📷</div>
+              <div class="thread-name-title">Camera Capture</div>
+              <div class="thread-role-sub">Continuously streams uncompressed raw frames from camera sensor.</div>
+            </div>
 
-              <!-- T2 -->
-              <div class="thread-card-cut" id="thread-t2" onclick="selectThread(2)">
-                <span class="thread-pill-tag">T2 · Device In</span>
-                <div class="thread-glyph">
-                  <span>📷</span>
-                  <span class="thread-pulse-dot" id="dot-t2"></span>
-                </div>
-                <div class="thread-name">Camera Capture</div>
-                <div class="thread-role">Continuously streams uncompressed raw frames from camera sensor.</div>
-              </div>
+            <!-- T3: Video Processing -->
+            <div class="thread-card-chip" id="thread-t3" onclick="selectThread(3)">
+              <span class="thread-badge-label">T3 · Compute</span>
+              <div class="thread-icon-seal">⚙️</div>
+              <div class="thread-name-title">Video Processing</div>
+              <div class="thread-role-sub">Encodes raw frames into H.264/HEVC stream via DSP/CPU.</div>
+            </div>
 
-              <!-- T3 -->
-              <div class="thread-card-cut" id="thread-t3" onclick="selectThread(3)">
-                <span class="thread-pill-tag">T3 · Compute</span>
-                <div class="thread-glyph">
-                  <span>⚙️</span>
-                  <span class="thread-pulse-dot" id="dot-t3"></span>
-                </div>
-                <div class="thread-name">Video Processing</div>
-                <div class="thread-role">Encodes raw frames into H.264/HEVC stream via DSP/CPU.</div>
-              </div>
+            <!-- T4: Audio Capture -->
+            <div class="thread-card-chip" id="thread-t4" onclick="selectThread(4)">
+              <span class="thread-badge-label">T4 · Audio In</span>
+              <div class="thread-icon-seal">🎙️</div>
+              <div class="thread-name-title">Audio Capture</div>
+              <div class="thread-role-sub">Samples microphone PCM data and syncs with video timestamps.</div>
+            </div>
 
-              <!-- T4 -->
-              <div class="thread-card-cut" id="thread-t4" onclick="selectThread(4)">
-                <span class="thread-pill-tag">T4 · Audio In</span>
-                <div class="thread-glyph">
-                  <span>🎙️</span>
-                  <span class="thread-pulse-dot" id="dot-t4"></span>
-                </div>
-                <div class="thread-name">Audio Capture</div>
-                <div class="thread-role">Samples microphone PCM data and syncs with video timestamps.</div>
-              </div>
-
-              <!-- T5 -->
-              <div class="thread-card-cut" id="thread-t5" onclick="selectThread(5)">
-                <span class="thread-pill-tag">T5 · Storage</span>
-                <div class="thread-glyph">
-                  <span>💾</span>
-                  <span class="thread-pulse-dot" id="dot-t5"></span>
-                </div>
-                <div class="thread-name">Storage / File Write</div>
-                <div class="thread-role">Flushes encoded chunks to flash storage without stalling capture.</div>
-              </div>
+            <!-- T5: File Write -->
+            <div class="thread-card-chip" id="thread-t5" onclick="selectThread(5)">
+              <span class="thread-badge-label">T5 · Storage</span>
+              <div class="thread-icon-seal">💾</div>
+              <div class="thread-name-title">Storage / File Write</div>
+              <div class="thread-role-sub">Flushes encoded chunks to flash storage without stalling capture.</div>
             </div>
           </div>
 
-          <!-- Live Buffer Capacity Meters -->
-          <div class="buffer-gauges-row">
-            <div class="buffer-gauge-card">
-              <div class="gauge-label-row">
+          <!-- Live Buffer Gauges -->
+          <div class="buffer-status-row">
+            <div class="buffer-box">
+              <div class="buffer-header">
                 <span>Sensor DMA Ring Buffer</span>
                 <span id="buf-dma-val">65% Full</span>
               </div>
-              <div class="gauge-progress-bar">
-                <div class="gauge-fill" id="bar-dma" style="width: 65%;"></div>
+              <div class="buffer-trench">
+                <div class="buffer-fill-bar" id="bar-dma" style="width: 65%; background: var(--color-pine);"></div>
               </div>
             </div>
 
-            <div class="buffer-gauge-card">
-              <div class="gauge-label-row">
+            <div class="buffer-box">
+              <div class="buffer-header">
                 <span>H.264 Encoder FIFO</span>
                 <span id="buf-enc-val">42% Full</span>
               </div>
-              <div class="gauge-progress-bar">
-                <div class="gauge-fill" id="bar-enc" style="width: 42%; background: var(--color-terracotta);"></div>
+              <div class="buffer-trench">
+                <div class="buffer-fill-bar" id="bar-enc" style="width: 42%; background: var(--color-amber);"></div>
               </div>
             </div>
 
-            <div class="buffer-gauge-card">
-              <div class="gauge-label-row">
+            <div class="buffer-box">
+              <div class="buffer-header">
                 <span>Flash Storage Write Queue</span>
                 <span id="buf-flash-val">28% Full</span>
               </div>
-              <div class="gauge-progress-bar">
-                <div class="gauge-fill" id="bar-flash" style="width: 28%; background: var(--color-slate);"></div>
+              <div class="buffer-trench">
+                <div class="buffer-fill-bar" id="bar-flash" style="width: 28%; background: var(--color-slate);"></div>
               </div>
             </div>
           </div>
 
-          <!-- Live Thread Inspector Box -->
-          <div class="thread-detail-inspector" id="thread-inspector-view">
-            <div class="inspector-block">
-              <h4 class="shared-badge"><span>📂</span> Shared Across All 5 Threads (Process Level)</h4>
-              <p style="font-size: 0.82rem; color: var(--ink-secondary); margin-bottom: 10px;">Resources shared directly inside the process address space without IPC overhead:</p>
-              <div class="shared-pill-list">
-                <span class="memory-paper-tag">Code / Instructions Segment</span>
-                <span class="memory-paper-tag">Shared Memory Frame Buffer</span>
-                <span class="memory-paper-tag">Open Video File Descriptor</span>
-                <span class="memory-paper-tag">Process Virtual Address Space</span>
-                <span class="memory-paper-tag">Process Privileges & User ID</span>
+          <!-- Thread Memory Inspector View -->
+          <div class="thread-inspector-panel" id="thread-inspector-view">
+            <div>
+              <div class="inspector-col-title">
+                <span>🔒 Private Context: <strong id="inspect-thread-name" style="color: var(--color-terracotta);">T1 · UI / User Input Thread</strong></span>
+              </div>
+              <div class="memory-paper-tag-cloud" id="inspect-private-tags">
+                <span class="memory-paper-tag">Program Counter (PC) pointing to touch event loop</span>
+                <span class="memory-paper-tag">Touch Event Dispatch Stack</span>
+                <span class="memory-paper-tag">Local Gesture Coordinates (X, Y)</span>
+                <span class="memory-paper-tag">CPU Register Bank State (R0–R15)</span>
+                <span class="memory-paper-tag">Private Stack Pointer (SP)</span>
               </div>
             </div>
 
-            <div class="inspector-block">
-              <h4 class="private-badge"><span>🔒</span> Private to Selected Thread (<span id="inspect-thread-name">T1 UI Thread</span>)</h4>
-              <p style="font-size: 0.82rem; color: var(--ink-secondary); margin-bottom: 10px;">Execution state unique to each individual thread context:</p>
-              <div class="shared-pill-list" id="inspect-private-tags">
-                <span class="memory-paper-tag">Program Counter (PC)</span>
-                <span class="memory-paper-tag">CPU General Registers (R0–R15)</span>
-                <span class="memory-paper-tag">Thread Call Stack (Local variables)</span>
-                <span class="memory-paper-tag">Stack Pointer (SP)</span>
-                <span class="memory-paper-tag">Thread Control Block (TCB)</span>
+            <div>
+              <div class="inspector-col-title">
+                <span>🤝 Shared Across All 5 Threads (Video Process)</span>
+              </div>
+              <div class="memory-paper-tag-cloud">
+                <span class="memory-paper-tag shared-tag">Shared Process Heap (Raw Frame Buffers)</span>
+                <span class="memory-paper-tag shared-tag">Memory-Mapped Camera DMA Buffers</span>
+                <span class="memory-paper-tag shared-tag">Target MP4 File Descriptor (Storage I/O)</span>
+                <span class="memory-paper-tag shared-tag">H.264 Encoder Code & Global Constants</span>
+                <span class="memory-paper-tag shared-tag">Process Synchronization Mutexes & Semaphores</span>
               </div>
             </div>
           </div>
@@ -2370,7 +2379,9 @@
       </div>
     </section>
 
-    <!-- SECTION 3: CPU SCHEDULING CALCULATIONS & INTERACTIVE GANTT TIMELINE -->
+    <!-- =========================================================================
+     * SECTION 3: CPU SCHEDULING CALCULATIONS & GANTT TIMELINE
+     * ========================================================================= -->
     <section id="scheduling" class="section-wrap">
       <div class="section-header-block">
         <div>
@@ -2401,143 +2412,154 @@
             </div>
           </div>
 
-          <!-- Interactive Time Scrubber -->
-          <div class="paper-scrubber-track">
-            <input type="range" min="0" max="20" value="0" step="1" class="paper-slider" id="timeline-scrubber" oninput="onScrubInput(this.value)">
-            <div class="ticks-container">
-              <span>t=0</span>
-              <span>t=4</span>
-              <span>t=6</span>
-              <span>t=11</span>
-              <span>t=14</span>
-              <span>t=20</span>
+          <!-- Algorithm Selector Bar -->
+          <div class="algo-mode-bar">
+            <span style="font-size: 0.8rem; font-weight: 800; color: var(--ink-headline); margin-left: 8px;">Active Timeline Model:</span>
+            <div class="algo-mode-pills">
+              <button class="algo-mode-btn active" id="btn-mode-prio" onclick="setGanttMode('prio')">Non-Preemptive Priority (Active)</button>
+              <button class="algo-mode-btn" id="btn-mode-rr" onclick="setGanttMode('rr')">Round Robin (q = 2)</button>
             </div>
           </div>
 
-          <!-- Visual Gantt Bar with Moving Needle -->
-          <div class="gantt-chart-display">
-            <div class="gantt-time-needle" id="gantt-needle" style="left: 0%;"></div>
-            <div class="gantt-chart-bar">
-              <div class="gantt-slice slice-music" id="slice-music" onclick="seekToTime(0)" title="Music Playback (0-4)">
+          <!-- Tactile Scrubber -->
+          <div class="scrubber-track-box">
+            <input type="range" min="0" max="20" value="0" step="1" class="timeline-scrubber" id="timeline-scrubber" oninput="onScrubInput(this.value)">
+            <div class="scrubber-ticks-labels">
+              <span>t = 0 (Music starts)</span>
+              <span>t = 4 (Message)</span>
+              <span>t = 6 (Video)</span>
+              <span>t = 11 (GPS)</span>
+              <span>t = 14 (Download)</span>
+              <span>t = 20 (Complete)</span>
+            </div>
+          </div>
+
+          <!-- Gantt Chart Slices Bar -->
+          <div class="gantt-chart-wrapper">
+            <div class="gantt-bar-trench" id="gantt-trench-bar">
+              <!-- Slices dynamically rendered by JavaScript based on active algorithm mode -->
+              <div class="gantt-slice slice-music active-slice" id="slice-music" onclick="seekToTime(0)">
                 <span>Music Playback</span>
                 <span class="slice-sub">0 – 4 (BT: 4)</span>
               </div>
-              <div class="gantt-slice slice-message" id="slice-message" onclick="seekToTime(4)" title="Message Notification (4-6)">
+              <div class="gantt-slice slice-message upcoming-slice" id="slice-message" onclick="seekToTime(4)">
                 <span>Message</span>
                 <span class="slice-sub">4 – 6 (BT: 2)</span>
               </div>
-              <div class="gantt-slice slice-video" id="slice-video" onclick="seekToTime(6)" title="Video Recording (6-11)">
+              <div class="gantt-slice slice-video upcoming-slice" id="slice-video" onclick="seekToTime(6)">
                 <span>Video Recording</span>
                 <span class="slice-sub">6 – 11 (BT: 5)</span>
               </div>
-              <div class="gantt-slice slice-gps" id="slice-gps" onclick="seekToTime(11)" title="GPS Tracking (11-14)">
+              <div class="gantt-slice slice-gps upcoming-slice" id="slice-gps" onclick="seekToTime(11)">
                 <span>GPS Tracking</span>
                 <span class="slice-sub">11 – 14 (BT: 3)</span>
               </div>
-              <div class="gantt-slice slice-download" id="slice-download" onclick="seekToTime(14)" title="File Download (14-20)">
+              <div class="gantt-slice slice-download upcoming-slice" id="slice-download" onclick="seekToTime(14)">
                 <span>File Download</span>
                 <span class="slice-sub">14 – 20 (BT: 6)</span>
               </div>
             </div>
+
+            <!-- Animated Needle Indicator -->
+            <div class="gantt-needle-line" id="gantt-needle" style="left: 0%;">
+              <div class="needle-diamond"></div>
+            </div>
           </div>
 
-          <!-- Live Ready Queue Stage -->
-          <div class="ready-queue-stage">
+          <!-- Dynamic Ready Queue Status -->
+          <div class="ready-queue-box">
             <div class="rq-label">Ready Queue at t = <span id="rq-time-label">0</span>:</div>
             <div class="rq-chips-list" id="ready-queue-chips">
-              <!-- Dynamically populated via JS -->
+              <span style="font-size: 0.8rem; color: var(--ink-muted); font-style: italic;">Ready queue is empty.</span>
             </div>
           </div>
         </div>
 
-        <!-- Calculated Metrics Table -->
-        <div class="paper-table-card" style="margin-top: 0;">
-          <div class="paper-table-header">
-            <h3>Scheduling Calculations — Non-Preemptive Priority (Lower Number = Higher Priority)</h3>
-            <span style="font-size: 0.8rem; font-weight: 700;">TAT = CT − AT &nbsp;|&nbsp; WT = TAT − BT &nbsp;|&nbsp; RT = First Start − AT</span>
+        <!-- Quantitative Calculations Table -->
+        <div class="calc-table-wrap">
+          <div style="background: var(--color-pine-dark); color: #FFFFFF; padding: 12px 18px; font-size: 0.82rem; font-weight: 800; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+            <span>Scheduling Calculations — Non-Preemptive Priority (Lower Number = Higher Priority)</span>
+            <span style="font-family: ui-monospace, monospace; opacity: 0.9;">TAT = CT − AT | WT = TAT − BT | RT = First Start − AT</span>
           </div>
-          <div class="table-container">
-            <table class="papercut-table" id="metrics-table">
-              <thead>
-                <tr>
-                  <th>Process</th>
-                  <th>Arrival (AT)</th>
-                  <th>Burst (BT)</th>
-                  <th>Priority</th>
-                  <th>Completion (CT)</th>
-                  <th>Turnaround (TAT)</th>
-                  <th>Waiting (WT)</th>
-                  <th>Response (RT)</th>
-                  <th>Status at t=<span id="table-time-indicator">0</span></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr id="row-music">
-                  <td><strong>Music Playback</strong></td>
-                  <td>0</td>
-                  <td>4</td>
-                  <td>3</td>
-                  <td>4</td>
-                  <td>4</td>
-                  <td>0</td>
-                  <td>0</td>
-                  <td><span class="task-badge-cut badge-music" id="status-music">Running</span></td>
-                </tr>
-                <tr id="row-message">
-                  <td><strong>Message Notification</strong></td>
-                  <td>1</td>
-                  <td>2</td>
-                  <td><strong style="color: var(--color-terracotta);">1 (Highest)</strong></td>
-                  <td>6</td>
-                  <td>5</td>
-                  <td>3</td>
-                  <td>3</td>
-                  <td><span class="task-badge-cut badge-bg" id="status-message">Not Arrived</span></td>
-                </tr>
-                <tr id="row-video">
-                  <td><strong>Video Recording</strong></td>
-                  <td>2</td>
-                  <td>5</td>
-                  <td>2</td>
-                  <td>11</td>
-                  <td>9</td>
-                  <td>4</td>
-                  <td>4</td>
-                  <td><span class="task-badge-cut badge-bg" id="status-video">Not Arrived</span></td>
-                </tr>
-                <tr id="row-gps">
-                  <td><strong>GPS Tracking</strong></td>
-                  <td>3</td>
-                  <td>3</td>
-                  <td>4</td>
-                  <td>14</td>
-                  <td>11</td>
-                  <td>8</td>
-                  <td>8</td>
-                  <td><span class="task-badge-cut badge-bg" id="status-gps">Not Arrived</span></td>
-                </tr>
-                <tr id="row-download">
-                  <td><strong>File Download</strong></td>
-                  <td>4</td>
-                  <td>6</td>
-                  <td>5 (Lowest)</td>
-                  <td>20</td>
-                  <td>16</td>
-                  <td>10</td>
-                  <td>10</td>
-                  <td><span class="task-badge-cut badge-bg" id="status-download">Not Arrived</span></td>
-                </tr>
-                <tr style="background: var(--paper-desk-accent); font-weight: 800;">
-                  <td colspan="4"><strong>Averages (Total Burst = 20 Units)</strong></td>
-                  <td>—</td>
-                  <td>9.0 units (45/5)</td>
-                  <td>5.0 units (25/5)</td>
-                  <td>5.0 units (25/5)</td>
-                  <td>—</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+          <table class="metrics-table" id="metrics-table">
+            <thead>
+              <tr>
+                <th>Process</th>
+                <th>Priority</th>
+                <th>Arrival (AT)</th>
+                <th>Burst (BT)</th>
+                <th>Completion (CT)</th>
+                <th>Turnaround (TAT)</th>
+                <th>Waiting (WT)</th>
+                <th>Response (RT)</th>
+                <th>Live Status (t = <span id="table-time-indicator">0</span>)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr id="row-music">
+                <td><strong>Music Playback</strong></td>
+                <td>3</td>
+                <td>0</td>
+                <td>4</td>
+                <td>4</td>
+                <td>4</td>
+                <td>0</td>
+                <td>0</td>
+                <td><span class="task-badge-cut badge-music" id="status-music">▶ Running on CPU</span></td>
+              </tr>
+              <tr id="row-message">
+                <td><strong>Message Notification</strong></td>
+                <td><span style="color: var(--color-plum); font-weight: 900;">1 (Highest)</span></td>
+                <td>1</td>
+                <td>2</td>
+                <td>6</td>
+                <td>5</td>
+                <td>3</td>
+                <td>3</td>
+                <td><span class="task-badge-cut badge-bg" id="status-message">Not Arrived</span></td>
+              </tr>
+              <tr id="row-video">
+                <td><strong>Video Recording</strong></td>
+                <td>2</td>
+                <td>2</td>
+                <td>5</td>
+                <td>11</td>
+                <td>9</td>
+                <td>4</td>
+                <td>4</td>
+                <td><span class="task-badge-cut badge-bg" id="status-video">Not Arrived</span></td>
+              </tr>
+              <tr id="row-gps">
+                <td><strong>GPS Tracking</strong></td>
+                <td>4</td>
+                <td>3</td>
+                <td>3</td>
+                <td>14</td>
+                <td>11</td>
+                <td>8</td>
+                <td>8</td>
+                <td><span class="task-badge-cut badge-bg" id="status-gps">Not Arrived</span></td>
+              </tr>
+              <tr id="row-download">
+                <td><strong>File Download</strong></td>
+                <td><span style="color: var(--ink-muted);">5 (Lowest)</span></td>
+                <td>4</td>
+                <td>6</td>
+                <td>20</td>
+                <td>16</td>
+                <td>10</td>
+                <td>10</td>
+                <td><span class="task-badge-cut badge-bg" id="status-download">Not Arrived</span></td>
+              </tr>
+              <tr style="background: var(--paper-desk); font-weight: 800;">
+                <td colspan="5"><strong>Averages Across Workloads:</strong></td>
+                <td><strong>Avg TAT = 9.0 units</strong></td>
+                <td><strong>Avg WT = 5.0 units</strong></td>
+                <td><strong>Avg RT = 5.0 units</strong></td>
+                <td><span style="color: var(--color-pine); font-weight: 900;">Total Time: 20 units</span></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
 
         <!-- Priority vs Round Robin Trade-Off Comparison Cards -->
@@ -2573,7 +2595,9 @@
       </div>
     </section>
 
-    <!-- SECTION 4: INTERRUPT ARCHITECTURE & 6-STEP CALL ARRIVES TRACE -->
+    <!-- =========================================================================
+     * SECTION 4: INTERRUPT ARCHITECTURE & 6-STEP CALL ARRIVES TRACE
+     * ========================================================================= -->
     <section id="interrupts" class="section-wrap">
       <div class="primary-topic-card" style="border-color: rgba(131, 24, 67, 0.3);">
         <div class="topic-tag-ribbon" style="background: var(--color-plum);">CORE TOPIC · SECTIONS 8.8 & 8.9 · INTERRUPT TRACE</div>
@@ -2585,7 +2609,7 @@
             <p class="section-subtext">A detailed step-by-step walkthrough of how the OS handles an urgent incoming telephone call while high-definition video recording is actively executing on the CPU.</p>
           </div>
           <div class="section-author-badge" style="border-color: var(--color-plum);">
-            <span>Lead Contributor: <strong class="author-highlight" style="color: var(--color-plum);">Nilotpal Deb (25BTRSN029)</strong></span>
+            <span>Assigned to: <strong class="author-highlight" style="color: var(--color-plum);">Nilotpal Deb (P3)</strong></span>
           </div>
         </div>
 
@@ -2593,81 +2617,75 @@
           <!-- Stepper Navigation -->
           <div class="trace-stepper-nav">
             <button class="trace-step-btn active" id="step-btn-1" onclick="jumpToTraceStep(1)">
-              <div class="trace-num">Step 1</div>
-              <div class="trace-label">Recording Running</div>
+              <span class="step-num-badge">STEP 1</span>
+              <span class="step-label-title">Recording Running</span>
             </button>
             <button class="trace-step-btn" id="step-btn-2" onclick="jumpToTraceStep(2)">
-              <div class="trace-num">Step 2</div>
-              <div class="trace-label">Call Arrives</div>
+              <span class="step-num-badge">STEP 2</span>
+              <span class="step-label-title">Call Arrives</span>
             </button>
             <button class="trace-step-btn" id="step-btn-3" onclick="jumpToTraceStep(3)">
-              <div class="trace-num">Step 3</div>
-              <div class="trace-label">Context Saved</div>
+              <span class="step-num-badge">STEP 3</span>
+              <span class="step-label-title">Context Saved</span>
             </button>
             <button class="trace-step-btn" id="step-btn-4" onclick="jumpToTraceStep(4)">
-              <div class="trace-num">Step 4</div>
-              <div class="trace-label">Call Work Runs</div>
+              <span class="step-num-badge">STEP 4</span>
+              <span class="step-label-title">Call Work Runs</span>
             </button>
             <button class="trace-step-btn" id="step-btn-5" onclick="jumpToTraceStep(5)">
-              <div class="trace-num">Step 5</div>
-              <div class="trace-label">Call Handled</div>
+              <span class="step-num-badge">STEP 5</span>
+              <span class="step-label-title">Call Handled</span>
             </button>
             <button class="trace-step-btn" id="step-btn-6" onclick="jumpToTraceStep(6)">
-              <div class="trace-num">Step 6</div>
-              <div class="trace-label">Recording Resumes</div>
+              <span class="step-num-badge">STEP 6</span>
+              <span class="step-label-title">Recording Resumes</span>
             </button>
           </div>
 
-          <!-- Trace Live Viewport -->
+          <!-- Trace Viewport -->
           <div class="trace-stage-viewport">
-            <!-- CPU & Register Bank Graphic -->
-            <div class="cpu-visual-chassis">
-              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-                <span style="font-size: 0.76rem; font-weight: 800; text-transform: uppercase; color: var(--ink-secondary);">CPU Execution Core</span>
+            <!-- Left: CPU Register Bank Visualizer -->
+            <div class="cpu-core-visual-box">
+              <div class="cpu-core-title">
+                <span>CPU Execution Core</span>
                 <span class="task-badge-cut badge-video" id="cpu-core-status-tag">Executing: Video Thread T3</span>
               </div>
 
-              <div class="cpu-core-chip">
-                <div>[CPU_CORE_0] Active IP: <span id="chip-ip" style="color: #FBBF24;">0x7FFF0402</span></div>
-                <div style="font-size: 0.72rem; color: #94A3B8; margin-top: 4px;">Task: <span id="chip-task-name" style="color: #6EE7B7;">libcamera_encode.so (Thread T3)</span></div>
-                
-                <div class="register-bank-visual">
-                  <div class="reg-box"><span>PC:</span><span class="reg-val" id="reg-pc">0x0402</span></div>
-                  <div class="reg-box"><span>SP:</span><span class="reg-val" id="reg-sp">0xFF80</span></div>
-                  <div class="reg-box"><span>R0:</span><span class="reg-val" id="reg-r0">0x002A</span></div>
-                  <div class="reg-box"><span>R1:</span><span class="reg-val" id="reg-r1">0x10C8</span></div>
+              <div class="core-terminal-screen">
+                <div id="core-terminal-content">
+                  <div>[CPU_CORE_0] Active IP: <span id="chip-ip" class="term-line-active">0x7FFF0402</span></div>
+                  <div>Task: <span id="chip-task-name" style="color: #6EE7B7;">libcamera_encode.so (Thread T3)</span></div>
                 </div>
               </div>
 
-              <div class="tcb-box-visual" id="tcb-visual-card">
-                <div style="font-weight: 800; font-size: 0.76rem; margin-bottom: 4px; display: flex; justify-content: space-between;">
-                  <span>TCB: Video Thread Control Block</span>
-                  <span id="tcb-save-state" style="color: var(--color-pine); font-weight: 800;">ACTIVE IN REGISTERS</span>
-                </div>
-                <div style="font-size: 0.72rem; color: var(--ink-secondary);">Preserves thread PC, CPU registers, stack pointers, and scheduling state across interrupts.</div>
+              <div class="register-bank-grid">
+                <div class="reg-cell"><span class="reg-name">PC:</span><span id="reg-pc" style="color: #FDE047;">0x0402</span></div>
+                <div class="reg-cell"><span class="reg-name">SP:</span><span id="reg-sp" style="color: #FDE047;">0xFF80</span></div>
+                <div class="reg-cell"><span class="reg-name">R0:</span><span id="reg-r0">0x002A</span></div>
+                <div class="reg-cell"><span class="reg-name">R1:</span><span id="reg-r1">0x10C8</span></div>
+              </div>
+
+              <div class="tcb-visual-card" id="tcb-visual-card">
+                <span>TCB (Video Thread Control Block):</span>
+                <span class="tcb-state-txt" id="tcb-save-state" style="color: var(--color-pine);">ACTIVE IN REGISTERS</span>
               </div>
             </div>
 
-            <!-- Trace Narrative Text -->
-            <div class="trace-story-text">
-              <div style="display: flex; align-items: center; gap: 8px;">
-                <span class="task-badge-cut badge-message" id="trace-step-tag">Step 1 of 6</span>
-                <span style="font-size: 0.78rem; font-weight: 700; color: var(--ink-muted);">Interrupt & Context Switch Scenario</span>
-              </div>
-
-              <h3 class="trace-headline" id="trace-step-title">Video Recording is Actively Running on the CPU</h3>
-
-              <p class="trace-detail-para" id="trace-step-desc">
-                The camera and video encoding threads are executing continuously on the processor core. Frames are pulled from sensor DMA buffers, compressed by the video codec, and pushed to the I/O queue. The CPU registers hold the encoding loop's active context.
+            <!-- Right: Step Narrative & OS Action -->
+            <div class="trace-narrative-box">
+              <div class="trace-step-tag" id="trace-step-tag">Step 1 of 6 · Baseline Execution</div>
+              <h3 class="trace-step-heading" id="trace-step-title">Video Recording is Actively Running on the CPU</h3>
+              <p class="trace-step-para" id="trace-step-desc">
+                The camera capture and video encoding threads are actively executing on the CPU core. Frames are pulled from sensor DMA buffers, compressed by the video codec, and pushed to the storage queue. The CPU registers hold the encoding loop's active context.
               </p>
 
-              <div class="trace-os-action-pill" id="trace-os-action">
-                <strong>OS Action:</strong> Normal scheduling is in progress. The OS timer tick maintains accounting while Thread T3 consumes allocated burst time.
+              <div class="trace-action-callout" id="trace-os-action">
+                <strong>OS Action:</strong> Normal execution: The OS scheduler maintains process time accounting and camera sensor DMA transfers without preemption.
               </div>
 
-              <div style="display: flex; gap: 10px; margin-top: 10px;">
-                <button class="paper-btn" onclick="prevTraceStep()">◀ Previous Step</button>
-                <button class="paper-btn primary" onclick="nextTraceStep()">Next Step ▶</button>
+              <div class="trace-stepper-ctrls">
+                <button class="paper-btn" onclick="prevTraceStep()">❮ Previous Step</button>
+                <button class="paper-btn primary" onclick="nextTraceStep()">Next Step ❯</button>
               </div>
             </div>
           </div>
@@ -2675,7 +2693,9 @@
       </div>
     </section>
 
-    <!-- SECTION 5: MULTICORE TASK ALLOCATION (big.LITTLE ARCHITECTURE) -->
+    <!-- =========================================================================
+     * SECTION 5: MULTICORE big.LITTLE ARCHITECTURE
+     * ========================================================================= -->
     <section id="multicore" class="section-wrap">
       <div class="section-header-block">
         <div>
@@ -2688,70 +2708,69 @@
         </div>
       </div>
 
-      <div class="multicore-deck">
-        <!-- Performance Cluster -->
-        <div class="core-cluster-card p-cluster">
-          <div class="cluster-head">
-            <div>
-              <div class="cluster-name">Performance Cores (Big)</div>
-              <div style="font-size: 0.78rem; color: var(--ink-muted); font-weight: 700;">High Clock Speed · Wide Out-of-Order · Max Compute</div>
-            </div>
-            <span class="cluster-badge badge-perf">High Power</span>
+      <div class="multicore-grid-box">
+        <!-- Big Cores -->
+        <div class="core-cluster-card cluster-big">
+          <div class="cluster-title-row">
+            <h3 class="cluster-name">Performance Cores (Big)</h3>
+            <span class="cluster-badge badge-big-core">High Power</span>
           </div>
-          <p class="cluster-desc">
+          <div class="cluster-specs-sub">High Clock Speed · Wide Out-of-Order · Max Compute</div>
+          <p style="font-size: 0.85rem; color: var(--ink-secondary); line-height: 1.55;">
             Allocated to heavy, latency-critical, user-facing processes that cannot tolerate pipeline stalls or frame drops.
           </p>
 
-          <div class="core-tasks-stack">
-            <div class="core-task-item">
+          <div class="core-tasks-list">
+            <div class="core-task-pill-card">
               <div>
-                <div class="ct-name">🎥 Video Recording & Encoding</div>
-                <div class="ct-reason">High compute load, 4K/60fps H.264 compression, zero frame drops</div>
+                <div class="core-task-name">📹 Video Recording & Encoding</div>
+                <div class="core-task-detail">High compute load, 4K/60fps H.264 compression, zero frame drops</div>
               </div>
               <span class="task-badge-cut badge-video">Continuous</span>
             </div>
-            <div class="core-task-item">
+
+            <div class="core-task-pill-card">
               <div>
-                <div class="ct-name">💬 Message / UI Touch Response</div>
-                <div class="ct-reason">Instantaneous user notification chime and smooth 120Hz UI animations</div>
+                <div class="core-task-name">💬 Message / UI Touch Response</div>
+                <div class="core-task-detail">Instantaneous user notification chime and smooth 120Hz UI animations</div>
               </div>
               <span class="task-badge-cut badge-message">Burst</span>
             </div>
           </div>
         </div>
 
-        <!-- Efficiency Cluster -->
-        <div class="core-cluster-card e-cluster">
-          <div class="cluster-head">
-            <div>
-              <div class="cluster-name">Efficiency Cores (LITTLE)</div>
-              <div style="font-size: 0.78rem; color: var(--ink-muted); font-weight: 700;">Low Voltage · In-Order · Minimal Battery Drain</div>
-            </div>
-            <span class="cluster-badge badge-eff">Low Power</span>
+        <!-- LITTLE Cores -->
+        <div class="core-cluster-card cluster-little">
+          <div class="cluster-title-row">
+            <h3 class="cluster-name">Efficiency Cores (LITTLE)</h3>
+            <span class="cluster-badge badge-little-core">Low Power</span>
           </div>
-          <p class="cluster-desc">
+          <div class="cluster-specs-sub">Low Voltage · In-Order · Minimal Battery Drain</div>
+          <p style="font-size: 0.85rem; color: var(--ink-secondary); line-height: 1.55;">
             Allocated to steady-state background or I/O-bound tasks that spend most of their existence waiting on peripheral devices.
           </p>
 
-          <div class="core-tasks-stack">
-            <div class="core-task-item">
+          <div class="core-tasks-list">
+            <div class="core-task-pill-card">
               <div>
-                <div class="ct-name">🎵 Music Playback</div>
-                <div class="ct-reason">Light, steady audio decompression; runs at lowest clock speed to save battery</div>
+                <div class="core-task-name">🎵 Music Playback</div>
+                <div class="core-task-detail">Light, steady audio decompression; runs at lowest clock speed to save battery</div>
               </div>
               <span class="task-badge-cut badge-music">Steady</span>
             </div>
-            <div class="core-task-item">
+
+            <div class="core-task-pill-card">
               <div>
-                <div class="ct-name">📍 GPS Location Updates</div>
-                <div class="ct-reason">Periodic low-frequency satellite sensor polls every few seconds</div>
+                <div class="core-task-name">📍 GPS Location Updates</div>
+                <div class="core-task-detail">Periodic low-frequency satellite sensor polls every few seconds</div>
               </div>
               <span class="task-badge-cut badge-gps">Periodic</span>
             </div>
-            <div class="core-task-item">
+
+            <div class="core-task-pill-card">
               <div>
-                <div class="ct-name">📥 Background File Download</div>
-                <div class="ct-reason">Network packet processing and flash I/O; mostly waiting on network latency</div>
+                <div class="core-task-name">📥 Background File Download</div>
+                <div class="core-task-detail">Network packet processing and flash I/O; mostly waiting on network latency</div>
               </div>
               <span class="task-badge-cut badge-download">I/O Wait</span>
             </div>
@@ -2759,21 +2778,23 @@
         </div>
       </div>
 
-      <!-- Live SoC Power Gauge Strip -->
-      <div class="soc-power-strip">
+      <!-- Estimated Energy Footprint Bar -->
+      <div class="soc-power-bar">
         <div>
-          <h4 style="font-size: 1.05rem; font-weight: 800; color: var(--ink-headline);">Estimated SoC Energy Footprint</h4>
-          <p style="font-size: 0.82rem; color: var(--ink-secondary);">DynamIQ Energy-Aware Scheduling saves up to 64% battery compared to all-Big core execution.</p>
+          <h4 style="font-size: 0.95rem; font-weight: 800; color: var(--ink-headline);">Estimated SoC Energy Footprint</h4>
+          <p style="font-size: 0.78rem; color: var(--ink-secondary);">DynamIQ Energy-Aware Scheduling saves up to 64% battery compared to all-Big core execution.</p>
         </div>
-        <div class="power-metric-box">
-          <span style="font-size: 0.85rem; font-weight: 800; color: var(--ink-muted);">Current SoC Power:</span>
-          <span class="power-number">2.1 W</span>
-          <span style="font-size: 0.82rem; font-weight: 800; color: var(--color-pine-dark); background: var(--color-pine-light); padding: 4px 10px; border-radius: var(--radius-pill); border: 1px solid var(--color-pine-tint);">Optimal Thermal State</span>
+        <div class="soc-power-meter">
+          <span style="font-size: 0.8rem; font-weight: 700; color: var(--ink-secondary);">Current SoC Power:</span>
+          <span class="soc-power-val" id="soc-power-val">2.1 W</span>
+          <span class="task-badge-cut badge-music" id="soc-thermal-tag" style="background: var(--color-pine-light); color: var(--color-pine-dark); border-color: var(--color-pine-tint);">Optimal Thermal State</span>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 6: PROBLEM IDENTIFICATION & PROPOSED OS SOLUTION -->
+    <!-- =========================================================================
+     * SECTION 6: PROBLEM IDENTIFICATION & PROPOSED SOLUTION
+     * ========================================================================= -->
     <section id="solution" class="section-wrap">
       <div class="section-header-block">
         <div>
@@ -2786,136 +2807,137 @@
         </div>
       </div>
 
-      <div class="solution-architecture-box">
-        <!-- Problem Highlight Strip -->
-        <div class="problem-highlight-strip">
-          <div class="warn-icon-cut">!</div>
+      <!-- Problem Alert Card -->
+      <div class="problem-alert-box">
+        <div class="alert-icon-seal">!</div>
+        <div>
+          <h3 style="font-size: 1.05rem; font-weight: 800; color: #9F1239; margin-bottom: 6px;">The Identified Problem: Urgent Tasks Wait & Background Tasks Starve</h3>
+          <p style="font-size: 0.88rem; color: #881337; line-height: 1.6;">
+            In the assumed non-preemptive trace, the <strong>Message Notification</strong> had the highest priority (Priority 1) and arrived at t = 1, yet had to wait until t = 4 (Response Time = 3 units) because Music was allowed to run to completion! Meanwhile, the <strong>File Download</strong> task experienced severe starvation, waiting 10 units before touching the CPU.
+          </p>
+        </div>
+      </div>
+
+      <!-- 4 Pillars of the Solution -->
+      <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--ink-headline); margin-bottom: 6px;">The Four-Pillar Smartphone OS Solution</h3>
+      <p style="font-size: 0.9rem; color: var(--ink-secondary); margin-bottom: 18px;">
+        Effective smartphone multitasking cannot simply run every task at the same priority; the OS kernel must coordinate resource allocation based on urgency, interactive state, and workload classification.
+      </p>
+
+      <div class="solutions-four-grid">
+        <!-- Pillar 1 -->
+        <div class="solution-pillar-card">
           <div>
-            <h3 style="font-size: 1.15rem; font-weight: 800; color: #991B1B; margin-bottom: 4px;">
-              The Identified Problem: Urgent Tasks Wait & Background Tasks Starve
-            </h3>
-            <p style="font-size: 0.9rem; color: #7F1D1D; line-height: 1.55;">
-              In the assumed non-preemptive trace, the <strong>Message Notification</strong> had the highest priority (Priority 1) and arrived at <code>t = 1</code>, yet had to wait until <code>t = 4</code> (Response Time = 3 units) because Music was allowed to run to completion! Meanwhile, the <strong>File Download</strong> task experienced severe starvation, waiting 10 units before touching the CPU.
-            </p>
+            <div class="pillar-num-seal">1</div>
+            <h4 class="pillar-title">Priority-Aware Scheduler with Aging & Preemption</h4>
+            <p class="pillar-desc">Foreground and time-critical tasks receive immediate preemption rights. Low-priority background tasks accumulate aging credits to prevent starvation.</p>
           </div>
         </div>
 
-        <h3 style="font-size: 1.3rem; font-weight: 900; color: var(--ink-headline); margin-bottom: 8px;">
-          The Four-Pillar Smartphone OS Solution
-        </h3>
-        <p style="font-size: 0.92rem; color: var(--ink-secondary);">
-          Effective smartphone multitasking cannot simply run every task at the same priority; the OS kernel must coordinate resource allocation based on urgency, interactive state, and workload classification.
-        </p>
-
-        <div class="four-pillars-grid">
-          <div class="pillar-card">
-            <div class="pillar-num">1</div>
-            <h4 class="pillar-title">Priority-Aware Scheduler with Aging & Preemption</h4>
-            <p class="pillar-text">
-              Foreground and time-critical tasks receive immediate preemption rights. Low-priority background tasks accumulate aging credits to prevent indefinite starvation.
-            </p>
-          </div>
-
-          <div class="pillar-card">
-            <div class="pillar-num">2</div>
+        <!-- Pillar 2 -->
+        <div class="solution-pillar-card">
+          <div>
+            <div class="pillar-num-seal">2</div>
             <h4 class="pillar-title">Process & Multithreading Architecture</h4>
-            <p class="pillar-text">
-              Internal tasks are decoupled into concurrent threads (UI, Capture, Codec, Audio, Storage) sharing memory, preventing slow disk I/O from stalling user interactions.
-            </p>
+            <p class="pillar-desc">Internal tasks are decoupled into concurrent threads (UI, Capture, Codec, Audio, Storage) sharing memory, preventing slow disk I/O from blocking user touch or sensor inputs.</p>
           </div>
+        </div>
 
-          <div class="pillar-card">
-            <div class="pillar-num">3</div>
+        <!-- Pillar 3 -->
+        <div class="solution-pillar-card">
+          <div>
+            <div class="pillar-num-seal">3</div>
             <h4 class="pillar-title">Fast Hardware Interrupt Handling</h4>
-            <p class="pillar-text">
-              Telephony, touch, and network interrupts preserve running registers via rapid TCB context saving and dispatch top-half handlers immediately.
-            </p>
+            <p class="pillar-desc">Telephony, touch, and network interrupts preserve running registers via rapid TCB context saving and dispatch top-half handlers in microseconds.</p>
           </div>
+        </div>
 
-          <div class="pillar-card">
-            <div class="pillar-num">4</div>
+        <!-- Pillar 4 -->
+        <div class="solution-pillar-card">
+          <div>
+            <div class="pillar-num-seal">4</div>
             <h4 class="pillar-title">Multicore big.LITTLE Workload Distribution</h4>
-            <p class="pillar-text">
-              High-throughput video and bursty UI tasks are pinned to Performance cores, while steady audio and background I/O reside on energy-saving LITTLE cores.
-            </p>
+            <p class="pillar-desc">High-throughput video and bursty UI tasks are pinned to Performance cores, while steady audio and background I/O reside on energy-efficient LITTLE cores.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 7: TEAM ROSTER & ACADEMIC CREDITS -->
+    <!-- =========================================================================
+     * SECTION 7: TEAM 5 CONTRIBUTOR ROSTER & REFERENCES
+     * ========================================================================= -->
     <section id="roster" class="section-wrap">
-      <div class="section-header-block">
-        <div>
-          <div class="section-eyebrow">Academic Authorship · Slide 1 & 12 · Section 11–14</div>
-          <h2 class="section-main-heading">Team 5 Case Study Contributors</h2>
-          <p class="section-subtext">School of Computer Science & Engineering · Faculty of Engineering & Technology · JAIN (Deemed-to-be University)</p>
+      <div class="section-deck-mat">
+        <div class="section-header-block">
+          <div>
+            <div class="section-eyebrow">Academic Authorship · Slide 1 & 12 · Section 11–14</div>
+            <h2 class="section-main-heading">Team 5 Case Study Contributors</h2>
+            <p class="section-subtext">School of Computer Science & Engineering · Faculty of Engineering & Technology · JAIN (Deemed-to-be University)</p>
+          </div>
+          <div class="section-author-badge">
+            <span>Faculty: <strong class="author-highlight">Mr. Karthikeyan S</strong></span>
+          </div>
         </div>
-        <div class="section-author-badge">
-          <span>Faculty: <strong class="author-highlight">Mr. Karthikeyan S</strong></span>
-        </div>
-      </div>
 
-      <div class="roster-card">
         <div class="roster-grid">
-          <!-- Nilotpal Deb (Lead) -->
-          <div class="team-member-cut author-card">
+          <!-- Member 1: Nilotpal Deb -->
+          <div class="team-member-card" style="border-color: var(--color-terracotta-tint); background: var(--color-terracotta-light);">
             <div class="tm-name">Nilotpal Deb ⭐</div>
             <div class="tm-usn">USN: 25BTRSN029</div>
             <div class="tm-role">P3 · Threads, Multithreading, Interrupts & Call Trace (Sec 8.6–8.9)</div>
           </div>
 
-          <!-- Aryan Tripathi -->
-          <div class="team-member-cut">
+          <!-- Member 2: Aryan Tripathi -->
+          <div class="team-member-card">
             <div class="tm-name">Aryan Tripathi</div>
             <div class="tm-usn">USN: 25BTRSN005</div>
             <div class="tm-role">P1 · Process Identification (Slide 2 / Sec 5.1)</div>
           </div>
 
-          <!-- Damodara Navanesh -->
-          <div class="team-member-cut">
+          <!-- Member 3: Damodara Navanesh -->
+          <div class="team-member-card">
             <div class="tm-name">Damodara Navanesh</div>
             <div class="tm-usn">USN: 25BTRSN011</div>
             <div class="tm-role">P2 · OS-Concept Mapping & System Model (Sec 5.2 & 7)</div>
           </div>
 
-          <!-- Hariom Yadav -->
-          <div class="team-member-cut">
+          <!-- Member 4: Hariom Yadav -->
+          <div class="team-member-card">
             <div class="tm-name">Hariom Yadav</div>
             <div class="tm-usn">USN: 25BTRSN017</div>
             <div class="tm-role">P2 · OS-Concept Mapping & System Model (Sec 5.2 & 7)</div>
           </div>
 
-          <!-- Khushi Thakur -->
-          <div class="team-member-cut">
+          <!-- Member 5: Khushi Thakur -->
+          <div class="team-member-card">
             <div class="tm-name">Khushi Thakur</div>
             <div class="tm-usn">USN: 25BTRSN023</div>
             <div class="tm-role">P3 · CPU Scheduling Calculations & Multicore (Sec 8.1–8.5)</div>
           </div>
 
-          <!-- Priya J U -->
-          <div class="team-member-cut">
+          <!-- Member 6: Priya J U -->
+          <div class="team-member-card">
             <div class="tm-name">Priya J U</div>
             <div class="tm-usn">USN: 25BTRSN035</div>
             <div class="tm-role">P4 · Problem Identification & Evidence (Sec 9 & 9.6)</div>
           </div>
 
-          <!-- Sandhya -->
-          <div class="team-member-cut">
+          <!-- Member 7: Sandhya -->
+          <div class="team-member-card">
             <div class="tm-name">Sandhya</div>
             <div class="tm-usn">USN: 25BTRSN041</div>
             <div class="tm-role">P4 · OS Causes & User Impact (Sec 9 & 9.6)</div>
           </div>
 
-          <!-- Sukhanth H R -->
-          <div class="team-member-cut">
+          <!-- Member 8: Sukhanth H R -->
+          <div class="team-member-card">
             <div class="tm-name">Sukhanth H R</div>
             <div class="tm-usn">USN: 25BTRSN047</div>
             <div class="tm-role">P5 · Proposed Solution (Slide 11 / Sec 10)</div>
           </div>
 
-          <!-- Vijaya Rupesh N -->
-          <div class="team-member-cut">
+          <!-- Member 9: Vijaya Rupesh N -->
+          <div class="team-member-card">
             <div class="tm-name">Vijaya Rupesh N</div>
             <div class="tm-usn">USN: 25BTRSN053</div>
             <div class="tm-role">P5 · Expected OS Behaviour & Conclusion (Sec 11–13)</div>
@@ -2933,6 +2955,17 @@
       </div>
     </section>
 
+    <!-- ACADEMIC FOOTER -->
+    <footer class="academic-footer">
+      <div class="footer-pill-row">
+        <span class="footer-chip">Team 5 · Mobile Phone Multitasking (CS8)</span>
+        <span class="footer-chip">Course Code: 25PCCS201 · Operating Systems</span>
+        <span class="footer-chip">Faculty: Mr. Karthikeyan S</span>
+        <span class="footer-chip">JAIN (Deemed-to-be University)</span>
+      </div>
+      <p style="margin-top: 10px;">Interactive Case Study Simulation Application · Developed for Academic Evaluation</p>
+    </footer>
+
   </main>
 
   <!-- JAVASCRIPT LOGIC & INTERACTIVE SIMULATION ENGINES -->
@@ -2944,28 +2977,49 @@
       { id: 'music', name: 'Music Playback', at: 0, bt: 4, prio: 3, start: 0, ct: 4, color: 'var(--color-amber)' },
       { id: 'message', name: 'Message Notification', at: 1, bt: 2, prio: 1, start: 4, ct: 6, color: 'var(--color-plum)' },
       { id: 'video', name: 'Video Recording', at: 2, bt: 5, prio: 2, start: 6, ct: 11, color: 'var(--color-terracotta)' },
-      { id: 'gps', name: 'GPS Tracking', at: 3, bt: 3, prio: 4, start: 11, ct: 14, color: 'var(--color-pine)' },
+      { id: 'gps', name: 'GPS Tracking', at: 3, bt: 3, prio: 4, start: 11, ct: 14, color: 'var(--color-teal)' },
       { id: 'download', name: 'File Download', at: 4, bt: 6, prio: 5, start: 14, ct: 20, color: 'var(--color-slate)' }
     ];
 
     let currentTimelineTime = 0;
     let timelinePlayInterval = null;
-
     let autoPipelineInterval = null;
-    let currentTraceStep = 1;
+    let activeGanttMode = 'prio'; // 'prio' or 'rr'
 
-    /* =========================================================================
-     * NAVIGATION HELPER
-     * ========================================================================= */
+    /* Smooth Navigation */
     function scrollToSection(id) {
       const el = document.getElementById(id);
       if (el) {
-        el.scrollIntoView({ behavior: 'smooth' });
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
       document.querySelectorAll('.nav-tab-btn').forEach(btn => btn.classList.remove('active'));
       const activeBtn = Array.from(document.querySelectorAll('.nav-tab-btn')).find(b => b.getAttribute('onclick')?.includes(id));
       if (activeBtn) activeBtn.classList.add('active');
     }
+
+    /* Scroll Spy using IntersectionObserver */
+    window.addEventListener('DOMContentLoaded', () => {
+      const sections = ['hero', 'activities', 'threads', 'scheduling', 'interrupts', 'multicore', 'solution', 'roster'];
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const secId = entry.target.id;
+            document.querySelectorAll('.nav-tab-btn').forEach(btn => {
+              if (btn.getAttribute('onclick')?.includes(secId)) {
+                btn.classList.add('active');
+              } else {
+                btn.classList.remove('active');
+              }
+            });
+          }
+        });
+      }, { threshold: 0.3 });
+
+      sections.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) observer.observe(el);
+      });
+    });
 
     /* =========================================================================
      * SECTION 1: FILTER ACTIVITIES
@@ -2979,6 +3033,7 @@
         const cat = card.getAttribute('data-category');
         if (category === 'all' || cat === category) {
           card.style.display = 'flex';
+          card.style.opacity = '1';
         } else {
           card.style.display = 'none';
         }
@@ -2995,53 +3050,64 @@
           "Program Counter (PC) pointing to touch event loop",
           "Touch Event Dispatch Stack",
           "Local Gesture Coordinates (X, Y)",
-          "UI State Variables (Record / Pause / Stop)"
+          "CPU Register Bank State (R0–R15)",
+          "Private Stack Pointer (SP)"
         ]
       },
       2: {
         name: "T2 · Camera Capture Thread",
         private: [
-          "Program Counter (PC) in camera driver buffer loop",
-          "Direct Memory Access (DMA) frame pointers",
-          "Sensor Exposure & ISO local registers",
-          "Hardware Interrupt Service Handler state"
+          "DMA Ring Buffer Index & Pointer",
+          "Sensor Hardware IRQ Vector Registration",
+          "Uncompressed YUV Frame Timestamp Registers",
+          "Camera HAL Interface State",
+          "Capture Timing Loop Stack"
         ]
       },
       3: {
-        name: "T3 · Video Processing & Encoding Thread",
+        name: "T3 · Video Processing Thread",
         private: [
-          "Program Counter (PC) in H.264/HEVC compression kernel",
-          "DSP/Vector Registers (SIMD / NEON state)",
-          "Quantization Matrices & Macroblock Cache",
-          "Bitrate Rate-Control Variables"
+          "H.264 / HEVC Macroblock Encoding Context",
+          "Motion Estimation Vector Cache",
+          "DSP/Hardware Acceleration Execution State",
+          "Quantization Matrix Pointers",
+          "Encoding Pipeline Thread Call Stack"
         ]
       },
       4: {
         name: "T4 · Audio Capture Thread",
         private: [
-          "Program Counter (PC) in Audio ALSA/AudioHAL driver",
-          "Microphone PCM Sample Stack",
-          "Audio Ring Buffer Read/Write Pointers",
-          "Audio Timestamp Synchronization State"
+          "Microphone PCM Audio Ring Buffer Pointer",
+          "Sample Rate Conversion State (48kHz)",
+          "Audio Frame Sync Clock Registers",
+          "ALSA / AudioFlinger Kernel Stack",
+          "Microphone Gain State Variables"
         ]
       },
       5: {
         name: "T5 · Storage / File Write Thread",
         private: [
-          "Program Counter (PC) in POSIX write() system call",
-          "I/O Queue Buffer Pointers",
-          "File Offset Marker (bytes written to MP4 container)",
-          "Storage Block Synchronization Lock"
+          "Storage Flash I/O Submission Queue Pointer",
+          "MP4 Muxer File Offset Counter",
+          "Kernel Page Cache Flush Status Registers",
+          "Disk Block Write Buffer Pointer",
+          "Synchronous File Commit Stack"
         ]
       }
     };
 
-    function selectThread(tNum) {
-      document.querySelectorAll('.thread-card-cut').forEach(card => card.classList.remove('selected'));
-      const card = document.getElementById(`thread-t${tNum}`);
-      if (card) card.classList.add('selected');
+    function selectThread(threadNumber) {
+      for (let i = 1; i <= 5; i++) {
+        const card = document.getElementById(`thread-t${i}`);
+        if (card) {
+          if (i === threadNumber) card.classList.add('selected');
+          else card.classList.remove('selected');
+        }
+      }
 
-      const meta = THREAD_METADATA[tNum];
+      const meta = THREAD_METADATA[threadNumber];
+      if (!meta) return;
+
       document.getElementById('inspect-thread-name').innerText = meta.name;
       const listContainer = document.getElementById('inspect-private-tags');
       listContainer.innerHTML = '';
@@ -3107,6 +3173,40 @@
     /* =========================================================================
      * SECTION 3: CPU SCHEDULING TIMELINE PLAYER
      * ========================================================================= */
+    function setGanttMode(mode) {
+      activeGanttMode = mode;
+      document.getElementById('btn-mode-prio').classList.toggle('active', mode === 'prio');
+      document.getElementById('btn-mode-rr').classList.toggle('active', mode === 'rr');
+
+      const trench = document.getElementById('gantt-trench-bar');
+      if (mode === 'rr') {
+        // Round Robin Quantum = 2 timeline slices
+        trench.innerHTML = `
+          <div class="gantt-slice slice-music" style="width: 10%;" onclick="seekToTime(0)"><span>Music</span><span class="slice-sub">0-2</span></div>
+          <div class="gantt-slice slice-message" style="width: 10%;" onclick="seekToTime(2)"><span>Msg</span><span class="slice-sub">2-4</span></div>
+          <div class="gantt-slice slice-music" style="width: 10%;" onclick="seekToTime(4)"><span>Music</span><span class="slice-sub">4-6</span></div>
+          <div class="gantt-slice slice-video" style="width: 10%;" onclick="seekToTime(6)"><span>Video</span><span class="slice-sub">6-8</span></div>
+          <div class="gantt-slice slice-gps" style="width: 10%;" onclick="seekToTime(8)"><span>GPS</span><span class="slice-sub">8-10</span></div>
+          <div class="gantt-slice slice-download" style="width: 10%;" onclick="seekToTime(10)"><span>Down</span><span class="slice-sub">10-12</span></div>
+          <div class="gantt-slice slice-video" style="width: 10%;" onclick="seekToTime(12)"><span>Video</span><span class="slice-sub">12-14</span></div>
+          <div class="gantt-slice slice-gps" style="width: 5%;" onclick="seekToTime(14)"><span>GPS</span><span class="slice-sub">14-15</span></div>
+          <div class="gantt-slice slice-download" style="width: 10%;" onclick="seekToTime(15)"><span>Down</span><span class="slice-sub">15-17</span></div>
+          <div class="gantt-slice slice-video" style="width: 5%;" onclick="seekToTime(17)"><span>Video</span><span class="slice-sub">17-18</span></div>
+          <div class="gantt-slice slice-download" style="width: 10%;" onclick="seekToTime(18)"><span>Down</span><span class="slice-sub">18-20</span></div>
+        `;
+      } else {
+        // Non-Preemptive Priority slices
+        trench.innerHTML = `
+          <div class="gantt-slice slice-music" id="slice-music" onclick="seekToTime(0)"><span>Music Playback</span><span class="slice-sub">0 – 4 (BT: 4)</span></div>
+          <div class="gantt-slice slice-message" id="slice-message" onclick="seekToTime(4)"><span>Message</span><span class="slice-sub">4 – 6 (BT: 2)</span></div>
+          <div class="gantt-slice slice-video" id="slice-video" onclick="seekToTime(6)"><span>Video Recording</span><span class="slice-sub">6 – 11 (BT: 5)</span></div>
+          <div class="gantt-slice slice-gps" id="slice-gps" onclick="seekToTime(11)"><span>GPS Tracking</span><span class="slice-sub">11 – 14 (BT: 3)</span></div>
+          <div class="gantt-slice slice-download" id="slice-download" onclick="seekToTime(14)"><span>File Download</span><span class="slice-sub">14 – 20 (BT: 6)</span></div>
+        `;
+      }
+      updateTimelineUI(currentTimelineTime);
+    }
+
     function updateTimelineUI(t) {
       currentTimelineTime = Math.max(0, Math.min(20, t));
       document.getElementById('clock-display').innerText = currentTimelineTime;
@@ -3124,7 +3224,7 @@
       else if (currentTimelineTime >= 4 && currentTimelineTime < 6) activeProcess = PROCESS_DATA[1]; // Message
       else if (currentTimelineTime >= 6 && currentTimelineTime < 11) activeProcess = PROCESS_DATA[2]; // Video
       else if (currentTimelineTime >= 11 && currentTimelineTime < 14) activeProcess = PROCESS_DATA[3]; // GPS
-      else if (currentTimelineTime >= 14 && currentTimelineTime <= 20) activeProcess = PROCESS_DATA[4]; // Download
+      else if (currentTimelineTime >= 14 && currentTimelineTime < 20) activeProcess = PROCESS_DATA[4]; // Download
 
       const badge = document.getElementById('cpu-active-badge');
       if (activeProcess) {
@@ -3133,26 +3233,26 @@
         badge.style.color = '#FFFFFF';
         badge.style.borderColor = activeProcess.color;
       } else {
-        badge.innerText = `CPU: Idle / Ready`;
+        badge.innerText = `CPU: Idle (All Tasks Completed in 20 units)`;
         badge.style.background = 'var(--paper-desk-accent)';
         badge.style.color = 'var(--ink-headline)';
         badge.style.borderColor = 'var(--paper-border-line)';
       }
 
-      // Highlight active Gantt slice
-      PROCESS_DATA.forEach(p => {
-        const slice = document.getElementById(`slice-${p.id}`);
-        if (currentTimelineTime >= p.start && currentTimelineTime < p.ct) {
-          slice.classList.add('active-slice');
-          slice.classList.remove('inactive-slice');
-        } else if (currentTimelineTime >= p.ct) {
-          slice.classList.remove('active-slice');
-          slice.classList.remove('inactive-slice');
-        } else {
-          slice.classList.remove('active-slice');
-          slice.classList.add('inactive-slice');
-        }
-      });
+      // Highlight active Gantt slice (Priority Mode)
+      if (activeGanttMode === 'prio') {
+        PROCESS_DATA.forEach(p => {
+          const slice = document.getElementById(`slice-${p.id}`);
+          if (!slice) return;
+          if (currentTimelineTime >= p.start && currentTimelineTime < p.ct) {
+            slice.className = `gantt-slice slice-${p.id} active-slice`;
+          } else if (currentTimelineTime >= p.ct) {
+            slice.className = `gantt-slice slice-${p.id} completed-slice`;
+          } else {
+            slice.className = `gantt-slice slice-${p.id} upcoming-slice`;
+          }
+        });
+      }
 
       // Update Ready Queue at time t
       const readyQueue = PROCESS_DATA.filter(p => {
@@ -3179,23 +3279,24 @@
       PROCESS_DATA.forEach(p => {
         const badgeEl = document.getElementById(`status-${p.id}`);
         const rowEl = document.getElementById(`row-${p.id}`);
+        if (!badgeEl || !rowEl) return;
 
         if (currentTimelineTime < p.at) {
           badgeEl.innerText = "Not Arrived";
           badgeEl.className = "task-badge-cut badge-bg";
-          rowEl.style.background = "transparent";
+          rowEl.classList.remove('active-row');
         } else if (currentTimelineTime >= p.start && currentTimelineTime < p.ct) {
           badgeEl.innerText = "▶ Running on CPU";
           badgeEl.className = `task-badge-cut badge-${p.id}`;
-          rowEl.style.background = "rgba(194, 65, 12, 0.08)";
+          rowEl.classList.add('active-row');
         } else if (currentTimelineTime >= p.ct) {
           badgeEl.innerText = "✓ Completed";
           badgeEl.className = "task-badge-cut badge-gps";
-          rowEl.style.background = "transparent";
+          rowEl.classList.remove('active-row');
         } else {
           badgeEl.innerText = `⏳ In Ready Queue (Wait)`;
           badgeEl.className = "task-badge-cut badge-download";
-          rowEl.style.background = "transparent";
+          rowEl.classList.remove('active-row');
         }
       });
     }
@@ -3204,18 +3305,20 @@
       updateTimelineUI(parseInt(val, 10));
     }
 
-    function stepTimeline(dir) {
-      if (timelinePlayInterval) toggleTimelinePlay();
-      updateTimelineUI(currentTimelineTime + dir);
+    function stepTimeline(delta) {
+      updateTimelineUI(currentTimelineTime + delta);
     }
 
     function seekToTime(t) {
-      if (timelinePlayInterval) toggleTimelinePlay();
       updateTimelineUI(t);
     }
 
     function resetTimeline() {
-      if (timelinePlayInterval) toggleTimelinePlay();
+      if (timelinePlayInterval) {
+        clearInterval(timelinePlayInterval);
+        timelinePlayInterval = null;
+        document.getElementById('btn-timeline-play').innerText = "▶ Auto Play";
+      }
       updateTimelineUI(0);
     }
 
@@ -3226,17 +3329,17 @@
         timelinePlayInterval = null;
         btn.innerText = "▶ Auto Play";
       } else {
-        if (currentTimelineTime >= 20) currentTimelineTime = 0;
+        if (currentTimelineTime >= 20) updateTimelineUI(0);
         btn.innerText = "⏸ Pause";
         timelinePlayInterval = setInterval(() => {
-          if (currentTimelineTime >= 20) {
+          if (currentTimelineTime < 20) {
+            updateTimelineUI(currentTimelineTime + 1);
+          } else {
             clearInterval(timelinePlayInterval);
             timelinePlayInterval = null;
             btn.innerText = "▶ Auto Play";
-          } else {
-            updateTimelineUI(currentTimelineTime + 1);
           }
-        }, 800);
+        }, 850);
       }
     }
 
@@ -3245,10 +3348,10 @@
      * ========================================================================= */
     const TRACE_STEPS = {
       1: {
+        tag: "Step 1 of 6 · Baseline Execution",
         title: "Video Recording is Actively Running on the CPU",
-        tag: "Step 1 of 6 · Baseline",
         desc: "The camera capture and video encoding threads are actively executing on the CPU core. Frames are pulled from sensor DMA buffers, compressed by the video codec, and pushed to the storage queue. The CPU registers hold the encoding loop's active context.",
-        osAction: "Normal execution: The OS scheduler maintains process time slices while Thread T3 consumes allocated processor burst time.",
+        osAction: "Normal execution: The OS scheduler maintains process time accounting and camera sensor DMA transfers without preemption.",
         cpuTag: "Executing: Video Thread T3",
         cpuTagClass: "task-badge-cut badge-video",
         ip: "0x7FFF0402",
@@ -3261,101 +3364,107 @@
         tcbColor: "var(--color-pine)"
       },
       2: {
-        title: "Incoming Telephony Interrupt Signal Arrives",
-        tag: "Step 2 of 6 · Hardware Event",
-        desc: "The cellular modem or radio chip receives an incoming voice call. It asserts a hardware interrupt request (IRQ) line on the processor's interrupt controller (GIC). The CPU finishes its current clock cycle and traps into kernel mode.",
-        osAction: "Hardware Interrupt Triggered: CPU disables lower-priority maskable interrupts and branches to the Interrupt Vector Table.",
-        cpuTag: "TRAP: Hardware IRQ (Telephony)",
+        tag: "Step 2 of 6 · Hardware IRQ Triggered",
+        title: "Cellular Baseband Modem Asserts Hardware Interrupt Line",
+        desc: "The radio transceiver detects an incoming voice call on the cellular carrier channel. The baseband processor pulls the hardware Interrupt Request (IRQ) pin HIGH, signaling the CPU's Interrupt Controller (ARM GIC).",
+        osAction: "Interrupt Detection: The CPU finishes the current machine instruction and halts sequential execution of Thread T3.",
+        cpuTag: "HARDWARE IRQ SIGNAL RAISED",
         cpuTagClass: "task-badge-cut badge-message",
-        ip: "0xFFFF0018",
-        task: "Kernel Interrupt Handler (vector_irq)",
-        pc: "0x0018",
+        ip: "0x7FFF0403 (HALTED)",
+        task: "Hardware Interrupt Line (IRQ 38)",
+        pc: "0x0403",
         sp: "0xFF80",
         r0: "0x002A",
         r1: "0x10C8",
-        tcbState: "PREEMPTION PENDING",
-        tcbColor: "var(--color-terracotta)"
+        tcbState: "PRE-PREEMPTION HOLD",
+        tcbColor: "var(--color-amber)"
       },
       3: {
-        title: "Context Switch: Recording Thread State is Saved",
         tag: "Step 3 of 6 · Context Preservation",
-        desc: "To avoid corrupting the video stream, the OS kernel pushes the running thread's state—Program Counter (PC), CPU registers (R0–R15), stack pointer (SP), and processor status word (CPSR)—into the video recording app's Thread Control Block (TCB).",
-        osAction: "State Preserved: TCB stores snapshot {PC: 0x0402, SP: 0xFF80, R0: 0x002A, R1: 0x10C8}. No video frames or state are lost.",
-        cpuTag: "Saving Video Thread Context",
-        cpuTagClass: "task-badge-cut badge-plum",
-        ip: "0xFFFF0280",
-        task: "kernel_context_save()",
-        pc: "0x0280",
-        sp: "0xFE00",
-        r0: "SAVING",
-        r1: "SAVING",
-        tcbState: "TCB SAVED TO KERNEL MEMORY",
-        tcbColor: "#2563EB"
+        title: "CPU State Preserved in Thread Control Block (TCB)",
+        desc: "To prevent corruption of the active video recording loop, the CPU switches to kernel mode and pushes all volatile register contents (PC=0x0403, SP=0xFF80, R0-R15) onto the kernel stack and into Thread T3's Thread Control Block (TCB).",
+        osAction: "Context Save: CPU registers saved into T3_TCB. The video thread transitions from RUNNING to READY state.",
+        cpuTag: "CPU In Kernel Mode (Saving Context)",
+        cpuTagClass: "task-badge-cut badge-download",
+        ip: "0xFFFF0008 (Kernel Vector)",
+        task: "arch/arm64/kernel/entry.S",
+        pc: "SAVED",
+        sp: "SAVED",
+        r0: "SAVED",
+        r1: "SAVED",
+        tcbState: "TCB SAVED IN RAM (Thread T3 Paused)",
+        tcbColor: "var(--color-terracotta)"
       },
       4: {
-        title: "Urgent Call-Handling Task Dispatched to CPU",
-        tag: "Step 4 of 6 · Urgent Work",
-        desc: "The OS scheduler selects the telephony daemon. Its registers are restored into the CPU, and the call-handling process begins executing on the core. The incoming call screen, ringtone audio stream, and vibration motor are triggered.",
-        osAction: "Task Dispatch: The urgent foreground user-facing call thread executes immediately to guarantee instantaneous response.",
-        cpuTag: "Executing: com.android.telecom",
+        tag: "Step 4 of 6 · High-Priority ISR Execution",
+        title: "Interrupt Service Routine (ISR) Executes for Incoming Call",
+        desc: "The OS kernel vector table dispatches the Telephony Interrupt Service Routine (ISR). The top-half ISR acknowledges the modem, and the bottom-half wakes the high-priority incoming call daemon to ring audio and trigger the heads-up notification window.",
+        osAction: "Dispatching Telephony Service: Call Manager preempts video thread and triggers incoming call heads-up UI window.",
+        cpuTag: "Executing: Telephony Call Service",
         cpuTagClass: "task-badge-cut badge-message",
-        ip: "0x7B001140",
-        task: "TelecomCallActivity (Main Thread)",
-        pc: "0x1140",
-        sp: "0xD040",
+        ip: "0x800412A0",
+        task: "com.android.server.telecom",
+        pc: "0x12A0",
+        sp: "0xF700",
         r0: "0x0001",
-        r1: "0xDEAD",
-        tcbState: "SUSPENDED (INACTIVE IN QUEUE)",
-        tcbColor: "var(--color-amber-dark)"
+        r1: "0x77FA",
+        tcbState: "TELEPHONY TCB ACTIVE",
+        tcbColor: "var(--color-plum)"
       },
       5: {
-        title: "Call Event Processing Completes",
-        tag: "Step 5 of 6 · Event Resolution",
-        desc: "The urgent call event has been serviced (notification heads-up banner displayed, vibration triggered, or user answered/declined). The call-handling task relinquishes the CPU or blocks waiting on user touch input.",
-        osAction: "Scheduler Invocation: The telephony thread yields execution. The OS scheduler checks the ready queue for the highest-priority runnable thread.",
-        cpuTag: "Scheduler Re-Evaluation",
+        tag: "Step 5 of 6 · Event Handled",
+        title: "User Interaction Completed / Silenced & Interrupt Cleared",
+        desc: "The incoming call notification has been posted to the display compositor, and the ringtone buffer is dispatched to the audio hardware. The telephony task yields the CPU or completes its urgent top-half servicing.",
+        osAction: "Interrupt Cleared: End-of-Interrupt (EOI) signaled to ARM GIC. Scheduler selects next highest priority task: Video Thread T3.",
+        cpuTag: "IRQ Handled: Scheduler Dispatch",
         cpuTagClass: "task-badge-cut badge-gps",
-        ip: "0xFFFF0500",
-        task: "schedule() -> pick_next_task()",
-        pc: "0x0500",
-        sp: "0xFE00",
+        ip: "0xFFFF0240",
+        task: "kernel/sched/core.c",
+        pc: "0x0240",
+        sp: "0xFFB0",
         r0: "0x0000",
         r1: "0x0000",
-        tcbState: "TCB QUEUED FOR RESTORATION",
-        tcbColor: "var(--color-pine)"
+        tcbState: "RESTORING T3 TCB REGISTERS",
+        tcbColor: "var(--color-amber)"
       },
       6: {
-        title: "Saved Context Restored — Video Recording Resumes",
         tag: "Step 6 of 6 · Seamless Resumption",
-        desc: "The OS kernel retrieves the video recording thread's TCB from memory. It reloads R0–R15, resets SP back to 0xFF80, and jumps execution back to PC 0x0402. The recording process resumes exactly where it paused, completely intact.",
-        osAction: "Execution Restored: The video encoding loop continues streaming frames. Multicore architecture also allows other work to continue in parallel.",
-        cpuTag: "Restored: Video Thread T3",
+        title: "CPU Context Restored: Video Recording Resumes Exactly",
+        desc: "The saved register values from T3's TCB (PC=0x0403, SP=0xFF80, R0-R15) are popped back into the hardware CPU registers. The processor executes an exception return instruction and resumes video encoding exactly where it left off with zero dropped frames.",
+        osAction: "Process Resumed: Thread T3 transitions back to RUNNING state in user space. Video pipeline continues smoothly.",
+        cpuTag: "Executing: Video Thread T3 (Resumed)",
         cpuTagClass: "task-badge-cut badge-video",
-        ip: "0x7FFF0402",
+        ip: "0x7FFF0403",
         task: "libcamera_encode.so (Thread T3)",
-        pc: "0x0402",
+        pc: "0x0403",
         sp: "0xFF80",
         r0: "0x002A",
         r1: "0x10C8",
-        tcbState: "RESTORED & EXECUTING",
+        tcbState: "ACTIVE IN REGISTERS (Restored)",
         tcbColor: "var(--color-pine)"
       }
     };
 
+    let currentTraceStep = 1;
+
     function jumpToTraceStep(stepNum) {
       currentTraceStep = stepNum;
-      document.querySelectorAll('.trace-step-btn').forEach((btn, idx) => {
-        if (idx + 1 === stepNum) btn.classList.add('active');
-        else btn.classList.remove('active');
-      });
+      for (let i = 1; i <= 6; i++) {
+        const btn = document.getElementById(`step-btn-${i}`);
+        if (btn) {
+          if (i === stepNum) btn.classList.add('active');
+          else btn.classList.remove('active');
+        }
+      }
 
       const data = TRACE_STEPS[stepNum];
+      if (!data) return;
+
       document.getElementById('trace-step-tag').innerText = data.tag;
       document.getElementById('trace-step-title').innerText = data.title;
       document.getElementById('trace-step-desc').innerText = data.desc;
       document.getElementById('trace-os-action').innerHTML = `<strong>OS Action:</strong> ${data.osAction}`;
 
-      // CPU Chassis elements
       const tagEl = document.getElementById('cpu-core-status-tag');
       tagEl.innerText = data.cpuTag;
       tagEl.className = data.cpuTagClass;
@@ -3381,6 +3490,12 @@
       if (currentTraceStep > 1) jumpToTraceStep(currentTraceStep - 1);
       else jumpToTraceStep(6);
     }
+
+    // Keyboard navigation support for presentations
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight') nextTraceStep();
+      else if (e.key === 'ArrowLeft') prevTraceStep();
+    });
 
     /* Initialize UI on Page Load */
     window.addEventListener('DOMContentLoaded', () => {

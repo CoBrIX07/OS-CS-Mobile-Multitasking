@@ -1,10 +1,10 @@
 # Mobile Phone Multitasking — Operating Systems Case Study
 
+> **Team:** Team 5 · CS8: Mobile Phone Multitasking  
 > **Course:** 25PCCS201 — Operating Systems (Semester III)  
 > **Faculty:** Mr. Karthikeyan S  
 > **Institution:** School of Computer Science & Engineering, Faculty of Engineering & Technology, JAIN (Deemed-to-be University)  
-> **Project:** Team 5 · CS8: Mobile Phone Multitasking  
-> **Author & Lead Developer:** **Nilotpal Deb** (USN: `25BTRSN029`)
+
 
 ---
 
@@ -104,4 +104,4 @@ Simply double-click `index.html` or open it in any modern browser (Chrome, Edge,
  * Course Code: 25PCCS201 - Operating Systems
  * ========================================================================= */
 ```
-All code, styling, visual models, and interactive simulation engines authored by **Nilotpal Deb**.
+All models, interactive simulation engines, and case study presentation materials prepared for Team 5 Course 25PCCS201.
