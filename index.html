@@ -148,85 +148,73 @@
     }
 
     /* =========================================================================
-     * STICKY HEADER & PAPERCRAFT NAVIGATION
+     * STICKY HEADER & REFINED NAVIGATION
      * ========================================================================= */
     .header-bar {
-      background: rgba(252, 250, 246, 0.94);
+      background: rgba(250, 248, 245, 0.95);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
-      border-bottom: 1.5px solid var(--paper-border-line);
-      box-shadow: var(--shadow-cut-sm);
+      border-bottom: 1px solid rgba(45, 30, 15, 0.08);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
       position: sticky;
       top: 0;
       z-index: 1000;
-      transition: all 0.25s var(--ease-paper);
+      transition: all 0.2s ease;
     }
 
     .header-content {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 74px;
+      height: 52px;
       gap: 16px;
     }
 
     .brand-mark {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
       text-decoration: none;
       color: inherit;
       flex-shrink: 0;
     }
 
-    .paper-crest {
-      width: 44px;
-      height: 44px;
-      background: linear-gradient(135deg, var(--color-pine-dark) 0%, var(--color-pine) 100%);
-      color: #FFFFFF;
-      font-weight: 900;
-      font-size: 1.3rem;
-      border-radius: 12px;
+    .brand-crest {
+      width: 28px;
+      height: 28px;
+      background: #1C1917;
+      color: #FAF8F5;
+      border-radius: 6px;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 4px 10px rgba(15, 81, 50, 0.28), 0 1.5px 0 rgba(255, 255, 255, 0.4) inset;
-      border: 2px solid rgba(255, 255, 255, 0.85);
-      position: relative;
-    }
-
-    .paper-crest::after {
-      content: "";
-      position: absolute;
-      inset: 2px;
-      border: 1px dashed rgba(255, 255, 255, 0.45);
-      border-radius: 8px;
-      pointer-events: none;
+      flex-shrink: 0;
+      border: 1px solid rgba(0, 0, 0, 0.08);
     }
 
     .brand-title {
-      font-size: 1.05rem;
-      font-weight: 800;
+      font-size: 0.92rem;
+      font-weight: 650;
       color: var(--ink-headline);
-      letter-spacing: -0.02em;
-      line-height: 1.2;
+      letter-spacing: -0.015em;
+      line-height: 1.15;
     }
 
     .brand-sub {
-      font-size: 0.75rem;
-      font-weight: 600;
+      font-size: 0.68rem;
+      font-weight: 500;
       color: var(--ink-secondary);
-      letter-spacing: 0.02em;
+      letter-spacing: 0.01em;
     }
 
     .nav-tabs {
       display: flex;
       align-items: center;
-      gap: 4px;
-      background: var(--paper-inset);
-      padding: 4px 6px;
-      border-radius: var(--radius-pill);
-      box-shadow: var(--shadow-inset-trench);
+      gap: 2px;
+      background: rgba(45, 30, 15, 0.04);
+      padding: 3px;
+      border-radius: 8px;
+      border: 1px solid rgba(45, 30, 15, 0.06);
       overflow-x: auto;
       scrollbar-width: none;
       -ms-overflow-style: none;
@@ -237,16 +225,16 @@
     }
 
     .nav-tab-btn {
-      padding: 6px 13px;
-      font-size: 0.8rem;
-      font-weight: 700;
+      padding: 5px 12px;
+      font-size: 0.74rem;
+      font-weight: 500;
       color: var(--ink-secondary);
       border: none;
       background: transparent;
-      border-radius: var(--radius-pill);
+      border-radius: 6px;
       cursor: pointer;
       white-space: nowrap;
-      transition: all 0.2s var(--ease-paper);
+      transition: all 0.15s ease;
       text-decoration: none;
       display: inline-flex;
       align-items: center;
@@ -254,138 +242,92 @@
 
     .nav-tab-btn:hover {
       color: var(--ink-headline);
-      background: rgba(255, 255, 255, 0.5);
+      background: rgba(45, 30, 15, 0.04);
     }
 
     .nav-tab-btn.active {
-      background: var(--paper-card-elevated);
-      color: var(--color-pine-dark);
-      box-shadow: 0 2px 6px rgba(45, 30, 15, 0.12), 0 1px 0 rgba(255, 255, 255, 0.9) inset;
+      background: #FFFFFF;
+      color: var(--ink-headline);
+      font-weight: 600;
+      box-shadow: 0 1px 2px rgba(45, 30, 15, 0.08);
     }
 
-    /* Header Project Status Pill */
     .header-status-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--paper-card-elevated);
-      border: 1.5px solid var(--paper-border-line);
-      padding: 6px 14px;
-      border-radius: var(--radius-pill);
-      font-size: 0.8rem;
-      font-weight: 800;
-      color: var(--ink-secondary);
-      box-shadow: var(--shadow-cut-flat);
-      flex-shrink: 0;
-    }
-
-    .status-live-pip {
-      width: 9px;
-      height: 9px;
-      border-radius: 50%;
-      background: #16A34A;
-      box-shadow: 0 0 0 2.5px rgba(22, 163, 74, 0.25);
-      animation: pulsePip 2s infinite ease-in-out;
-    }
-
-    @keyframes pulsePip {
-      0%, 100% { transform: scale(1); opacity: 1; }
-      50% { transform: scale(1.25); opacity: 0.75; }
+      display: none !important;
     }
 
     /* =========================================================================
-     * HERO SECTION: ELEVATED PAPERCRAFT HERO & MOBILE MULTITASKING DISPLAY
+     * HERO SECTION: REFINED EDITORIAL ARCHITECTURE HERO
      * ========================================================================= */
     .hero-section {
-      padding: 36px 0 20px;
+      padding: 24px 0 20px;
     }
 
     .hero-card {
       background: var(--paper-card-elevated);
       border-radius: var(--radius-lg);
-      padding: 42px 46px;
+      padding: 36px 40px;
       box-shadow: var(--shadow-cut-lg);
-      border: 1px solid var(--paper-border-highlight);
-      outline: 1.5px dashed var(--paper-stitch);
-      outline-offset: -7px;
+      border: 1px solid var(--paper-border-line);
       position: relative;
       overflow: hidden;
       display: grid;
-      grid-template-columns: 1.28fr 0.92fr;
+      grid-template-columns: 1.22fr 0.98fr;
       gap: 36px;
-      align-items: center;
+      align-items: start;
     }
 
-    /* Papercut Fold Ribbon */
-    .hero-ribbon {
-      position: absolute;
-      top: 0;
-      right: 36px;
-      background: linear-gradient(135deg, var(--color-terracotta) 0%, var(--color-terracotta-dark) 100%);
-      color: #FFFFFF;
-      padding: 8px 18px;
-      font-size: 0.75rem;
-      font-weight: 800;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      border-radius: 0 0 8px 8px;
-      box-shadow: 0 4px 10px rgba(194, 65, 12, 0.35);
-      z-index: 5;
-    }
-
-    .hero-dept-badge {
+    /* Refined Editorial Eyebrow Badge */
+    .hero-eyebrow {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      flex-wrap: wrap;
-      background: var(--paper-desk);
-      padding: 6px 14px;
-      border-radius: var(--radius-pill);
-      font-size: 0.8rem;
-      font-weight: 700;
-      color: var(--ink-secondary);
-      border: 1px solid var(--paper-border-line);
-      margin-bottom: 20px;
-      box-shadow: var(--shadow-cut-flat);
+      background: rgba(194, 65, 12, 0.06);
+      color: var(--color-terracotta-dark);
+      padding: 4px 10px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      border-radius: 6px;
+      border: 1px solid rgba(194, 65, 12, 0.15);
+      margin-bottom: 14px;
     }
 
-    .hero-dept-chip {
-      white-space: nowrap;
-    }
-
-    .hero-dept-sep {
-      color: var(--ink-light);
-      font-size: 0.7rem;
+    .eyebrow-pip {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--color-terracotta);
+      flex-shrink: 0;
     }
 
     .hero-title {
-      font-size: 2.85rem;
-      font-weight: 900;
+      font-size: 2.75rem;
+      font-weight: 850;
       line-height: 1.12;
       color: var(--ink-headline);
       letter-spacing: -0.035em;
-      margin-bottom: 18px;
+      margin-bottom: 16px;
     }
 
     .hero-title-accent {
-      background: linear-gradient(135deg, var(--color-terracotta) 0%, #EA580C 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: var(--color-terracotta);
+      font-weight: 850;
       display: inline-block;
     }
 
     .hero-desc {
-      font-size: 1.05rem;
+      font-size: 1.02rem;
       color: var(--ink-secondary);
-      line-height: 1.68;
-      margin-bottom: 28px;
-      max-width: 620px;
+      line-height: 1.65;
+      margin-bottom: 24px;
+      max-width: 580px;
     }
 
     .hero-stats-row {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
+      gap: 12px;
       margin-top: 10px;
     }
 
@@ -393,211 +335,28 @@
       background: var(--paper-card);
       border: 1px solid var(--paper-border-line);
       border-radius: var(--radius-card);
-      padding: 14px 18px;
+      padding: 14px 16px;
       box-shadow: var(--shadow-cut-flat);
       position: relative;
     }
 
-    .hero-stat-card::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 16px; right: 16px;
-      height: 3px;
-      background: var(--color-pine);
-      border-radius: 0 0 3px 3px;
-      opacity: 0.7;
-    }
-    .hero-stat-card:nth-child(2)::before { background: var(--color-terracotta); }
-    .hero-stat-card:nth-child(3)::before { background: var(--color-slate); }
-
     .hero-stat-label {
-      font-size: 0.72rem;
-      font-weight: 800;
+      font-size: 0.68rem;
+      font-weight: 600;
       color: var(--ink-muted);
       text-transform: uppercase;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.04em;
       margin-bottom: 4px;
     }
 
     .hero-stat-val {
-      font-size: 1.25rem;
-      font-weight: 900;
+      font-size: 1.15rem;
+      font-weight: 800;
       color: var(--ink-headline);
       letter-spacing: -0.02em;
     }
 
-    /* Tactile Papercraft Phone Mockup Frame */
-    .hero-phone-wrap {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      padding: 14px 10px;
-    }
 
-    .paper-phone-chassis {
-      width: 290px;
-      background: #25221F;
-      border-radius: 42px;
-      padding: 12px;
-      box-shadow: 
-        0 22px 50px -10px rgba(45, 30, 15, 0.3),
-        0 4px 12px rgba(45, 30, 15, 0.15),
-        inset 0 2px 0 rgba(255, 255, 255, 0.22),
-        inset 0 -2px 0 rgba(0, 0, 0, 0.4);
-      position: relative;
-      border: 3px solid #3E3833;
-    }
-
-    .paper-phone-screen {
-      background: #FAF7F2;
-      border-radius: 32px;
-      padding: 14px 12px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      position: relative;
-      box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.12);
-    }
-
-    .phone-dynamic-notch {
-      width: 86px;
-      height: 20px;
-      background: #151210;
-      border-radius: 12px;
-      margin: 0 auto 6px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 8px;
-    }
-
-    .notch-camera-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: #0B0A09;
-      border: 1px solid #2B2623;
-    }
-
-    .notch-sensor-dot {
-      width: 4px;
-      height: 4px;
-      border-radius: 50%;
-      background: #1C355E;
-    }
-
-    .phone-status-bar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.68rem;
-      font-weight: 800;
-      color: var(--ink-secondary);
-      padding: 0 4px 2px;
-    }
-
-    .phone-app-card {
-      background: var(--paper-card-elevated);
-      border-radius: 12px;
-      padding: 9px 11px;
-      box-shadow: var(--shadow-cut-flat);
-      border: 1px solid rgba(70, 52, 35, 0.08);
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      position: relative;
-    }
-
-    .phone-app-card.active-fg {
-      border-color: var(--color-terracotta-tint);
-      background: var(--color-terracotta-light);
-      box-shadow: 0 3px 8px rgba(194, 65, 12, 0.12);
-    }
-
-    .phone-app-icon {
-      width: 30px;
-      height: 30px;
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.95rem;
-      flex-shrink: 0;
-      color: #FFFFFF;
-    }
-
-    .phone-app-info {
-      flex: 1;
-      min-width: 0;
-    }
-
-    .phone-app-title {
-      font-size: 0.78rem;
-      font-weight: 800;
-      color: var(--ink-headline);
-      line-height: 1.2;
-    }
-
-    .phone-app-sub {
-      font-size: 0.65rem;
-      color: var(--ink-secondary);
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    /* Pinned Papercraft Chips Framing Phone */
-    .hero-float-pin {
-      position: absolute;
-      background: var(--paper-card-elevated);
-      border: 1px solid var(--paper-border-highlight);
-      outline: 1px solid var(--paper-border-line);
-      border-radius: var(--radius-pill);
-      padding: 6px 14px;
-      font-size: 0.74rem;
-      font-weight: 800;
-      box-shadow: var(--shadow-cut-md);
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      white-space: nowrap;
-      z-index: 10;
-      animation: floatPin 4s infinite ease-in-out;
-    }
-
-    .pin-top-right {
-      top: 18px;
-      right: -25px;
-      background: #FFF7ED;
-      color: var(--color-terracotta-dark);
-      border-color: var(--color-terracotta-tint);
-      animation-delay: 0s;
-    }
-
-    .pin-mid-left {
-      top: 155px;
-      left: -35px;
-      background: #FEFCE8;
-      color: var(--color-amber-dark);
-      border-color: var(--color-amber-tint);
-      animation-delay: 1.2s;
-    }
-
-    .pin-bottom-right {
-      bottom: 25px;
-      right: -30px;
-      background: #F0FDF4;
-      color: var(--color-pine-dark);
-      border-color: var(--color-pine-tint);
-      animation-delay: 2.1s;
-    }
-
-    @keyframes floatPin {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-5px); }
-    }
 
     /* =========================================================================
      * SECTION WRAPPERS & PAPERCRAFT HEADINGS
@@ -1874,115 +1633,95 @@
   
 
     /* =========================================================================
-     * 1. GLOBAL OS KERNEL & ALGORITHM LIVE TELEMETRY HUD
+     * 1. GLOBAL OS KERNEL & ALGORITHM LIVE TELEMETRY HUD (MINIMAL SINGLE LINE)
      * ========================================================================= */
     .global-kernel-hud {
-      background: rgba(248, 245, 239, 0.95);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border-bottom: 2px solid var(--paper-border-line);
-      box-shadow: 0 4px 14px -2px rgba(45, 30, 15, 0.08);
+      background: #1F1D1A;
+      color: #A8A29E;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       position: sticky;
-      top: 74px;
+      top: 52px;
       z-index: 950;
-      padding: 9px 0;
-      font-size: 0.8rem;
-      transition: all 0.25s var(--ease-paper);
+      height: 28px;
+      line-height: 28px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.68rem;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+      transition: all 0.2s ease;
     }
 
     .hud-inner {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-
-    .hud-left-group {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .hud-algo-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--paper-card-elevated);
-      border: 1.5px solid var(--color-terracotta);
-      color: var(--color-terracotta-dark);
-      padding: 4px 12px;
-      border-radius: var(--radius-pill);
-      font-weight: 800;
-      font-size: 0.76rem;
-      letter-spacing: 0.02em;
-      box-shadow: var(--shadow-cut-flat);
-    }
-
-    .hud-live-pip {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #22C55E;
-      box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.25);
-      animation: hudPipPulse 1.8s infinite;
-    }
-
-    @keyframes hudPipPulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.5; transform: scale(0.85); }
-    }
-
-    .hud-cpu-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      background: var(--paper-card-elevated);
-      border: 1px solid var(--paper-border-line);
-      padding: 4px 10px;
-      border-radius: var(--radius-pill);
-      font-weight: 700;
-      color: var(--ink-headline);
-      font-size: 0.74rem;
-    }
-
-    .hud-layer-tag {
-      background: var(--color-pine-light);
-      color: var(--color-pine-dark);
-      border: 1px solid var(--color-pine-tint);
-      padding: 3px 9px;
-      border-radius: var(--radius-pill);
-      font-weight: 800;
-      font-size: 0.7rem;
-    }
-
-    .hud-quick-nav {
-      display: flex;
-      align-items: center;
-      gap: 6px;
+      height: 100%;
       overflow-x: auto;
       scrollbar-width: none;
     }
-
-    .hud-jump-btn {
-      background: transparent;
-      border: 1px solid var(--paper-border-line);
-      padding: 4px 9px;
-      border-radius: var(--radius-pill);
-      font-size: 0.72rem;
-      font-weight: 700;
-      color: var(--ink-secondary);
-      cursor: pointer;
-      white-space: nowrap;
-      transition: all 0.2s var(--ease-paper);
+    .hud-inner::-webkit-scrollbar {
+      display: none;
     }
 
-    .hud-jump-btn:hover {
-      background: var(--paper-card-elevated);
-      border-color: var(--color-terracotta);
-      color: var(--color-terracotta-dark);
-      transform: translateY(-1px);
+    .hud-stream-line {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      white-space: nowrap;
+      width: 100%;
+    }
+
+    .hud-live-pip {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #22C55E;
+      flex-shrink: 0;
+      opacity: 0.9;
+    }
+
+    .hud-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .hud-label {
+      color: #78716C;
+      font-weight: 500;
+      font-size: 0.62rem;
+      letter-spacing: 0.03em;
+    }
+
+    .hud-val {
+      color: #E7E5E4;
+      font-weight: 600;
+    }
+
+    .hud-algo-item .hud-val {
+      color: #F5F5F4;
+    }
+
+    .hud-tag {
+      background: rgba(255, 255, 255, 0.06);
+      color: #D6D3D1;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-size: 0.62rem;
+      font-weight: 600;
+    }
+
+    .hud-val-warn {
+      color: #F59E0B !important;
+    }
+
+    .hud-val-success {
+      color: #4ADE80 !important;
+    }
+
+    .hud-sep {
+      color: rgba(255, 255, 255, 0.16);
+      font-size: 0.68rem;
+      user-select: none;
     }
 
     /* =========================================================================
@@ -1992,24 +1731,24 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
       position: relative;
-      padding: 10px 0;
+      padding: 2px 0;
     }
 
     .phone-flagship-chassis {
-      width: 324px;
-      height: 654px;
-      background: linear-gradient(155deg, #2D2722 0%, #171513 100%);
-      border-radius: 46px;
+      width: 320px;
+      height: 630px;
+      background: linear-gradient(155deg, #2A2521 0%, #171513 100%);
+      border-radius: 44px;
       padding: 10px;
       box-shadow: 
-        0 24px 60px -10px rgba(45, 30, 15, 0.42),
-        0 8px 24px rgba(45, 30, 15, 0.2),
-        inset 0 1px 1px rgba(255, 255, 255, 0.28),
-        inset 0 -2px 3px rgba(0, 0, 0, 0.7);
+        0 20px 48px -10px rgba(45, 30, 15, 0.35),
+        0 6px 18px rgba(45, 30, 15, 0.15),
+        inset 0 1px 1px rgba(255, 255, 255, 0.22),
+        inset 0 -2px 3px rgba(0, 0, 0, 0.6);
       position: relative;
-      border: 3px solid #453E38;
+      border: 3px solid #3E3832;
       box-sizing: border-box;
       user-select: none;
     }
@@ -2060,8 +1799,8 @@
 
     /* Speaker Earpiece Grille */
     .phone-earpiece-slit {
-      width: 52px;
-      height: 4px;
+      width: 48px;
+      height: 3.5px;
       background: #171513;
       border-radius: 2px;
       position: absolute;
@@ -2074,43 +1813,40 @@
     /* Screen Area */
     .phone-screen-viewport {
       background: #FAF8F5;
-      border-radius: 38px;
+      border-radius: 36px;
       height: 100%;
       width: 100%;
       overflow: hidden;
       display: flex;
       flex-direction: column;
       position: relative;
-      box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.15);
-      background-image: 
-        radial-gradient(ellipse at 80% 20%, rgba(194, 65, 12, 0.08) 0%, transparent 55%),
-        radial-gradient(ellipse at 20% 80%, rgba(15, 81, 50, 0.08) 0%, transparent 55%);
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12);
     }
 
     /* Dynamic Island at Top */
     .phone-dynamic-island {
       position: absolute;
-      top: 9px;
+      top: 7px;
       left: 50%;
       transform: translateX(-50%);
       background: #0D0C0B;
       color: #FFFFFF;
-      border-radius: 20px;
-      height: 28px;
-      width: 104px;
+      border-radius: 14px;
+      height: 24px;
+      width: 92px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 0 8px;
       z-index: 100;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
       cursor: pointer;
-      transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1), height 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-radius 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: width 0.25s ease, height 0.25s ease, border-radius 0.25s ease;
     }
 
     .island-lens-dot {
-      width: 8px;
-      height: 8px;
+      width: 7px;
+      height: 7px;
       border-radius: 50%;
       background: #050505;
       border: 1px solid #2D2722;
@@ -2122,8 +1858,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 0.65rem;
-      font-weight: 800;
+      font-size: 0.62rem;
+      font-weight: 700;
       color: #E2E8F0;
       overflow: hidden;
       white-space: nowrap;
@@ -2132,8 +1868,8 @@
     }
 
     .island-privacy-dot {
-      width: 5px;
-      height: 5px;
+      width: 4px;
+      height: 4px;
       border-radius: 50%;
       background: #22C55E;
       flex-shrink: 0;
@@ -2146,18 +1882,18 @@
 
     /* Expanded Dynamic Island States */
     .phone-dynamic-island.mode-music {
-      width: 168px;
-      height: 30px;
+      width: 156px;
+      height: 26px;
     }
     .phone-dynamic-island.mode-video {
-      width: 172px;
-      height: 30px;
+      width: 156px;
+      height: 26px;
     }
     .phone-dynamic-island.mode-call {
-      width: 278px;
-      height: 64px;
-      border-radius: 24px;
-      padding: 10px 14px;
+      width: 268px;
+      height: 58px;
+      border-radius: 20px;
+      padding: 8px 12px;
       flex-direction: column;
       align-items: stretch;
       justify-content: space-between;
@@ -2165,22 +1901,62 @@
 
     /* Phone Status Bar */
     .phone-status-bar {
-      height: 38px;
+      height: 34px;
       display: flex;
       align-items: flex-end;
       justify-content: space-between;
-      padding: 0 18px 4px;
+      padding: 0 16px 3px;
       font-size: 0.72rem;
-      font-weight: 800;
-      color: var(--ink-secondary);
+      font-weight: 700;
+      color: #2D2722;
       z-index: 40;
+      flex-shrink: 0;
     }
 
     .status-carrier-row {
       display: flex;
       align-items: center;
-      gap: 5px;
-      font-size: 0.65rem;
+      gap: 6px;
+      font-size: 0.64rem;
+      color: #44403C;
+    }
+
+    .status-wifi-svg {
+      width: 12px;
+      height: 12px;
+      display: inline-block;
+    }
+
+    .status-battery-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      font-size: 0.62rem;
+      font-weight: 700;
+    }
+    .battery-shell {
+      width: 18px;
+      height: 9px;
+      border: 1.2px solid #44403C;
+      border-radius: 2.5px;
+      padding: 1px;
+      position: relative;
+    }
+    .battery-shell::after {
+      content: "";
+      position: absolute;
+      right: -3px;
+      top: 2px;
+      width: 1.5px;
+      height: 3px;
+      background: #44403C;
+      border-radius: 0 1px 1px 0;
+    }
+    .battery-level {
+      height: 100%;
+      width: 88%;
+      background: #16A34A;
+      border-radius: 1px;
     }
 
     /* Screens Viewport & Individual App Screens */
@@ -2197,10 +1973,10 @@
       inset: 0;
       display: none;
       flex-direction: column;
-      padding: 10px 14px;
+      padding: 8px 12px;
       opacity: 0;
-      transform: scale(0.97);
-      transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      transform: scale(0.98);
+      transition: opacity 0.2s ease, transform 0.2s ease;
       overflow-y: auto;
       scrollbar-width: none;
     }
@@ -2214,23 +1990,24 @@
 
     /* Bottom Gesture Bar */
     .phone-gesture-bar-wrap {
-      height: 24px;
+      height: 20px;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
       z-index: 80;
+      flex-shrink: 0;
     }
     .phone-gesture-pill {
-      width: 110px;
-      height: 4.5px;
+      width: 96px;
+      height: 4px;
       background: #25221F;
       border-radius: var(--radius-pill);
       box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
       transition: width 0.2s ease, background 0.2s ease;
     }
     .phone-gesture-bar-wrap:hover .phone-gesture-pill {
-      width: 130px;
+      width: 120px;
       background: var(--color-terracotta);
     }
 
@@ -2245,20 +2022,20 @@
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
-      padding: 16px 4px 6px;
+      padding: 12px 4px 6px;
       text-align: center;
     }
     .lock-time-big {
-      font-size: 3.2rem;
-      font-weight: 900;
+      font-size: 2.8rem;
+      font-weight: 850;
       color: var(--ink-headline);
       letter-spacing: -0.04em;
       line-height: 1;
-      margin-top: 10px;
+      margin-top: 8px;
     }
     .lock-date-sub {
-      font-size: 0.82rem;
-      font-weight: 700;
+      font-size: 0.78rem;
+      font-weight: 600;
       color: var(--ink-secondary);
       margin-top: 4px;
     }
@@ -2266,69 +2043,72 @@
       width: 100%;
       display: flex;
       flex-direction: column;
-      gap: 8px;
-      margin: 18px 0;
+      gap: 7px;
+      margin: 12px 0;
     }
     .lock-notif-card {
-      background: rgba(255, 255, 255, 0.88);
+      background: rgba(255, 255, 255, 0.92);
       backdrop-filter: blur(10px);
       border: 1px solid var(--paper-border-line);
-      border-radius: 14px;
-      padding: 9px 12px;
+      border-radius: 12px;
+      padding: 8px 10px;
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
       text-align: left;
       box-shadow: var(--shadow-cut-sm);
       cursor: pointer;
     }
     .lock-unlock-hint {
-      font-size: 0.74rem;
-      font-weight: 800;
+      font-size: 0.7rem;
+      font-weight: 600;
       color: var(--ink-muted);
       display: flex;
       align-items: center;
-      gap: 6px;
-      animation: bounceHint 2s infinite ease-in-out;
-    }
-    @keyframes bounceHint {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-4px); }
+      gap: 5px;
     }
 
     /* B. Home Screen */
     .home-top-widget {
-      background: var(--paper-card-elevated);
-      border: 1px solid var(--paper-border-line);
-      border-radius: 16px;
-      padding: 10px 12px;
-      margin-bottom: 14px;
-      box-shadow: var(--shadow-cut-flat);
+      background: #FFFFFF;
+      border: 1px solid rgba(45, 30, 15, 0.08);
+      border-radius: 14px;
+      padding: 8px 11px;
+      margin-bottom: 8px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+      flex-shrink: 0;
     }
     .home-widget-title {
-      font-size: 0.7rem;
-      font-weight: 800;
-      color: var(--ink-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
+      font-size: 0.67rem;
+      font-weight: 600;
+      color: #78716C;
       display: flex;
       justify-content: space-between;
+      align-items: center;
       margin-bottom: 6px;
+    }
+    .widget-temp-pip {
+      display: inline-block;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #16A34A;
+      margin-right: 4px;
     }
     .home-core-bars {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 8px;
+      gap: 7px;
     }
     .home-core-cell {
       background: var(--paper-inset);
-      border-radius: 8px;
-      padding: 6px 8px;
-      font-size: 0.68rem;
+      border-radius: 7px;
+      padding: 5px 7px;
+      font-size: 0.65rem;
     }
     .home-core-meter {
       height: 4px;
-      background: #D8CEBE;
+      background: #E5DFD5;
       border-radius: 2px;
       margin-top: 4px;
       overflow: hidden;
@@ -2343,38 +2123,37 @@
     .home-app-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 12px 8px;
-      margin-bottom: 16px;
+      gap: 8px 5px;
+      margin-bottom: 8px;
     }
     .home-app-item {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 4px;
+      gap: 3px;
       cursor: pointer;
       text-align: center;
     }
     .home-app-icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 14px;
+      width: 42px;
+      height: 42px;
+      border-radius: 11px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.35rem;
       color: #FFFFFF;
-      box-shadow: 0 4px 10px -1px rgba(45, 30, 15, 0.18), inset 0 1px 1px rgba(255, 255, 255, 0.4);
+      box-shadow: 0 2px 6px rgba(45, 30, 15, 0.14);
       position: relative;
       transition: transform 0.15s ease;
     }
     .home-app-item:hover .home-app-icon {
-      transform: scale(1.06);
+      transform: scale(1.05);
     }
     .home-app-label {
-      font-size: 0.68rem;
-      font-weight: 700;
+      font-size: 0.63rem;
+      font-weight: 600;
       color: var(--ink-headline);
-      max-width: 58px;
+      max-width: 52px;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
@@ -2385,24 +2164,27 @@
       right: -3px;
       background: #EF4444;
       color: #FFFFFF;
-      font-size: 0.58rem;
-      font-weight: 900;
-      padding: 1px 5px;
-      border-radius: 8px;
-      border: 1.5px solid #FFFFFF;
+      font-size: 0.52rem;
+      font-weight: 800;
+      padding: 0 4px;
+      border-radius: 6px;
+      border: 1px solid #FFFFFF;
+      line-height: 12px;
     }
 
     /* Home Dock */
     .home-dock-wrap {
       margin-top: auto;
-      background: rgba(237, 230, 217, 0.7);
-      backdrop-filter: blur(12px);
-      border-radius: 22px;
-      padding: 7px 10px;
+      background: rgba(235, 229, 219, 0.82);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 18px;
+      padding: 6px 8px;
       display: flex;
       align-items: center;
       justify-content: space-around;
-      border: 1px solid rgba(255, 255, 255, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      margin-bottom: 2px;
     }
 
     /* C. Camera / Video Recording App */
@@ -3232,35 +3014,35 @@
       animation: pulseTorch 1.5s infinite ease-in-out;
     }
     @keyframes pulseTorch {
-      0%, 100% { transform: scale(1); filter: drop-shadow(0 0 15px rgba(245, 158, 11, 0.8)); }
-      50% { transform: scale(1.1); filter: drop-shadow(0 0 30px rgba(245, 158, 11, 1)); }
+      0%, 100% { transform: scale(1); opacity: 0.95; }
+      50% { transform: scale(1.04); opacity: 1; }
     }
 
-    /* On-Display Live Algorithm Pill */
+    /* On-Display Live Algorithm Pill - Docked at Bottom of Screen */
     .phone-algo-live-pill {
-      position: absolute;
-      top: 42px;
-      left: 12px;
-      right: 12px;
-      background: rgba(20, 16, 13, 0.88);
+      position: relative;
+      margin: 2px 12px 4px;
+      background: rgba(24, 20, 17, 0.94);
       backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
       color: #F5F5F4;
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 8px;
       font-size: 0.61rem;
-      font-weight: 800;
-      padding: 4px 8px;
+      font-weight: 700;
+      padding: 3px 8px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      z-index: 85;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      z-index: 70;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
       cursor: pointer;
-      transition: all 0.2s ease;
+      transition: background 0.15s ease, border-color 0.15s ease;
+      flex-shrink: 0;
     }
     .phone-algo-live-pill:hover {
-      background: rgba(30, 24, 20, 0.95);
-      border-color: var(--color-terracotta);
+      background: rgba(38, 32, 27, 0.98);
+      border-color: rgba(255, 255, 255, 0.25);
     }
     .pill-left {
       display: flex;
@@ -3273,7 +3055,6 @@
       height: 6px;
       border-radius: 50%;
       background: #22C55E;
-      box-shadow: 0 0 6px #22C55E;
       flex-shrink: 0;
     }
     .pill-text {
@@ -3282,10 +3063,10 @@
       text-overflow: ellipsis;
     }
     .pill-ring-badge {
-      background: var(--color-terracotta);
+      background: rgba(255, 255, 255, 0.14);
       color: #FFFFFF;
       font-size: 0.52rem;
-      font-weight: 900;
+      font-weight: 800;
       padding: 1px 5px;
       border-radius: 4px;
       letter-spacing: 0.04em;
@@ -3703,14 +3484,13 @@
 
     /* Dedicated OS Algorithm Radar & Inspector Box */
     .phone-algo-inspector-box {
-      width: 324px;
-      background: var(--paper-card-elevated);
-      border: 1.5px solid var(--paper-border-highlight);
-      outline: 1.5px solid var(--paper-border-line);
-      border-radius: var(--radius-card);
-      padding: 14px 16px;
-      margin-top: 12px;
-      box-shadow: var(--shadow-cut-md);
+      width: 320px;
+      background: #FFFFFF;
+      border: 1px solid rgba(45, 30, 15, 0.1);
+      border-radius: 12px;
+      padding: 12px 14px;
+      margin-top: 10px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
       box-sizing: border-box;
       user-select: none;
     }
@@ -3726,59 +3506,58 @@
       gap: 6px;
     }
     .algo-pulse-indicator {
-      width: 8px;
-      height: 8px;
+      width: 6px;
+      height: 6px;
       border-radius: 50%;
       background: var(--color-terracotta);
-      box-shadow: 0 0 0 2px rgba(194, 65, 12, 0.25);
-      animation: pulsePip 1.8s infinite ease-in-out;
+      flex-shrink: 0;
     }
     .algo-box-eyebrow {
-      font-size: 0.65rem;
-      font-weight: 900;
-      color: var(--color-terracotta-dark);
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
+      font-size: 0.63rem;
+      font-weight: 600;
+      color: #78716C;
+      letter-spacing: 0.02em;
     }
     .algo-ring-badge {
-      font-size: 0.62rem;
-      font-weight: 800;
-      padding: 2px 7px;
-      border-radius: var(--radius-pill);
-      background: var(--paper-inset);
-      color: var(--ink-headline);
-      border: 1px solid var(--paper-border-line);
+      font-size: 0.6rem;
+      font-weight: 600;
+      padding: 1px 6px;
+      border-radius: 4px;
+      background: rgba(45, 30, 15, 0.04);
+      color: #44403C;
+      border: 1px solid rgba(45, 30, 15, 0.08);
     }
     .algo-box-name {
-      font-size: 0.88rem;
-      font-weight: 900;
+      font-size: 0.84rem;
+      font-weight: 700;
       color: var(--ink-headline);
-      letter-spacing: -0.015em;
+      letter-spacing: -0.01em;
       line-height: 1.25;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
     .algo-box-tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 5px;
-      margin-bottom: 8px;
+      gap: 4px;
+      margin-bottom: 6px;
     }
     .algo-chip-spec {
-      font-size: 0.62rem;
-      font-weight: 800;
-      background: var(--paper-desk);
-      color: var(--ink-secondary);
-      border: 1px solid var(--paper-border-line);
-      padding: 2px 7px;
-      border-radius: 5px;
+      font-size: 0.61rem;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-weight: 500;
+      background: rgba(45, 30, 15, 0.03);
+      color: #44403C;
+      border: 1px solid rgba(45, 30, 15, 0.08);
+      padding: 2px 6px;
+      border-radius: 4px;
     }
     .algo-box-narrative {
       font-size: 0.72rem;
-      color: var(--ink-secondary);
-      line-height: 1.55;
-      background: var(--paper-inset);
+      color: #57534E;
+      line-height: 1.48;
+      background: #FAF8F5;
       padding: 7px 9px;
-      border-radius: 8px;
+      border-radius: 6px;
       border-left: 2.5px solid var(--color-terracotta);
     }
 
@@ -3845,18 +3624,23 @@
 </head>
 <body>
 
-  <!-- STICKY HEADER WITH PAPERCUT NAVIGATION -->
+  <!-- REFINED NAVIGATION HEADER -->
   <header class="header-bar">
     <div class="container header-content">
       <a href="#hero" class="brand-mark">
-        <div class="paper-crest">📱</div>
+        <div class="brand-crest">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="4" y="2" width="16" height="20" rx="3" ry="3"></rect>
+            <line x1="12" y1="18" x2="12.01" y2="18"></line>
+          </svg>
+        </div>
         <div>
           <div class="brand-title">Mobile Phone Multitasking</div>
-          <div class="brand-sub">Operating Systems Interactive Case Study</div>
+          <div class="brand-sub">Operating Systems Case Study · CE-SE Branch</div>
         </div>
       </a>
 
-      <!-- Quick Section Tabs -->
+      <!-- Navigation Tabs -->
       <nav class="nav-tabs" id="main-nav-tabs">
         <button class="nav-tab-btn active" onclick="scrollToSection('hero')">Overview</button>
         <button class="nav-tab-btn" onclick="scrollToSection('activities')">6 Activities</button>
@@ -3867,49 +3651,35 @@
         <button class="nav-tab-btn" onclick="scrollToSection('multicore')">big.LITTLE Cores</button>
         <button class="nav-tab-btn" onclick="scrollToSection('solution')">OS Solution</button>
       </nav>
-
-      <!-- Status Pill -->
-      <div class="header-status-pill">
-        <span class="status-live-pip"></span>
-        <span>Interactive Simulation</span>
-      </div>
     </div>
   </header>
 
   <!-- GLOBAL OS KERNEL & ALGORITHM LIVE TELEMETRY HUD -->
   <div class="global-kernel-hud" id="global-kernel-hud">
     <div class="container hud-inner">
-      <div class="hud-left-group">
-        <div class="hud-algo-badge" id="hud-algo-badge" title="Current OS Scheduling & Concurrency Algorithm">
-          <span class="hud-live-pip"></span>
-          <span>ALGORITHM:</span>
-          <strong id="hud-algo-name">Non-Preemptive Priority Scheduling</strong>
-        </div>
-
-        <div class="hud-cpu-pill" id="hud-cpu-pill">
-          <span>⚡ SoC:</span>
-          <span id="hud-core-status">Core 0 (Cortex-X2) 94% · Core 1 (Cortex-A510) 22%</span>
-        </div>
-
-        <div class="hud-layer-tag" id="hud-layer-tag">Ring 3 · User Space App</div>
-
-        <div class="hud-cpu-pill">
-          <span>Ready Queue:</span>
-          <strong id="hud-rq-summary" style="color: var(--color-terracotta);">[Music (Prio 3), Msg (Prio 1)]</strong>
-        </div>
-        <div class="hud-cpu-pill" id="hud-event-pill" style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-          <span>Event:</span>
-          <span id="hud-event-ticker" style="color: #6EE7B7; font-weight: 700;">Zero Frame Drops (60 FPS)</span>
-        </div>
-      </div>
-
-      <div class="hud-quick-nav">
-        <span style="font-size: 0.72rem; font-weight: 800; color: var(--ink-muted); margin-right: 2px;">Inspect:</span>
-        <button class="hud-jump-btn" onclick="scrollToSection('layer-architecture')">Architecture Layers</button>
-        <button class="hud-jump-btn" onclick="scrollToSection('threads')">Thread Pipeline</button>
-        <button class="hud-jump-btn" onclick="scrollToSection('scheduling')">CPU Gantt</button>
-        <button class="hud-jump-btn" onclick="scrollToSection('interrupts')">Interrupt Trace</button>
-        <button class="hud-jump-btn" onclick="scrollToSection('multicore')">big.LITTLE Cores</button>
+      <div class="hud-stream-line">
+        <span class="hud-live-pip"></span>
+        <span class="hud-item hud-algo-item">
+          <span class="hud-label">ALGO:</span>
+          <span class="hud-val" id="hud-algo-name">Non-Preemptive Priority Scheduling</span>
+        </span>
+        <span class="hud-sep">/</span>
+        <span class="hud-item" id="hud-cpu-pill">
+          <span class="hud-label">SoC:</span>
+          <span class="hud-val" id="hud-core-status">Core 0 (Cortex-X2) 94% · Core 1 (Cortex-A510) 22%</span>
+        </span>
+        <span class="hud-sep">/</span>
+        <span class="hud-tag" id="hud-layer-tag">Ring 3 · User Space App</span>
+        <span class="hud-sep">/</span>
+        <span class="hud-item">
+          <span class="hud-label">Queue:</span>
+          <span class="hud-val hud-val-warn" id="hud-rq-summary">[Music (Prio 3), Msg (Prio 1)]</span>
+        </span>
+        <span class="hud-sep">/</span>
+        <span class="hud-item" id="hud-event-pill">
+          <span class="hud-label">Event:</span>
+          <span class="hud-val hud-val-success" id="hud-event-ticker">Zero Frame Drops (60 FPS)</span>
+        </span>
       </div>
     </div>
   </div>
@@ -3922,16 +3692,11 @@
      * ========================================================================= -->
     <section id="hero" class="hero-section">
       <div class="hero-card">
-        <div class="hero-ribbon">Operating Systems Simulation & Architecture</div>
-
         <!-- Left Column: Context, Scope & Key Statistics -->
         <div>
-          <div class="hero-dept-badge">
-            <span class="hero-dept-chip">⚡ Real-Time Multitasking</span>
-            <span class="hero-dept-sep">•</span>
-            <span class="hero-dept-chip">6 Concurrent Workloads</span>
-            <span class="hero-dept-sep">•</span>
-            <span class="hero-dept-chip">Energy-Aware Scheduling</span>
+          <div class="hero-eyebrow">
+            <span class="eyebrow-pip"></span>
+            OS Simulation & Architecture · Real-Time Multitasking Case Study
           </div>
 
           <h1 class="hero-title">
@@ -3958,19 +3723,8 @@
           </div>
         </div>
 
-        <!-- Right Column: Tactile Papercraft Phone Mockup -->
         <!-- Right Column: Interactive Flagship Smartphone Simulation -->
         <div class="hero-phone-wrap">
-          <div class="hero-float-pin pin-top-right">
-            <span>📹 Active 4K/60FPS · 5 Threads</span>
-          </div>
-          <div class="hero-float-pin pin-mid-left">
-            <span>🧠 Scheduler: Non-Preemptive vs RR</span>
-          </div>
-          <div class="hero-float-pin pin-bottom-right">
-            <span>⚡ Hardware IRQ: Call Preemption</span>
-          </div>
-
           <!-- Smartphone Hardware Chassis -->
           <div class="phone-flagship-chassis" id="phone-flagship-chassis">
             <!-- Hardware Physical Buttons -->
@@ -3995,24 +3749,16 @@
 
               <!-- Flashlight / Torch Screen Beam Overlay -->
               <div class="phone-torch-overlay" id="phone-torch-overlay" onclick="togglePhoneTorch()">
-                <div class="torch-active-indicator">🔦</div>
-                <div style="font-weight: 900; font-size: 0.85rem; margin-top: 8px;">TORCH ACTIVE</div>
+                <div class="torch-active-indicator">Torch</div>
+                <div style="font-weight: 800; font-size: 0.85rem; margin-top: 8px;">TORCH ACTIVE</div>
                 <div style="font-size: 0.65rem; opacity: 0.8;">Tap anywhere to turn off</div>
               </div>
 
-              <!-- On-Screen Live Algorithm Telemetry Pill -->
-              <div class="phone-algo-live-pill" id="phone-algo-live-pill" onclick="toggleAlgoInspector()" title="Click to view full OS Algorithm details">
-                <div class="pill-left">
-                  <span class="pill-pip"></span>
-                  <span class="pill-text" id="phone-algo-pill-text">ALGO: Producer-Consumer (sem_empty=8, sem_full=2)</span>
-                </div>
-                <span class="pill-ring-badge" id="phone-algo-pill-ring">RING 3</span>
-              </div>
               <!-- Interactive Dynamic Island -->
               <div class="phone-dynamic-island" id="phone-dynamic-island" onclick="toggleDynamicIsland()" title="Dynamic Island: Contextual Activity Pill">
                 <div class="island-lens-dot"></div>
                 <div class="island-content" id="island-content">
-                  <span>📱 Ready</span>
+                  <span>Ready</span>
                 </div>
                 <div class="island-privacy-dot" id="island-privacy-dot"></div>
               </div>
@@ -4021,9 +3767,17 @@
               <div class="phone-status-bar" id="phone-status-bar" onclick="toggleControlCenter()" title="Tap status bar to pull down Control Center overlay" style="cursor: pointer;">
                 <span id="phone-clock-text">09:41</span>
                 <div class="status-carrier-row">
-                  <span>📶 5G</span>
-                  <span>📡 Wi-Fi</span>
-                  <span>🔋 88%</span>
+                  <span style="font-size:0.6rem; font-weight:700;">5G</span>
+                  <svg class="status-wifi-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
+                    <path d="M1.42 9a16 16 0 0 1 21.16 0"></path>
+                    <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+                    <line x1="12" y1="20" x2="12.01" y2="20"></line>
+                  </svg>
+                  <div class="status-battery-pill">
+                    <span style="font-size:0.6rem; font-weight:700;">88%</span>
+                    <div class="battery-shell"><div class="battery-level"></div></div>
+                  </div>
                 </div>
               </div>
 
@@ -4033,7 +3787,7 @@
                 <div class="phone-screen active" id="phone-screen-lock">
                   <div class="lock-screen-content">
                     <div>
-                      <div style="font-size: 0.72rem; font-weight: 800; color: var(--color-terracotta); text-transform: uppercase; letter-spacing: 0.06em;">OS Multitasking Lab</div>
+                      <div style="font-size: 0.7rem; font-weight: 700; color: var(--color-terracotta); text-transform: uppercase; letter-spacing: 0.05em;">OS Multitasking Lab</div>
                       <div class="lock-time-big" id="lock-clock-display">09:41</div>
                       <div class="lock-date-sub" id="lock-date-display">Monday, November 23</div>
                     </div>
@@ -4041,31 +3795,50 @@
                     <!-- Notification Stack on Lock Screen -->
                     <div class="lock-notif-box">
                       <div class="lock-notif-card" onclick="openPhoneApp('messages')">
-                        <div style="font-size: 1.1rem; background: var(--color-plum-light); color: var(--color-plum); width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center;">💬</div>
+                        <div style="width: 28px; height: 28px; border-radius: 8px; background: var(--color-plum-light); color: var(--color-plum); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                          </svg>
+                        </div>
                         <div style="flex: 1; min-width: 0;">
-                          <div style="font-size: 0.72rem; font-weight: 800; color: var(--ink-headline);">Cellular Modem (IRQ 38)</div>
-                          <div style="font-size: 0.64rem; color: var(--ink-secondary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Incoming voice call pending CPU dispatch</div>
+                          <div style="font-size: 0.72rem; font-weight: 700; color: var(--ink-headline);">Cellular Modem (IRQ 38)</div>
+                          <div style="font-size: 0.63rem; color: var(--ink-secondary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Incoming voice call pending CPU dispatch</div>
                         </div>
                       </div>
 
                       <div class="lock-notif-card" onclick="openPhoneApp('downloads')">
-                        <div style="font-size: 1.1rem; background: var(--color-slate-light); color: var(--color-slate); width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center;">📥</div>
+                        <div style="width: 28px; height: 28px; border-radius: 8px; background: var(--color-slate-light); color: var(--color-slate); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                          </svg>
+                        </div>
                         <div style="flex: 1; min-width: 0;">
-                          <div style="font-size: 0.72rem; font-weight: 800; color: var(--ink-headline);">Download Manager</div>
-                          <div style="font-size: 0.64rem; color: var(--ink-secondary);">linux-arm64-rt.bin · 76% (I/O Wait)</div>
+                          <div style="font-size: 0.72rem; font-weight: 700; color: var(--ink-headline);">Download Manager</div>
+                          <div style="font-size: 0.63rem; color: var(--ink-secondary);">linux-arm64-rt.bin · 76% (I/O Wait)</div>
                         </div>
                       </div>
                     </div>
 
                     <!-- Unlock Hint -->
                     <div class="lock-unlock-hint" onclick="unlockPhone()">
-                      <span>👆 Swipe up or tap here to Unlock</span>
+                      <span>Swipe up or tap here to unlock</span>
                     </div>
 
                     <!-- Lock Screen Bottom Flashlight & Camera Shortcuts -->
                     <div class="lock-bottom-shortcuts">
-                      <div class="lock-shortcut-circle" onclick="event.stopPropagation(); togglePhoneTorch();" title="Toggle Flashlight / Torch">🔦</div>
-                      <div class="lock-shortcut-circle" onclick="event.stopPropagation(); openPhoneApp('camera');" title="Quick Launch 4K Camera">📹</div>
+                      <div class="lock-shortcut-circle" onclick="event.stopPropagation(); togglePhoneTorch();" title="Toggle Flashlight / Torch">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                        </svg>
+                      </div>
+                      <div class="lock-shortcut-circle" onclick="event.stopPropagation(); openPhoneApp('camera');" title="Quick Launch 4K Camera">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                          <circle cx="12" cy="13" r="4"></circle>
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -4075,12 +3848,12 @@
                   <!-- Live SoC Monitor Widget -->
                   <div class="home-top-widget">
                     <div class="home-widget-title">
-                      <span>big.LITTLE SoC Real-Time Load</span>
-                      <span style="color: var(--color-pine); font-weight: 900;">Nominal Thermal State</span>
+                      <span>SoC Cluster Real-Time Load</span>
+                      <span style="color: var(--color-pine); font-weight: 700;"><span class="widget-temp-pip"></span>38°C · Nominal</span>
                     </div>
                     <div class="home-core-bars">
                       <div class="home-core-cell">
-                        <div style="display: flex; justify-content: space-between; font-weight: 800;">
+                        <div style="display: flex; justify-content: space-between; font-weight: 700;">
                           <span>Cortex-X2 (Big)</span>
                           <span id="widget-big-val">94%</span>
                         </div>
@@ -4089,7 +3862,7 @@
                         </div>
                       </div>
                       <div class="home-core-cell">
-                        <div style="display: flex; justify-content: space-between; font-weight: 800;">
+                        <div style="display: flex; justify-content: space-between; font-weight: 700;">
                           <span>Cortex-A510 (LITTLE)</span>
                           <span id="widget-little-val">22%</span>
                         </div>
@@ -4100,12 +3873,15 @@
                     </div>
                   </div>
 
-                  <!-- 7 Simulated Applications Grid -->
+                  <!-- Simulated Applications Grid -->
                   <div class="home-app-grid">
                     <!-- App 1: Camera -->
                     <div class="home-app-item" onclick="openPhoneApp('camera')">
-                      <div class="home-app-icon" style="background: linear-gradient(135deg, var(--color-terracotta) 0%, #EA580C 100%);">
-                        📹
+                      <div class="home-app-icon" style="background: linear-gradient(135deg, #C2410C 0%, #EA580C 100%);">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                          <circle cx="12" cy="13" r="4"></circle>
+                        </svg>
                         <span class="home-badge-pip">60fps</span>
                       </div>
                       <div class="home-app-label">Camera</div>
@@ -4113,16 +3889,22 @@
 
                     <!-- App 2: Music -->
                     <div class="home-app-item" onclick="openPhoneApp('music')">
-                      <div class="home-app-icon" style="background: linear-gradient(135deg, var(--color-amber) 0%, #D97706 100%);">
-                        🎵
+                      <div class="home-app-icon" style="background: linear-gradient(135deg, #D97706 0%, #B45309 100%);">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M9 18V5l12-2v13"></path>
+                          <circle cx="6" cy="18" r="3"></circle>
+                          <circle cx="18" cy="16" r="3"></circle>
+                        </svg>
                       </div>
                       <div class="home-app-label">Music</div>
                     </div>
 
                     <!-- App 3: Messages -->
                     <div class="home-app-item" onclick="openPhoneApp('messages')">
-                      <div class="home-app-icon" style="background: linear-gradient(135deg, var(--color-plum) 0%, #9D174D 100%);">
-                        💬
+                      <div class="home-app-icon" style="background: linear-gradient(135deg, #9D174D 0%, #831843 100%);">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
                         <span class="home-badge-pip">IRQ</span>
                       </div>
                       <div class="home-app-label">Messages</div>
@@ -4130,16 +3912,24 @@
 
                     <!-- App 4: GPS Maps -->
                     <div class="home-app-item" onclick="openPhoneApp('gps')">
-                      <div class="home-app-icon" style="background: linear-gradient(135deg, var(--color-teal) 0%, #0D9488 100%);">
-                        📍
+                      <div class="home-app-icon" style="background: linear-gradient(135deg, #0D9488 0%, #0F766E 100%);">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"></polygon>
+                          <line x1="9" y1="3" x2="9" y2="18"></line>
+                          <line x1="15" y1="6" x2="15" y2="21"></line>
+                        </svg>
                       </div>
                       <div class="home-app-label">Maps</div>
                     </div>
 
                     <!-- App 5: Downloads -->
                     <div class="home-app-item" onclick="openPhoneApp('downloads')">
-                      <div class="home-app-icon" style="background: linear-gradient(135deg, var(--color-slate) 0%, #2563EB 100%);">
-                        📥
+                      <div class="home-app-icon" style="background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                          <polyline points="7 10 12 15 17 10"></polyline>
+                          <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
                         <span class="home-badge-pip">76%</span>
                       </div>
                       <div class="home-app-label">Files</div>
@@ -4147,8 +3937,19 @@
 
                     <!-- App 6: OS Task Manager -->
                     <div class="home-app-item" onclick="openPhoneApp('taskmgr')">
-                      <div class="home-app-icon" style="background: linear-gradient(135deg, #475569 0%, #1E293B 100%);">
-                        ⚙️
+                      <div class="home-app-icon" style="background: linear-gradient(135deg, #475569 0%, #334155 100%);">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                          <rect x="9" y="9" width="6" height="6"></rect>
+                          <line x1="9" y1="1" x2="9" y2="4"></line>
+                          <line x1="15" y1="1" x2="15" y2="4"></line>
+                          <line x1="9" y1="20" x2="9" y2="23"></line>
+                          <line x1="15" y1="20" x2="15" y2="23"></line>
+                          <line x1="20" y1="9" x2="23" y2="9"></line>
+                          <line x1="20" y1="14" x2="23" y2="14"></line>
+                          <line x1="1" y1="9" x2="4" y2="9"></line>
+                          <line x1="1" y1="14" x2="4" y2="14"></line>
+                        </svg>
                       </div>
                       <div class="home-app-label">OS Kernel</div>
                     </div>
@@ -4156,7 +3957,9 @@
                     <!-- App 7: Phone Call Simulation -->
                     <div class="home-app-item" onclick="triggerIncomingCall()">
                       <div class="home-app-icon" style="background: linear-gradient(135deg, #16A34A 0%, #15803D 100%);">
-                        📞
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
                       </div>
                       <div class="home-app-label">Phone</div>
                     </div>
@@ -4164,7 +3967,11 @@
                     <!-- App 8: Multitasking Switcher -->
                     <div class="home-app-item" onclick="openPhoneApp('multitask')">
                       <div class="home-app-icon" style="background: linear-gradient(135deg, #7C3AED 0%, #6D28D9 100%);">
-                        🗂️
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                          <polyline points="2 17 12 22 22 17"></polyline>
+                          <polyline points="2 12 12 17 22 12"></polyline>
+                        </svg>
                       </div>
                       <div class="home-app-label">Switcher</div>
                     </div>
@@ -4172,8 +3979,18 @@
                     <!-- App 9: Phone Dialer (DTMF Tones) -->
                     <div class="home-app-item" onclick="openPhoneApp('dialer')">
                       <div class="home-app-icon" style="background: linear-gradient(135deg, #059669 0%, #047857 100%);">
-                        📞
-                        <span class="home-badge-pip" style="background: #22C55E;">DTMF</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <circle cx="6" cy="6" r="1.5"></circle>
+                          <circle cx="12" cy="6" r="1.5"></circle>
+                          <circle cx="18" cy="6" r="1.5"></circle>
+                          <circle cx="6" cy="12" r="1.5"></circle>
+                          <circle cx="12" cy="12" r="1.5"></circle>
+                          <circle cx="18" cy="12" r="1.5"></circle>
+                          <circle cx="6" cy="18" r="1.5"></circle>
+                          <circle cx="12" cy="18" r="1.5"></circle>
+                          <circle cx="18" cy="18" r="1.5"></circle>
+                        </svg>
+                        <span class="home-badge-pip" style="background: #16A34A;">DTMF</span>
                       </div>
                       <div class="home-app-label">Dialer</div>
                     </div>
@@ -4181,7 +3998,10 @@
                     <!-- App 10: Split Screen Multitasking -->
                     <div class="home-app-item" onclick="openSplitScreen()">
                       <div class="home-app-icon" style="background: linear-gradient(135deg, #4F46E5 0%, #3730A3 100%);">
-                        ⚏
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                          <line x1="12" y1="3" x2="12" y2="21"></line>
+                        </svg>
                       </div>
                       <div class="home-app-label">Split View</div>
                     </div>
@@ -4189,10 +4009,29 @@
 
                   <!-- Home Dock -->
                   <div class="home-dock-wrap">
-                    <div class="home-app-icon" style="width: 44px; height: 44px; background: #16A34A; cursor: pointer;" onclick="triggerIncomingCall()">📞</div>
-                    <div class="home-app-icon" style="width: 44px; height: 44px; background: var(--color-plum); cursor: pointer;" onclick="openPhoneApp('messages')">💬</div>
-                    <div class="home-app-icon" style="width: 44px; height: 44px; background: var(--color-amber); cursor: pointer;" onclick="openPhoneApp('music')">🎵</div>
-                    <div class="home-app-icon" style="width: 44px; height: 44px; background: var(--color-terracotta); cursor: pointer;" onclick="openPhoneApp('camera')">📹</div>
+                    <div class="home-app-icon" style="width: 38px; height: 38px; background: #16A34A; cursor: pointer;" onclick="triggerIncomingCall()" title="Phone Call">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                      </svg>
+                    </div>
+                    <div class="home-app-icon" style="width: 38px; height: 38px; background: var(--color-plum); cursor: pointer;" onclick="openPhoneApp('messages')" title="Messages">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                      </svg>
+                    </div>
+                    <div class="home-app-icon" style="width: 38px; height: 38px; background: var(--color-amber); cursor: pointer;" onclick="openPhoneApp('music')" title="Music Player">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 18V5l12-2v13"></path>
+                        <circle cx="6" cy="18" r="3"></circle>
+                        <circle cx="18" cy="16" r="3"></circle>
+                      </svg>
+                    </div>
+                    <div class="home-app-icon" style="width: 38px; height: 38px; background: var(--color-terracotta); cursor: pointer;" onclick="openPhoneApp('camera')" title="Camera">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                        <circle cx="12" cy="13" r="4"></circle>
+                      </svg>
+                    </div>
                   </div>
                 </div>
 
@@ -4214,8 +4053,8 @@
                     <canvas id="cam-canvas" class="cam-viewfinder-canvas" width="280" height="340"></canvas>
 
                     <div class="cam-hud-bottom">
-                      <button class="cam-pipeline-chip" onclick="togglePiP()" title="Picture-in-Picture Floating Window">📺 PiP</button>
-                      <button class="cam-shutter-btn" id="cam-shutter-btn" onclick="toggleCameraRecording()" title="Start/Pause 4K Recording"></button>
+                      <button class="cam-pipeline-chip" onclick="togglePiP()" title="Picture-in-Picture Floating Window">PiP</button>
+                      <button class="cam-shutter-btn" id="cam-shutter-btn" onclick="toggleCameraRecording()" title="Start/Pause 4K Recording"><span id="cam-shutter-state" style="display:none;"></span></button>
                       <button class="cam-pipeline-chip" onclick="flipCameraLens()" id="cam-lens-btn" title="Switch Lens">1x</button>
                     </div>
 
@@ -4234,14 +4073,16 @@
                 <div class="phone-screen" id="phone-screen-music">
                   <div class="music-app-frame">
                     <div style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
-                      <span style="font-size: 0.74rem; font-weight: 800; color: var(--ink-muted);" onclick="openPhoneApp('home')">❮ Library</span>
+                      <span style="font-size: 0.74rem; font-weight: 800; color: var(--ink-muted); cursor: pointer;" onclick="openPhoneApp('home')">❮ Library</span>
                       <span style="font-size: 0.7rem; font-weight: 800; color: var(--color-amber);">48kHz PCM DAC</span>
-                      <span style="font-size: 0.8rem; cursor: pointer;" onclick="toggleAudioSynth()" id="music-synth-mute-icon" title="Toggle Sound Synthesizer">🔈</span>
+                      <span style="display: inline-flex; align-items: center; cursor: pointer; color: var(--ink-secondary);" onclick="toggleAudioSynth()" id="music-synth-mute-icon" title="Toggle Sound Synthesizer"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg></span>
                     </div>
 
                     <!-- Vinyl Record Art -->
                     <div class="music-vinyl-box" id="music-vinyl-box">
-                      <div class="music-album-art">🎵</div>
+                      <div class="music-album-art" style="display: flex; align-items: center; justify-content: center; background: #262626;">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/></svg>
+                      </div>
                     </div>
 
                     <div>
@@ -4275,7 +4116,9 @@
                   <div class="msg-app-frame">
                     <div class="msg-app-header">
                       <span style="font-size: 0.74rem; cursor: pointer; font-weight: 800;" onclick="openPhoneApp('home')">❮</span>
-                      <div class="msg-header-icon">💬</div>
+                      <div class="msg-header-icon" style="display: flex; align-items: center; justify-content: center; background: var(--color-plum); color: #FFF;">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                      </div>
                       <div>
                         <div style="font-size: 0.78rem; font-weight: 800; color: var(--ink-headline);">Modem IRQ 38 Daemon</div>
                         <div style="font-size: 0.62rem; color: var(--color-pine); font-weight: 700;">● Priority 1 · Interrupt Line Active</div>
@@ -4298,7 +4141,7 @@
                       <input type="text" class="msg-input-field" id="msg-input-field" placeholder="Ask Kernel or trigger IRQ..." onkeydown="if(event.key==='Enter') sendChatMessage()">
                       <button class="msg-send-btn" onclick="sendChatMessage()">Send</button>
                     </div>
-                    <button class="phone-ctrl-btn" style="margin-top: 4px; background: var(--color-plum-light); color: var(--color-plum); border-color: var(--color-plum-tint);" onclick="triggerIncomingCall()">⚡ Trigger Incoming Call Interrupt</button>
+                    <button class="phone-ctrl-btn" style="margin-top: 4px; background: var(--color-plum-light); color: var(--color-plum); border-color: var(--color-plum-tint);" onclick="triggerIncomingCall()">Trigger Incoming Call Interrupt</button>
                   </div>
                 </div>
 
@@ -4421,8 +4264,8 @@
                     </table>
 
                     <div style="display: flex; gap: 6px; margin-top: auto;">
-                      <button class="phone-ctrl-btn" style="flex: 1;" onclick="boostActiveTask()">⚡ Boost Video Priority</button>
-                      <button class="phone-ctrl-btn" style="flex: 1;" onclick="simulateMemoryPressure()">🧹 Free Inactive RAM</button>
+                      <button class="phone-ctrl-btn" style="flex: 1;" onclick="boostActiveTask()">Boost Video Priority</button>
+                      <button class="phone-ctrl-btn" style="flex: 1;" onclick="simulateMemoryPressure()">Free Inactive RAM</button>
                     </div>
                   </div>
                 </div>
@@ -4440,11 +4283,13 @@
                       <!-- Card 1: Camera -->
                       <div class="multitask-app-card" onclick="openPhoneApp('camera')">
                         <div class="multitask-card-header">
-                          <div class="home-app-icon" style="width: 26px; height: 26px; font-size: 0.8rem; background: var(--color-terracotta);">📹</div>
+                          <div class="home-app-icon" style="width: 26px; height: 26px; background: var(--color-terracotta); display: flex; align-items: center; justify-content: center; color: #FFF;">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                          </div>
                           <strong style="font-size: 0.72rem;">Camera 4K</strong>
                         </div>
-                        <div class="multitask-preview-body" style="background: #111; color: #FFF;">
-                          📹
+                        <div class="multitask-preview-body" style="background: #111; color: #FFF; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;">
+                          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3" fill="#EF4444"/></svg>
                           <span style="font-size: 0.6rem; color: #EF4444; font-weight: 800;">60 FPS Active</span>
                         </div>
                         <span class="task-badge-cut badge-video" style="font-size: 0.6rem;">Foreground · Running</span>
@@ -4453,11 +4298,13 @@
                       <!-- Card 2: Music -->
                       <div class="multitask-app-card" onclick="openPhoneApp('music')">
                         <div class="multitask-card-header">
-                          <div class="home-app-icon" style="width: 26px; height: 26px; font-size: 0.8rem; background: var(--color-amber);">🎵</div>
+                          <div class="home-app-icon" style="width: 26px; height: 26px; background: var(--color-amber); display: flex; align-items: center; justify-content: center; color: #FFF;">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+                          </div>
                           <strong style="font-size: 0.72rem;">Music</strong>
                         </div>
-                        <div class="multitask-preview-body" style="background: #FFFBEB;">
-                          🎵
+                        <div class="multitask-preview-body" style="background: #FFFBEB; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;">
+                          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-amber)" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
                           <span style="font-size: 0.6rem; color: var(--color-amber); font-weight: 800;">Playing 48kHz</span>
                         </div>
                         <span class="task-badge-cut badge-music" style="font-size: 0.6rem;">Background Stream</span>
@@ -4466,11 +4313,13 @@
                       <!-- Card 3: Messages -->
                       <div class="multitask-app-card" onclick="openPhoneApp('messages')">
                         <div class="multitask-card-header">
-                          <div class="home-app-icon" style="width: 26px; height: 26px; font-size: 0.8rem; background: var(--color-plum);">💬</div>
+                          <div class="home-app-icon" style="width: 26px; height: 26px; background: var(--color-plum); display: flex; align-items: center; justify-content: center; color: #FFF;">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                          </div>
                           <strong style="font-size: 0.72rem;">Messages</strong>
                         </div>
-                        <div class="multitask-preview-body" style="background: #FDF2F8;">
-                          💬
+                        <div class="multitask-preview-body" style="background: #FDF2F8; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;">
+                          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-plum)" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
                           <span style="font-size: 0.6rem; color: var(--color-plum); font-weight: 800;">IRQ 38 Pending</span>
                         </div>
                         <span class="task-badge-cut badge-message" style="font-size: 0.6rem;">High-Priority IRQ</span>
@@ -4479,11 +4328,13 @@
                       <!-- Card 4: GPS Maps -->
                       <div class="multitask-app-card" onclick="openPhoneApp('gps')">
                         <div class="multitask-card-header">
-                          <div class="home-app-icon" style="width: 26px; height: 26px; font-size: 0.8rem; background: var(--color-teal);">📍</div>
+                          <div class="home-app-icon" style="width: 26px; height: 26px; background: var(--color-teal); display: flex; align-items: center; justify-content: center; color: #FFF;">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+                          </div>
                           <strong style="font-size: 0.72rem;">Maps GPS</strong>
                         </div>
-                        <div class="multitask-preview-body" style="background: #0B1917; color: #2DD4BF;">
-                          📍
+                        <div class="multitask-preview-body" style="background: #0B1917; color: #2DD4BF; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;">
+                          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
                           <span style="font-size: 0.6rem; font-weight: 800;">12 Sats Locked</span>
                         </div>
                         <span class="task-badge-cut badge-gps" style="font-size: 0.6rem;">Periodic Sensor IRQ</span>
@@ -4492,11 +4343,13 @@
                       <!-- Card 5: Downloads -->
                       <div class="multitask-app-card" onclick="openPhoneApp('downloads')">
                         <div class="multitask-card-header">
-                          <div class="home-app-icon" style="width: 26px; height: 26px; font-size: 0.8rem; background: var(--color-slate);">📥</div>
+                          <div class="home-app-icon" style="width: 26px; height: 26px; background: var(--color-slate); display: flex; align-items: center; justify-content: center; color: #FFF;">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                          </div>
                           <strong style="font-size: 0.72rem;">Downloads</strong>
                         </div>
-                        <div class="multitask-preview-body" style="background: #EFF6FF;">
-                          📥
+                        <div class="multitask-preview-body" style="background: #EFF6FF; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;">
+                          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-slate)" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                           <span style="font-size: 0.6rem; color: var(--color-slate); font-weight: 800;">76% Complete</span>
                         </div>
                         <span class="task-badge-cut badge-download" style="font-size: 0.6rem;">Blocked on Socket I/O</span>
@@ -4533,8 +4386,12 @@
 
                     <div class="dialer-call-bar">
                       <button class="dialer-del-btn" onclick="deleteDialerDigit()">⌫</button>
-                      <button class="dialer-call-circle" onclick="startDialerCall()" title="Dial Outgoing Call">📞</button>
-                      <button class="dialer-del-btn" onclick="openPhoneApp('messages')" title="Open Messages">💬</button>
+                      <button class="dialer-call-circle" onclick="startDialerCall()" title="Dial Outgoing Call">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                      </button>
+                      <button class="dialer-del-btn" onclick="openPhoneApp('messages')" title="Open Messages">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -4545,7 +4402,7 @@
                     <!-- Top Split: 4K Camera Viewfinder -->
                     <div class="split-top-pane" id="split-top-pane">
                       <div style="position: absolute; top: 4px; left: 8px; z-index: 5; background: rgba(0,0,0,0.7); padding: 2px 6px; border-radius: 4px; font-size: 0.58rem; color: #FFF; font-weight: 800;">
-                        📹 App 1: 4K Camera (Core 0 · Cortex-X2)
+                        App 1: 4K Camera (Core 0 · Cortex-X2)
                       </div>
                       <canvas id="cam-split-canvas" width="280" height="150" style="width: 100%; height: 100%; object-fit: cover;"></canvas>
                     </div>
@@ -4558,7 +4415,7 @@
                     <!-- Bottom Split: GPS Radar or Messages -->
                     <div class="split-bottom-pane" id="split-bottom-pane">
                       <div style="position: absolute; top: 4px; left: 8px; z-index: 5; background: rgba(0,0,0,0.7); padding: 2px 6px; border-radius: 4px; font-size: 0.58rem; color: #FFF; font-weight: 800;">
-                        📍 App 2: GPS Tracking (Core 1 · Cortex-A510)
+                        App 2: GPS Tracking (Core 1 · Cortex-A510)
                       </div>
                       <canvas id="gps-split-canvas" width="280" height="150" style="width: 100%; height: 100%; object-fit: cover;"></canvas>
                     </div>
@@ -4588,28 +4445,36 @@
                 <!-- 2x2 Network Grid -->
                 <div class="cc-grid-2x2">
                   <div class="cc-tile active" id="cc-tile-wifi" onclick="toggleCCTile(this, 'Wi-Fi')">
-                    <span class="cc-tile-icon">📡</span>
+                    <span class="cc-tile-icon">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+                    </span>
                     <div>
                       <div class="cc-tile-label">Wi-Fi 6E</div>
                       <div class="cc-tile-sub">Connected · 1.2 Gbps</div>
                     </div>
                   </div>
                   <div class="cc-tile active" id="cc-tile-cell" onclick="toggleCCTile(this, 'Cellular')">
-                    <span class="cc-tile-icon">📶</span>
+                    <span class="cc-tile-icon">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 20h20"/><path d="M5 20v-4"/><path d="M9 20v-8"/><path d="M13 20v-12"/><path d="M17 20V4"/></svg>
+                    </span>
                     <div>
                       <div class="cc-tile-label">5G Standalone</div>
                       <div class="cc-tile-sub">Modem Active · IRQ 38</div>
                     </div>
                   </div>
                   <div class="cc-tile active" id="cc-tile-bt" onclick="toggleCCTile(this, 'Bluetooth')">
-                    <span class="cc-tile-icon">⚡</span>
+                    <span class="cc-tile-icon">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6.5 6.5 17.5 17.5 12 23 12 1 17.5 6.5 6.5 17.5"/></svg>
+                    </span>
                     <div>
                       <div class="cc-tile-label">Bluetooth 5.3</div>
                       <div class="cc-tile-sub">Audio DAC Connected</div>
                     </div>
                   </div>
                   <div class="cc-tile" id="cc-tile-torch" onclick="togglePhoneTorch()">
-                    <span class="cc-tile-icon">🔦</span>
+                    <span class="cc-tile-icon">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6l-3-3H9L6 6v3l3 3v9h6v-9l3-3V6z"/></svg>
+                    </span>
                     <div>
                       <div class="cc-tile-label">Flashlight</div>
                       <div class="cc-tile-sub">Screen Torch</div>
@@ -4620,7 +4485,7 @@
                 <!-- Volume and Brightness Sliders -->
                 <div class="cc-slider-card">
                   <div class="cc-slider-label">
-                    <span>🔊 Audio Volume</span>
+                    <span>Audio Volume</span>
                     <span id="cc-vol-val">80%</span>
                   </div>
                   <input type="range" min="0" max="100" value="80" class="cc-range-input" oninput="setPhoneVolumeFromCC(this.value)">
@@ -4628,7 +4493,7 @@
 
                 <div class="cc-slider-card">
                   <div class="cc-slider-label">
-                    <span>☀️ Screen Brightness (AMOLED)</span>
+                    <span>Screen Brightness (AMOLED)</span>
                     <span id="cc-bright-val">90%</span>
                   </div>
                   <input type="range" min="20" max="100" value="90" class="cc-range-input" oninput="setPhoneBrightness(this.value)">
@@ -4645,7 +4510,7 @@
 
                 <!-- OS Algorithm Switcher inside Control Center -->
                 <div class="cc-widget-card">
-                  <div style="font-weight: 800; font-size: 0.7rem; margin-bottom: 6px;">🧠 CPU Scheduler Algorithm</div>
+                  <div style="font-weight: 800; font-size: 0.7rem; margin-bottom: 6px;">CPU Scheduler Algorithm</div>
                   <div style="display: flex; gap: 6px;">
                     <button class="phone-ctrl-btn" style="flex: 1; font-size: 0.65rem;" onclick="setGanttMode('prio'); updateTimelineUI(0);">Non-Preemptive</button>
                     <button class="phone-ctrl-btn" style="flex: 1; font-size: 0.65rem;" onclick="setGanttMode('rr'); updateTimelineUI(0);">Round Robin (q=2)</button>
@@ -4656,16 +4521,27 @@
               <!-- DYNAMIC OVERLAYER: FULL IN-CALL ACTIVE SCREEN -->
               <div class="phone-overlay-activecall" id="phone-overlay-activecall">
                 <div style="display: flex; flex-direction: column; align-items: center; margin-top: 10px;">
-                  <div class="call-avatar-circle">📞</div>
+                  <div class="call-avatar-circle" style="display: flex; align-items: center; justify-content: center; background: var(--color-pine); color: #FFF;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  </div>
                   <div class="call-contact-name" id="activecall-name">Baseband Modem IRQ 38</div>
                   <div class="call-contact-sub" id="activecall-number">+91 98765 43210 · Hardware Line Asserted</div>
                   <div class="call-timer-ticker" id="activecall-timer">00:03</div>
                 </div>
 
                 <div class="call-action-grid">
-                  <button class="call-tile-btn" id="call-mute-btn" onclick="toggleCallMute()"><span style="font-size: 1.1rem;">🎤</span><span>Mute</span></button>
-                  <button class="call-tile-btn" onclick="openPhoneApp('dialer'); endActiveCall();"><span style="font-size: 1.1rem;">🔢</span><span>Keypad</span></button>
-                  <button class="call-tile-btn" id="call-speaker-btn" onclick="toggleCallSpeaker()"><span style="font-size: 1.1rem;">📢</span><span>Speaker</span></button>
+                  <button class="call-tile-btn" id="call-mute-btn" onclick="toggleCallMute()">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+                    <span>Mute</span>
+                  </button>
+                  <button class="call-tile-btn" onclick="openPhoneApp('dialer'); endActiveCall();">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="7" y1="8" x2="7" y2="8.01"/><line x1="12" y1="8" x2="12" y2="8.01"/><line x1="17" y1="8" x2="17" y2="8.01"/><line x1="7" y1="12" x2="7" y2="12.01"/><line x1="12" y1="12" x2="12" y2="12.01"/><line x1="17" y1="12" x2="17" y2="12.01"/><line x1="7" y1="16" x2="7" y2="16.01"/><line x1="12" y1="16" x2="12" y2="16.01"/><line x1="17" y1="16" x2="17" y2="16.01"/></svg>
+                    <span>Keypad</span>
+                  </button>
+                  <button class="call-tile-btn" id="call-speaker-btn" onclick="toggleCallSpeaker()">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+                    <span>Speaker</span>
+                  </button>
                 </div>
 
                 <button class="call-end-pill-btn" onclick="endActiveCall()">✕ End Call (Clear IRQ)</button>
@@ -4688,7 +4564,9 @@
 
               <!-- DYNAMIC OVERLAY 2: NOTIFICATION TOAST -->
               <div class="phone-overlay-toast" id="phone-overlay-toast" onclick="dismissNotificationToast()">
-                <div style="font-size: 1.1rem;" id="toast-icon">💬</div>
+                <div style="display: flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 5px; background: var(--color-plum); color: #FFF;" id="toast-icon">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                </div>
                 <div style="flex: 1; min-width: 0;">
                   <div style="font-size: 0.72rem; font-weight: 800;" id="toast-title">Urgent Message</div>
                   <div style="font-size: 0.65rem; color: var(--ink-secondary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" id="toast-body">Modem IRQ 38 arrived on hardware line.</div>
@@ -4700,6 +4578,15 @@
                 <div class="volume-fill-bar" id="phone-volume-bar" style="height: 80%;"></div>
               </div>
 
+              <!-- On-Screen Live Algorithm Telemetry Pill Docked at Bottom of Viewport -->
+              <div class="phone-algo-live-pill" id="phone-algo-live-pill" onclick="toggleAlgoInspector()" title="Click to view full OS Algorithm details">
+                <div class="pill-left">
+                  <span class="pill-pip"></span>
+                  <span class="pill-text" id="phone-algo-pill-text">ALGO: Producer-Consumer (sem_empty=8, sem_full=2)</span>
+                </div>
+                <span class="pill-ring-badge" id="phone-algo-pill-ring">RING 3</span>
+              </div>
+
               <!-- BOTTOM GESTURE BAR -->
               <div class="phone-gesture-bar-wrap" onclick="handleGestureBarClick()" title="Tap to return Home; Double-tap for App Switcher">
                 <div class="phone-gesture-pill" id="phone-gesture-pill"></div>
@@ -4709,13 +4596,13 @@
 
           <!-- Phone Controls Toolbar Below Phone -->
           <div class="phone-controls-strip">
-            <button class="phone-ctrl-btn active" id="btn-phone-mode" onclick="togglePhoneSyncMode()">🎮 Mode: Interactive</button>
-            <button class="phone-ctrl-btn" onclick="openPhoneApp('home')">📱 Home</button>
-            <button class="phone-ctrl-btn" onclick="openPhoneApp('multitask')">🗂️ Switcher</button>
-            <button class="phone-ctrl-btn" onclick="triggerIncomingCall()">📞 Call (IRQ)</button>
-            <button class="phone-ctrl-btn" onclick="triggerIncomingMessageToast()">💬 SMS</button>
-            <button class="phone-ctrl-btn" id="btn-synth-toggle" onclick="toggleAudioSynth()">🔊 Sound: Off</button>
-            <button class="phone-ctrl-btn" onclick="togglePhoneLock()">🔒 Lock</button>
+            <button class="phone-ctrl-btn active" id="btn-phone-mode" onclick="togglePhoneSyncMode()">Mode: Interactive</button>
+            <button class="phone-ctrl-btn" onclick="openPhoneApp('home')">Home</button>
+            <button class="phone-ctrl-btn" onclick="openPhoneApp('multitask')">App Switcher</button>
+            <button class="phone-ctrl-btn" onclick="triggerIncomingCall()">Call (IRQ 38)</button>
+            <button class="phone-ctrl-btn" onclick="triggerIncomingMessageToast()">SMS Alert</button>
+            <button class="phone-ctrl-btn" id="btn-synth-toggle" onclick="toggleAudioSynth()">Sound: Off</button>
+            <button class="phone-ctrl-btn" onclick="togglePhoneLock()">Lock Screen</button>
           </div>
 
           <!-- Dedicated OS Algorithm Radar & Inspector Box -->
@@ -4723,15 +4610,15 @@
             <div class="algo-box-header">
               <div class="algo-box-title">
                 <span class="algo-pulse-indicator"></span>
-                <span class="algo-box-eyebrow">ACTIVE OS SUBSYSTEM & ALGORITHM</span>
+                <span class="algo-box-eyebrow">Active OS Subsystem & Algorithm</span>
               </div>
               <span class="algo-ring-badge" id="algo-box-ring">Ring 3 · User Space App</span>
             </div>
             <div class="algo-box-name" id="algo-box-name">Producer-Consumer Bounded Buffer with POSIX Semaphores</div>
             <div class="algo-box-tags">
-              <span class="algo-chip-spec" id="algo-box-soc">⚡ SoC: Cortex-X2 Core 0 (Big) @ 3.0GHz</span>
-              <span class="algo-chip-spec" id="algo-box-mem">💾 DMA RAM: Zero-Copy Ring Buffer [10 Slots]</span>
-              <span class="algo-chip-spec" id="algo-box-sched">⚖️ CFS / EAS: High-Throughput RT Priority</span>
+              <span class="algo-chip-spec" id="algo-box-soc">SoC: Cortex-X2 Core 0 (Big) @ 3.0GHz</span>
+              <span class="algo-chip-spec" id="algo-box-mem">DMA RAM: Zero-Copy Ring Buffer [10 Slots]</span>
+              <span class="algo-chip-spec" id="algo-box-sched">CFS / EAS: High-Throughput RT Priority</span>
             </div>
             <div class="algo-box-narrative" id="algo-box-desc">
               Live 4K 60FPS camera viewfinder frames bypass the CPU via direct memory access (DMA) into a 10-slot circular ring buffer. POSIX semaphores coordinate Producer T2 and Consumer T3 with zero race conditions.
@@ -4878,10 +4765,10 @@
         <!-- Trace Selector Bar -->
         <div class="layer-trace-selector-bar">
           <span style="font-size: 0.82rem; font-weight: 800; color: var(--ink-headline); margin-right: 4px;">Simulate Signal Flow:</span>
-          <button class="layer-trace-btn active" id="btn-trace-video" onclick="runSignalTrace('video')">📹 1. 4K Video Capture Pipeline</button>
-          <button class="layer-trace-btn" id="btn-trace-call" onclick="runSignalTrace('call')">⚡ 2. Incoming Call Hardware IRQ</button>
-          <button class="layer-trace-btn" id="btn-trace-switch" onclick="runSignalTrace('switch')">🧠 3. CPU Context Switch (RR q=2)</button>
-          <button class="layer-trace-btn" id="btn-trace-download" onclick="runSignalTrace('download')">📥 4. File Download Network I/O</button>
+          <button class="layer-trace-btn active" id="btn-trace-video" onclick="runSignalTrace('video')">1. 4K Video Pipeline</button>
+          <button class="layer-trace-btn" id="btn-trace-call" onclick="runSignalTrace('call')">2. Incoming Call Hardware IRQ</button>
+          <button class="layer-trace-btn" id="btn-trace-switch" onclick="runSignalTrace('switch')">3. CPU Context Switch (RR q=2)</button>
+          <button class="layer-trace-btn" id="btn-trace-download" onclick="runSignalTrace('download')">4. File Download Network I/O</button>
         </div>
 
         <!-- 4-Tier Interactive Card Stack -->
@@ -4894,11 +4781,11 @@
               <span style="font-size: 0.72rem; color: var(--ink-secondary);">Sandboxed processes with private memory heaps</span>
             </div>
             <div class="arch-layer-items-grid">
-              <div class="arch-node-chip" id="node-app-video">📹 Video Camera App</div>
-              <div class="arch-node-chip" id="node-app-music">🎵 Music Player</div>
-              <div class="arch-node-chip" id="node-app-msg">💬 Messaging App</div>
-              <div class="arch-node-chip" id="node-app-gps">📍 GPS Navigation</div>
-              <div class="arch-node-chip" id="node-app-down">📥 Download Manager</div>
+              <div class="arch-node-chip" id="node-app-video">Video Camera App</div>
+              <div class="arch-node-chip" id="node-app-music">Music Player App</div>
+              <div class="arch-node-chip" id="node-app-msg">Messaging App</div>
+              <div class="arch-node-chip" id="node-app-gps">GPS Navigation</div>
+              <div class="arch-node-chip" id="node-app-down">Download Manager</div>
             </div>
           </div>
 
@@ -4991,7 +4878,7 @@
               <p style="font-size: 0.8rem; color: var(--ink-secondary);">Click any thread below to inspect its execution state, memory segment, and concurrency benefits.</p>
             </div>
             <div class="paper-btn-group">
-              <button class="paper-btn" id="btn-pulse-frame" onclick="triggerFramePulse()">⚡ Simulate Frame Capture</button>
+              <button class="paper-btn" id="btn-pulse-frame" onclick="triggerFramePulse()">Simulate Frame Capture</button>
               <button class="paper-btn primary" id="btn-toggle-auto" onclick="toggleAutoPipeline()">▶ Continuous Capture</button>
             </div>
           </div>
@@ -5001,7 +4888,7 @@
             <!-- T1: UI -->
             <div class="thread-card-chip selected" id="thread-t1" onclick="selectThread(1)">
               <span class="thread-badge-label">T1 · Main / UI</span>
-              <div class="thread-icon-seal">👆</div>
+              <div class="thread-icon-seal" style="font-weight: 800; font-size: 0.85rem; font-family: ui-monospace, monospace;">T1</div>
               <div class="thread-name-title">UI / User Input</div>
               <div class="thread-role-sub">Handles touch, start, stop, pause actions without blocking.</div>
             </div>
@@ -5009,7 +4896,7 @@
             <!-- T2: Camera Capture -->
             <div class="thread-card-chip" id="thread-t2" onclick="selectThread(2)">
               <span class="thread-badge-label">T2 · Device In</span>
-              <div class="thread-icon-seal">📷</div>
+              <div class="thread-icon-seal" style="font-weight: 800; font-size: 0.85rem; font-family: ui-monospace, monospace;">T2</div>
               <div class="thread-name-title">Camera Capture</div>
               <div class="thread-role-sub">Continuously streams uncompressed raw frames from camera sensor.</div>
             </div>
@@ -5017,7 +4904,7 @@
             <!-- T3: Video Processing -->
             <div class="thread-card-chip" id="thread-t3" onclick="selectThread(3)">
               <span class="thread-badge-label">T3 · Compute</span>
-              <div class="thread-icon-seal">⚙️</div>
+              <div class="thread-icon-seal" style="font-weight: 800; font-size: 0.85rem; font-family: ui-monospace, monospace;">T3</div>
               <div class="thread-name-title">Video Processing</div>
               <div class="thread-role-sub">Encodes raw frames into H.264/HEVC stream via DSP/CPU.</div>
             </div>
@@ -5025,7 +4912,7 @@
             <!-- T4: Audio Capture -->
             <div class="thread-card-chip" id="thread-t4" onclick="selectThread(4)">
               <span class="thread-badge-label">T4 · Audio In</span>
-              <div class="thread-icon-seal">🎙️</div>
+              <div class="thread-icon-seal" style="font-weight: 800; font-size: 0.85rem; font-family: ui-monospace, monospace;">T4</div>
               <div class="thread-name-title">Audio Capture</div>
               <div class="thread-role-sub">Samples microphone PCM data and syncs with video timestamps.</div>
             </div>
@@ -5033,7 +4920,7 @@
             <!-- T5: File Write -->
             <div class="thread-card-chip" id="thread-t5" onclick="selectThread(5)">
               <span class="thread-badge-label">T5 · Storage</span>
-              <div class="thread-icon-seal">💾</div>
+              <div class="thread-icon-seal" style="font-weight: 800; font-size: 0.85rem; font-family: ui-monospace, monospace;">T5</div>
               <div class="thread-name-title">Storage / File Write</div>
               <div class="thread-role-sub">Flushes encoded chunks to flash storage without stalling capture.</div>
             </div>
@@ -5100,8 +4987,8 @@
               <div class="buffer-slot-box" id="buf-slot-9">Slot 8</div>
               <div class="buffer-slot-box" id="buf-slot-10">Slot 9</div>
             </div>
-            <div style="font-size: 0.74rem; color: var(--ink-muted); font-style: italic;">
-              ⚡ Producer-Consumer Algorithm: sem_wait(&sem_empty); pthread_mutex_lock(&mutex); push_frame(); pthread_mutex_unlock(&mutex); sem_post(&sem_full);
+            <div style="font-size: 0.74rem; color: var(--ink-muted); font-family: ui-monospace, monospace;">
+              POSIX Synchronization: sem_wait(&sem_empty); pthread_mutex_lock(&mutex); push_frame(); pthread_mutex_unlock(&mutex); sem_post(&sem_full);
             </div>
           </div>
 
@@ -5109,7 +4996,7 @@
           <div class="thread-inspector-panel" id="thread-inspector-view">
             <div>
               <div class="inspector-col-title">
-                <span>🔒 Private Context: <strong id="inspect-thread-name" style="color: var(--color-terracotta);">T1 · UI / User Input Thread</strong></span>
+                <span>Thread-Private Context: <strong id="inspect-thread-name" style="color: var(--color-terracotta);">T1 · UI / User Input Thread</strong></span>
               </div>
               <div class="memory-paper-tag-cloud" id="inspect-private-tags">
                 <span class="memory-paper-tag">Program Counter (PC) pointing to touch event loop</span>
@@ -5122,7 +5009,7 @@
 
             <div>
               <div class="inspector-col-title">
-                <span>🤝 Shared Across All 5 Threads (Video Process)</span>
+                <span>Process-Shared Resources (Video Pipeline Heap)</span>
               </div>
               <div class="memory-paper-tag-cloud">
                 <span class="memory-paper-tag shared-tag">Shared Process Heap (Raw Frame Buffers)</span>
@@ -5234,7 +5121,7 @@
           <!-- Dynamic Algorithm Decision HUD -->
           <div class="algo-decision-hud" id="algo-decision-hud">
             <div class="decision-hud-header">
-              <span>⚡ Live Scheduling Algorithm Decision Engine</span>
+              <span>Live Scheduling Algorithm Decision Engine</span>
               <span>Time t = <span id="clock-display-decision">0</span></span>
             </div>
             <div class="decision-hud-text" id="algo-decision-text">
@@ -5437,9 +5324,9 @@
               
                 <!-- Plain-English Bookmark Analogy Visualizer -->
                 <div style="background: rgba(0,0,0,0.25); border-radius: 8px; padding: 8px 10px; font-size: 0.76rem; border: 1px dashed rgba(255,255,255,0.25); line-height: 1.45;">
-                  <div style="color: #93C5FD; font-weight: 800; margin-bottom: 3px;">🔖 The "Movie Bookmark" Principle:</div>
+                  <div style="color: #93C5FD; font-weight: 800; margin-bottom: 3px;">The "Movie Bookmark" Principle (TCB Preservation):</div>
                   <div id="trace-bookmark-explainer" style="color: #E2E8F0;">
-                    🎥 Normal Playback: Video is recording live. No bookmark needed because nothing has paused.
+                    Normal Playback: Video is recording live. No bookmark needed because execution is uninterrupted.
                   </div>
                 </div>
               </div>
@@ -5482,7 +5369,7 @@
       <!-- Relatable Runner Analogy Callout -->
       <div style="background: var(--paper-desk); border: 1px solid var(--paper-cut-line); border-radius: 12px; padding: 18px 22px; margin-bottom: 24px; box-shadow: var(--shadow-paper-sm);">
         <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
-          <span style="font-size: 1.4rem;">🏃‍♂️💨 vs 🚶‍♂️🔋</span>
+          <span style="font-size: 0.68rem; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; background: rgba(0,0,0,0.06); padding: 3px 8px; border-radius: 4px; color: var(--ink-muted);">Concept Analogy</span>
           <h3 style="font-size: 1.05rem; font-weight: 800; color: var(--ink-headline); margin: 0;">The Runner Analogy: Sprinters vs. Marathon Walkers</h3>
         </div>
         <p style="font-size: 0.9rem; color: var(--ink-secondary); line-height: 1.6; margin: 0;">
@@ -5494,7 +5381,7 @@
         <!-- Big Cores -->
         <div class="core-cluster-card cluster-big">
           <div class="cluster-title-row">
-            <h3 class="cluster-name">⚡ Big Cores (The Olympic Sprinters)</h3>
+            <h3 class="cluster-name">Cortex-X2 Big Cores (High-Performance)</h3>
             <span class="cluster-badge badge-big-core">Maximum Speed & Muscle</span>
           </div>
           <div class="cluster-specs-sub">Power-Hungry · Superfast · Heavy Lifting</div>
@@ -5505,7 +5392,7 @@
           <div class="core-tasks-list">
             <div class="core-task-pill-card">
               <div>
-                <div class="core-task-name">📹 4K Video Recording & Compression</div>
+                <div class="core-task-name">4K Video Recording & Compression</div>
                 <div class="core-task-detail">Needs huge computing muscle every millisecond so zero frames are dropped</div>
               </div>
               <span class="task-badge-cut badge-video">Heavy Compute</span>
@@ -5513,7 +5400,7 @@
 
             <div class="core-task-pill-card">
               <div>
-                <div class="core-task-name">💬 Instant Touch Response & UI Animations</div>
+                <div class="core-task-name">Touch Response & UI Compositing</div>
                 <div class="core-task-detail">Powers lightning-fast 120Hz swiping, button taps, and instant notification chimes</div>
               </div>
               <span class="task-badge-cut badge-message">Instant Burst</span>
@@ -5524,7 +5411,7 @@
         <!-- LITTLE Cores -->
         <div class="core-cluster-card cluster-little">
           <div class="cluster-title-row">
-            <h3 class="cluster-name">🔋 LITTLE Cores (The Marathon Walkers)</h3>
+            <h3 class="cluster-name">Cortex-A510 LITTLE Cores (Energy-Efficient)</h3>
             <span class="cluster-badge badge-little-core">Ultra-Low Battery Drain</span>
           </div>
           <div class="cluster-specs-sub">Energy Saver · Always Calm · All-Day Endurance</div>
@@ -5535,7 +5422,7 @@
           <div class="core-tasks-list">
             <div class="core-task-pill-card">
               <div>
-                <div class="core-task-name">🎵 Music Streaming (Spotify / Apple Music)</div>
+                <div class="core-task-name">Music Streaming (PCM Audio Engine)</div>
                 <div class="core-task-detail">Decompressing audio requires tiny CPU power; runs at lowest speed to save battery</div>
               </div>
               <span class="task-badge-cut badge-music">Steady & Calm</span>
@@ -5543,7 +5430,7 @@
 
             <div class="core-task-pill-card">
               <div>
-                <div class="core-task-name">📍 GPS Location Updates</div>
+                <div class="core-task-name">GPS Location Updates</div>
                 <div class="core-task-detail">Briefly checks satellite signals every few seconds while your phone is in your pocket</div>
               </div>
               <span class="task-badge-cut badge-gps">Periodic Check</span>
@@ -5551,7 +5438,7 @@
 
             <div class="core-task-pill-card">
               <div>
-                <div class="core-task-name">📥 Background File Downloads</div>
+                <div class="core-task-name">Background File Downloads</div>
                 <div class="core-task-detail">Most time is spent waiting on Wi-Fi or 5G packets, so it runs on minimal energy</div>
               </div>
               <span class="task-badge-cut badge-download">Background Wait</span>
@@ -6274,7 +6161,7 @@
         title: "4K Video Recording is Running Smoothly",
         desc: "Your camera is actively filming high-definition 4K video at 60 frames per second. The CPU's working memory holds the live video frame data and recording counters. Everything is running smoothly with no interruptions.",
         osAction: "Normal Execution: The OS lets the camera record uninterrupted, streaming video frames directly into storage.",
-        bookmarkDesc: "🎥 Normal Playback: Video is recording live. No bookmark needed because nothing has paused.",
+        bookmarkDesc: "Normal Playback: Video is recording live. No bookmark needed because execution is uninterrupted.",
         cpuTag: "Executing: 4K Video Recording",
         cpuTagClass: "task-badge-cut badge-video",
         ip: "0x7FFF0402 (Frame 142)",
@@ -6290,8 +6177,8 @@
         tag: "Step 2 of 6 · Urgent Hardware Alert",
         title: "Urgent Phone Call Rings In (Hardware Alert!)",
         desc: "Your phone's antenna detects an incoming voice call. Because an incoming phone call is an urgent, time-sensitive event, the cellular modem sends a direct hardware signal (IRQ 38) to the processor—like an emergency doorbell ringing at the CPU's door.",
-        osAction: "Doorbell Ringing: The CPU detects the hardware interrupt signal and finishes its current micro-instruction before pausing video.",
-        bookmarkDesc: "🔔 Doorbell Rang! The CPU is alerted that a call has arrived and is getting ready to set a bookmark.",
+        osAction: "Interrupt Asserted: The CPU detects the hardware interrupt signal and finishes its current micro-instruction before pausing video.",
+        bookmarkDesc: "Interrupt Asserted: The CPU is alerted that a call has arrived and prepares context switch.",
         cpuTag: "HARDWARE ALERT: Incoming Call!",
         cpuTagClass: "task-badge-cut badge-message",
         ip: "0x7FFF0403 (Alert Raised)",
@@ -6308,7 +6195,7 @@
         title: "CPU State Preserved: Saving the Video Bookmark",
         desc: "Before the processor switches over to answer the phone, it must save the video's exact spot so nothing is lost. It copies all live numbers (the current frame, timer, and memory pointers) into a secure memory card called a Thread Control Block (TCB). Just like bookmarking a movie where you paused it, this guarantees the phone knows exactly where to resume.",
         osAction: "Setting the Bookmark: All active video CPU registers are safely stored in RAM. The video recording is safely paused.",
-        bookmarkDesc: "🔖 Bookmark Stored in RAM: The exact video second, frame numbers, and audio buffers are safely frozen so 0 frames are dropped.",
+        bookmarkDesc: "Bookmark Stored in RAM: The exact video second, frame numbers, and audio buffers are safely frozen so 0 frames are dropped.",
         cpuTag: "Saving Video Bookmark to RAM",
         cpuTagClass: "task-badge-cut badge-download",
         ip: "0xFFFF0008 (Kernel Context Saver)",
@@ -6325,7 +6212,7 @@
         title: "Incoming Call Screen & Ringtone Are Handled",
         desc: "Now that the video's bookmark is safely stored away, the processor turns 100% of its attention to the call. It starts playing your ringtone through the phone's speaker and displays the incoming call banner on the screen, waiting for you to pick up.",
         osAction: "Handling Urgent Call: The OS prioritizes telephony, plays the ringtone, and shows the call banner.",
-        bookmarkDesc: "📞 Answering the Urgent Event: The CPU is serving the call, while the video patiently waits on hold in memory.",
+        bookmarkDesc: "Answering the Urgent Event: The CPU is serving the call, while the video patiently waits on hold in memory.",
         cpuTag: "Executing: Incoming Call Service",
         cpuTagClass: "task-badge-cut badge-message",
         ip: "0x800412A0 (Call Manager)",
@@ -6342,7 +6229,7 @@
         title: "Call Handled: Reaching for the Video Bookmark",
         desc: "You silence or dismiss the call banner, or finish speaking. The phone call task is finished and releases the processor. The OS scheduler immediately asks: 'What was I doing before this call arrived?' It locates the saved video bookmark in memory to get ready to resume.",
         osAction: "Clearing Alert: The hardware interrupt is dismissed. The OS prepares to restore the video camera where it left off.",
-        bookmarkDesc: "🔄 Fetching the Bookmark: The call is over, and the OS is loading the saved video timestamp back into the CPU.",
+        bookmarkDesc: "Fetching the Bookmark: The call is over, and the OS is loading the saved video timestamp back into the CPU.",
         cpuTag: "Alert Cleared: Preparing Resume",
         cpuTagClass: "task-badge-cut badge-gps",
         ip: "0xFFFF0240 (OS Scheduler)",
@@ -6359,7 +6246,7 @@
         title: "Video Recording Resumes Seamlessly — Zero Frames Lost!",
         desc: "The processor reloads all the saved numbers from the bookmark back into its working memory. Video recording continues immediately at the exact microsecond where it was paused. The user experiences zero stutter, zero dropped frames, and crystal-clear recording!",
         osAction: "Seamless Resumption: Video recording is running again at full speed without losing a single frame.",
-        bookmarkDesc: "🎬 Movie Resumed from Bookmark: Recording continues seamlessly from the exact paused timestamp with 0 dropped frames!",
+        bookmarkDesc: "Resumed from Bookmark: Recording continues seamlessly from the exact paused timestamp with 0 dropped frames.",
         cpuTag: "Executing: 4K Video (Resumed)",
         cpuTagClass: "task-badge-cut badge-video",
         ip: "0x7FFF0403 (Resumed Smoothly)",
@@ -6497,9 +6384,9 @@
         name: "Producer-Consumer Bounded Ring Buffer with POSIX Semaphores & Mutex",
         short: "ALGO: Producer-Consumer (sem_empty=8, sem_full=2)",
         ring: "Ring 3 (App) ⇄ Ring 0 (DMA Driver)",
-        soc: "⚡ SoC: Cortex-X2 Core 0 (Big) @ 3.0GHz",
-        mem: "💾 DMA RAM: Zero-Copy Ring Buffer [10 Slots]",
-        sched: "⚖️ CFS / EAS: High-Throughput RT Priority",
+        soc: "SoC: Cortex-X2 Core 0 (Big) @ 3.0GHz",
+        mem: "DMA RAM: Zero-Copy Ring Buffer [10 Slots]",
+        sched: "CFS / EAS: High-Throughput RT Priority",
         desc: "Live 4K 60FPS camera viewfinder frames bypass the CPU via direct memory access (DMA) into a 10-slot circular ring buffer. POSIX semaphores coordinate Producer T2 and Consumer T3 with zero race conditions.",
         event: "Camera ISP DMA streaming 60 FPS (zero copy)",
         rq: "[Music (Prio 3), Msg (Prio 1)]"
@@ -6508,9 +6395,9 @@
         name: "Fixed-Interval Low-Latency DMA Audio Buffer & CFS Bandwidth",
         short: "ALGO: Low-Latency PCM Audio DAC DMA Stream",
         ring: "Ring 0 (ALSA/AudioFlinger) ⇄ Ring 3 (Player)",
-        soc: "⚡ SoC: Cortex-A510 Core 1 (LITTLE) @ 1.2GHz",
-        mem: "💾 RAM: 48kHz PCM Double-Buffered Stream",
-        sched: "⚖️ Linux CFS: High-Priority Nice -10 Audio Class",
+        soc: "SoC: Cortex-A510 Core 1 (LITTLE) @ 1.2GHz",
+        mem: "RAM: 48kHz PCM Double-Buffered Stream",
+        sched: "Linux CFS: High-Priority Nice -10 Audio Class",
         desc: "Audio stream decompression runs on high-efficiency LITTLE cores at low voltage. DMA transfers fixed 48kHz PCM packets to the DAC to eliminate audible jitter while sipping 0.15W of power.",
         event: "PCM DAC DMA buffer flushed (48kHz)",
         rq: "[Camera (Prio 2), Msg (Prio 1)]"
@@ -6519,9 +6406,9 @@
         name: "ARM GIC Hardware IRQ 38 Trap & Vector Table Preemption",
         short: "ALGO: ARM GIC Priority IRQ 38 Preemption",
         ring: "Hardware IRQ ➔ Ring 0 Kernel Interrupt Vector",
-        soc: "⚡ SoC: Cortex-X2 Core 0 (Burst Preempt)",
-        mem: "💾 Register Stack: X0..X30 & PC Pushed to TCB",
-        sched: "⚖️ Interrupt Priority: Telecom Line > CFS Tasks",
+        soc: "SoC: Cortex-X2 Core 0 (Burst Preempt)",
+        mem: "Register Stack: X0..X30 & PC Pushed to TCB",
+        sched: "Interrupt Priority: Telecom Line > CFS Tasks",
         desc: "Incoming cellular radio signal asserts ARM GIC IRQ line 38. The CPU immediately preserves the current thread's PC and stack pointer into its TCB, context-switching to the baseband telephony driver.",
         event: "Modem IRQ 38 asserted (Preempted Video)",
         rq: "[Incoming Call (Prio 1), Video (Prio 2)]"
@@ -6530,9 +6417,9 @@
         name: "Periodic 1Hz Sensor Timer Interrupt & Kalman Filter",
         short: "ALGO: 1Hz Periodic Sensor Timer IRQ",
         ring: "Ring 0 (Sensor HAL) ⇄ Ring 3 (Location Daemon)",
-        soc: "⚡ SoC: Cortex-A510 Core 1 (LITTLE) @ 800MHz",
-        mem: "💾 RAM: Ephemeris & Satellite Matrix",
-        sched: "⚖️ Periodic Timer: 1Hz Tick Wakeup (95% Sleep)",
+        soc: "SoC: Cortex-A510 Core 1 (LITTLE) @ 800MHz",
+        mem: "RAM: Ephemeris & Satellite Matrix",
+        sched: "Periodic Timer: 1Hz Tick Wakeup (95% Sleep)",
         desc: "GPS positioning queries the satellite radio once per second (1 Hz). Between ticks, the GPS thread transitions to BLOCKED/SLEEPING, allowing efficiency cores to enter deep C-states.",
         event: "GPS 1Hz location packet parsed (12 Sats)",
         rq: "[Video (Prio 2), Download (Prio 5)]"
@@ -6541,9 +6428,9 @@
         name: "Non-Blocking Async epoll Socket Wait Queue (I/O Bound)",
         short: "ALGO: epoll Socket Wait Queue (I/O Blocked)",
         ring: "Ring 0 (TCP/IP Stack) ⇄ Ring 3 (HTTP Daemon)",
-        soc: "⚡ SoC: Cortex-A510 Core 1 (LITTLE) @ 1.0GHz",
-        mem: "💾 RAM: Wi-Fi Zero-Copy Packet Ring Buffer",
-        sched: "⚖️ I/O Wait State: Blocked on Socket Readiness",
+        soc: "SoC: Cortex-A510 Core 1 (LITTLE) @ 1.0GHz",
+        mem: "RAM: Wi-Fi Zero-Copy Packet Ring Buffer",
+        sched: "I/O Wait State: Blocked on Socket Readiness",
         desc: "Bulk file download spends 85% of time blocked waiting for Wi-Fi packets. The kernel places the download thread in the socket wait queue, freeing CPU execution cycles.",
         event: "Wi-Fi packet received (7.2 MB/s)",
         rq: "[Music (Prio 3), Video (Prio 2)]"
@@ -6552,9 +6439,9 @@
         name: "Multicore Energy-Aware Scheduling (EAS) & LowMemoryKiller",
         short: "ALGO: Multicore EAS & LMK OOM Reclaim",
         ring: "Ring 0 Kernel Scheduler & Memory Manager",
-        soc: "⚡ SoC: Asymmetric big.LITTLE Dual Cluster",
-        mem: "💾 RAM: 5.8 GB / 8.0 GB (LMK oom_adj Score)",
-        sched: "⚖️ Energy-Aware Scheduler (EAS) & CFS vruntime",
+        soc: "SoC: Asymmetric big.LITTLE Dual Cluster",
+        mem: "RAM: 5.8 GB / 8.0 GB (LMK oom_adj Score)",
+        sched: "Energy-Aware Scheduler (EAS) & CFS vruntime",
         desc: "Linux CFS and EAS continuously balance thread queues across asymmetric Cortex-X2 and Cortex-A510 cores based on energy models and latency sensitivity.",
         event: "EAS thread migration balanced across cores",
         rq: "[Video (Prio 2), Music (Prio 3), GPS (Prio 4)]"
@@ -6563,9 +6450,9 @@
         name: "Hardware Telephony Baseband Interface & DTMF Audio Synthesis",
         short: "ALGO: Baseband Modem RPC & DTMF Audio",
         ring: "Ring 3 (Dialer UI) ⇄ Ring 0 (Modem Driver)",
-        soc: "⚡ SoC: Baseband DSP & Cortex-A510 Little",
-        mem: "💾 RAM: Dual-Tone PCM Frequency Cache",
-        sched: "⚖️ User Interactive UI Class",
+        soc: "SoC: Baseband DSP & Cortex-A510 Little",
+        mem: "RAM: Dual-Tone PCM Frequency Cache",
+        sched: "User Interactive UI Class",
         desc: "Numeric dialpad triggers dual-tone multi-frequency (DTMF) synthesis and prepares outgoing cellular call channel across the baseband processor.",
         event: "DTMF tone synthesized & dialed",
         rq: "[Dialer UI (Prio 2), Music (Prio 3)]"
@@ -6574,9 +6461,9 @@
         name: "Split-Screen Concurrent Process Display & Dual Core Dispatch",
         short: "ALGO: Multi-Window Dual-Core Dispatch",
         ring: "Ring 3 Multi-Window ⇄ Ring 0 Scheduler",
-        soc: "⚡ Dual SoC: Core 0 (Video) & Core 1 (GPS)",
-        mem: "💾 VRAM: Split SurfaceFlinger Windows",
-        sched: "⚖️ Concurrent Multi-Task Scheduling",
+        soc: "Dual SoC: Core 0 (Video) & Core 1 (GPS)",
+        mem: "VRAM: Split SurfaceFlinger Windows",
+        sched: "Concurrent Multi-Task Scheduling",
         desc: "Split-screen mode executes two distinct user applications concurrently, dispatching Camera 4K to Cortex-X2 (Big) and GPS Radar to Cortex-A510 (LITTLE) in parallel.",
         event: "Concurrent multi-window render active",
         rq: "[Camera (Prio 2), GPS (Prio 4)]"
@@ -6585,9 +6472,9 @@
         name: "Process Context Switching & ARM64 TTBR0_EL1 Page Table Reload",
         short: "ALGO: ARM64 Process Context Switching",
         ring: "Ring 0 Kernel Exception Level EL1",
-        soc: "⚡ SoC: Core 0 Context Switch Engine",
-        mem: "💾 MMU: TTBR0_EL1 Page Directory Swap",
-        sched: "⚖️ Process Dispatcher & ASID TLB Invalidation",
+        soc: "SoC: Core 0 Context Switch Engine",
+        mem: "MMU: TTBR0_EL1 Page Directory Swap",
+        sched: "Process Dispatcher & ASID TLB Invalidation",
         desc: "Switching between active apps saves the outgoing process's hardware register state, reloads the Translation Table Base Register (TTBR0_EL1) for virtual memory mapping, and dispatches the new process.",
         event: "Process context switch (TTBR0_EL1 swapped)",
         rq: "[Active App Switcher Carousel]"
@@ -6596,9 +6483,9 @@
         name: "Compositor SurfaceFlinger 120Hz VSync & App Dispatcher",
         short: "ALGO: SurfaceFlinger 120Hz VSync Compositor",
         ring: "Ring 3 (SystemUI) ⇄ Ring 0 (DRM/KMS Display Driver)",
-        soc: "⚡ SoC: Adreno GPU & Cortex-X2 Display Pipeline",
-        mem: "💾 VRAM: Double-Buffered Framebuffer",
-        sched: "⚖️ VSync Real-Time Display Thread",
+        soc: "SoC: Adreno GPU & Cortex-X2 Display Pipeline",
+        mem: "VRAM: Double-Buffered Framebuffer",
+        sched: "VSync Real-Time Display Thread",
         desc: "The Home screen runs atop the Android SurfaceFlinger compositor, synchronized to hardware 120Hz VSync interrupts to ensure jitter-free tactile scrolling.",
         event: "120Hz VSync frame composite flushed",
         rq: "[SystemUI (Prio 1), Background Services]"
@@ -6607,9 +6494,9 @@
         name: "Deep Power-Down Sleep & Always-On Wakeup Controller",
         short: "ALGO: Low-Power C-State Sleep & Sensor Wakeup",
         ring: "Silicon Power Controller (PMIC) ⇄ Ring 0 Kernel",
-        soc: "⚡ SoC: Cortex-A510 in Deep C-State (0.02W)",
-        mem: "💾 RAM: Low-Power DDR5 Self-Refresh Mode",
-        sched: "⚖️ Kernel Idle Loop (WFI - Wait For Interrupt)",
+        soc: "SoC: Cortex-A510 in Deep C-State (0.02W)",
+        mem: "RAM: Low-Power DDR5 Self-Refresh Mode",
+        sched: "Kernel Idle Loop (WFI - Wait For Interrupt)",
         desc: "Screen lock puts the primary Cortex-X2 compute cores into power-gated sleep. The system waits in WFI (Wait For Interrupt) state until a touch or radio interrupt awakens the SoC.",
         event: "SoC in low-power idle standby",
         rq: "[Idle / Wait For Interrupt (WFI)]"
@@ -6644,18 +6531,18 @@
 
       if (phoneState.soundEnabled) {
         if (btn) {
-          btn.innerText = "🔊 Sound: On";
+          btn.innerText = "Sound: On";
           btn.classList.add('active');
         }
-        if (icon) icon.innerText = "🔊";
+        if (icon) icon.innerHTML = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>';
         playChimeSound();
         if (phoneState.isMusicPlaying) startMusicSynth();
       } else {
         if (btn) {
-          btn.innerText = "🔇 Sound: Off";
+          btn.innerText = "Sound: Off";
           btn.classList.remove('active');
         }
-        if (icon) icon.innerText = "🔈";
+        if (icon) icon.innerHTML = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>';
         stopMusicSynth();
       }
     }
@@ -6938,16 +6825,16 @@
 
       if (phoneState.isCalling) {
         island.classList.add('mode-call');
-        content.innerHTML = `<span style="color:#22C55E;">📞 IRQ 38 Call</span>`;
+        content.innerHTML = `<span style="color:#22C55E; font-size:0.6rem; font-weight:800;">IRQ 38 Call</span>`;
       } else if (phoneState.isRecording && app !== 'camera') {
         island.classList.add('mode-video');
         privDot.classList.add('active');
         content.innerHTML = `<span style="color:#EF4444; font-size:0.6rem;">● 4K REC</span>`;
       } else if (phoneState.isMusicPlaying && app !== 'music') {
         island.classList.add('mode-music');
-        content.innerHTML = `<span style="color:#F59E0B;">🎵 Synthwave</span>`;
+        content.innerHTML = `<span style="color:#F59E0B; font-size:0.6rem; font-weight:800;">48kHz Audio</span>`;
       } else {
-        content.innerHTML = `<span>📱 Ready</span>`;
+        content.innerHTML = `<span style="font-size:0.6rem; opacity:0.8;">OS Ready</span>`;
       }
     }
 
@@ -7118,7 +7005,7 @@
       const island = document.getElementById('phone-dynamic-island');
       if (island) {
         island.classList.add('mode-call');
-        document.getElementById('island-content').innerHTML = `<span style="color:#22C55E; font-size:0.65rem;">📞 IRQ 38: Cellular Call</span>`;
+        document.getElementById('island-content').innerHTML = `<span style="color:#22C55E; font-size:0.65rem; font-weight:800;">IRQ 38: Cellular Call</span>`;
       }
 
       // If video was recording, indicate preemption
@@ -7371,7 +7258,7 @@
     /* Task Manager Non-Blocking Actions */
     function boostActiveTask() {
       playClickSound();
-      triggerIncomingMessageToast("⚡ Kernel Action: Boosted Video Thread T3 to RT Priority (SCHED_FIFO / Nice -20)!");
+      triggerIncomingMessageToast("Kernel Action: Boosted Video Thread T3 to RT Priority (SCHED_FIFO / Nice -20)!");
       updateAlgorithmTelemetry('camera', {
         name: "Real-Time FIFO Scheduler (SCHED_FIFO) Boosted",
         desc: "Video Thread T3 was promoted to Real-Time SCHED_FIFO class. Preempts all normal CFS threads on Cortex-X2 Core 0."
@@ -7380,7 +7267,7 @@
 
     function simulateMemoryPressure() {
       playClickSound();
-      triggerIncomingMessageToast("🧹 Android LMK: Reclaimed 420 MB RAM from cached background apps!");
+      triggerIncomingMessageToast("Android LMK: Reclaimed 420 MB RAM from cached background apps!");
       const widgetBig = document.getElementById('widget-big-val');
       if (widgetBig) widgetBig.innerText = "72%";
     }
@@ -7392,7 +7279,7 @@
 
       const btn = document.getElementById('btn-phone-mode');
       if (phoneState.syncMode) {
-        btn.innerText = "🔄 Mode: OS Synced";
+        btn.innerText = "Mode: OS Synced";
         btn.classList.add('active');
         if (currentTimelineTime >= 0 && currentTimelineTime < 4) syncPhoneToProcess('music');
         else if (currentTimelineTime >= 4 && currentTimelineTime < 6) syncPhoneToProcess('message');
@@ -7400,7 +7287,7 @@
         else if (currentTimelineTime >= 11 && currentTimelineTime < 14) syncPhoneToProcess('gps');
         else if (currentTimelineTime >= 14 && currentTimelineTime <= 20) syncPhoneToProcess('download');
       } else {
-        btn.innerText = "🎮 Mode: Interactive";
+        btn.innerText = "Mode: Interactive";
         btn.classList.remove('active');
       }
     }
